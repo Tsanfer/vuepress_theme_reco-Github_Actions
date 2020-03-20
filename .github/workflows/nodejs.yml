@@ -27,16 +27,25 @@ jobs:
 
     - name: Build
       run: yarn && yarn build --if-present
-      env:
+      with:
         LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }}
         LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }}
-        
-    - name: FTP Deploy
+   
+    - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
-      env:
-        FTP_SERVER: sftp://39.107.221.57:22/
-        FTP_USERNAME: root
-        FTP_PASSWORD: ${{ secrets.BLOG_FTP_PASSWORD }}
-        LOCAL_DIR: docs/.vuepress/dist
-        REMOTE_DIR: /home/www/htdocs
-        ARGS: --delete --transfer-all --exclude=logreport --verbose
+      with:
+        ftp-server: sftp://39.107.221.57:22/
+        ftp-username: root
+        ftp-password: ${{ secrets.BLOG_FTP_PASSWORD }}
+        git-ftp-args: --remote-root /home/www/htdocs # if your certificate is setup correctly this can be removed
+        local-dir: docs/.vuepress/dist
+
+    # - name: FTP Deploy
+    #   uses: SamKirkland/FTP-Deploy-Action@3.0.0
+    #   env:
+    #     FTP_SERVER: sftp://39.107.221.57:22/
+    #     FTP_USERNAME: root
+    #     FTP_PASSWORD: ${{ secrets.BLOG_FTP_PASSWORD }}
+    #     LOCAL_DIR: docs/.vuepress/dist
+    #     REMOTE_DIR: /home/www/htdocs
+    #     ARGS: --delete --transfer-all --exclude=logreport --verbose
