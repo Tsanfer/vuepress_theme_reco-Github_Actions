@@ -39,3 +39,4 @@ jobs:
         ftp-password: ${{ secrets.BLOG_FTP_PASSWORD }}
         git-ftp-args: --remote-root /home/www/htdocs # if your certificate is setup correctly this can be removed
         local-dir: docs/.vuepress/dist
+        
