@@ -26,7 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Build
-    - run: yarn && yarn build --if-present
+        run: yarn && yarn build --if-present
       env:
         LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }}
         LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }}
