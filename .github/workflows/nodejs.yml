@@ -32,9 +32,9 @@ jobs:
         LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }}
         
     - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
       env:
-        FTP_SERVER: 39.107.221.57:22
+        FTP_SERVER: sftp://39.107.221.57:22/
         FTP_USERNAME: root
         FTP_PASSWORD: ${{ secrets.BLOG_FTP_PASSWORD }}
         LOCAL_DIR: docs/.vuepress/dist
