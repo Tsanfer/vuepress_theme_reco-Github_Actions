@@ -34,9 +34,9 @@ tags:
 
 
 
-# 思路
+## 思路
 
-## 总体
+### 总体
 
 VuePress 在本地完成项目的源文件，推送至 Github 触发 Travis CI 自动构建目标文件，完成后自动部署到另一个 Github 分支，此分支作在线文档使用。
 
@@ -46,7 +46,7 @@ VuePress 在本地完成项目的源文件，推送至 Github 触发 Travis CI �
 
 
 
-## 过程
+### 过程
 
 1. 在本地创建配置 VuePress 工程上传到`master`分支
 2. 上传成功后触发 TravisCI 开始自动构建
@@ -54,7 +54,7 @@ VuePress 在本地完成项目的源文件，推送至 Github 触发 Travis CI �
 
 
 
-## 用到的东西
+### 用到的东西
 
 - SSH密钥链接Github
 - VuePress目录文件结构
@@ -63,7 +63,7 @@ VuePress 在本地完成项目的源文件，推送至 Github 触发 Travis CI �
 
 
 
-## 相关
+### 相关
 
 - VuePress: 
 
@@ -85,15 +85,15 @@ VuePress 在本地完成项目的源文件，推送至 Github 触发 Travis CI �
   
   
 
-# 创建Github仓库
-
 ## 创建Github仓库
+
+### 创建Github仓库
 
 在Github官网上创建一个新的仓库（我仓库的名字叫`VuePress-GithubPages-TravisCI`）
 
-### SSH密钥链接Github
+#### SSH密钥链接Github
 
-#### 生成SSH密钥
+##### 生成SSH密钥
 
 ```shell
 $ ssh-keygen
@@ -110,7 +110,7 @@ Your identification has been saved in /home/tsanfer/.ssh/test_key.
 Your public key has been saved in /home/tsanfer/.ssh/test_key.pub.
 ```
 
-#### Github添加SSH密钥
+##### Github添加SSH密钥
 
 在Github头像旁边的菜单中 Settings --> SSH and GPG keys --> SSH keys 中的右上角点击 New SSH key
 
@@ -121,7 +121,7 @@ Your public key has been saved in /home/tsanfer/.ssh/test_key.pub.
 - Title：随便填
 - Key：公钥文件里的所有内容（`~/.ssh/test_key.pub`）
 
-#### 测试SSH密钥
+##### 测试SSH密钥
 
 测试一下密钥
 
@@ -166,19 +166,19 @@ git clone git@github.com:{Username}/{Repo}.git
 
 
 
-# 配置VuePress
+## 配置VuePress
 
-## 安装VuePress
+### 安装VuePress
 
 ::: warning  注意
 请确保你的 Node.js 版本 >= 8。
 :::
 
-### 安装yarn
+#### 安装yarn
 
 > 也可以安装npm
 
-#### Debian / Ubuntu
+##### Debian / Ubuntu
 
 在 Debian 或 Ubuntu 上，需要用yarn的 Debian 包仓库来安装 Yarn。 首先需要配置仓库：
 
@@ -200,11 +200,11 @@ $ yarn --version
 1.22.4
 ```
 
-#### Windows
+##### Windows
 
 直接下安装包，然后在CMD或者Powershell里运行
 
-#### 更换国内的源
+##### 更换国内的源
 
 先看一下当前的源
 
@@ -219,7 +219,7 @@ https://registry.yarnpkg.com
 yarn config set registry https://registry.npm.taobao.org
 ```
 
-### 安装VuePress
+#### 安装VuePress
 
 ```shell
 # 先进入安装目录，就是刚刚克隆的仓库
@@ -266,7 +266,7 @@ vuepress build .
 
 
 
-### VuePress目录结构
+#### VuePress目录结构
 
 官方给的结构
 
@@ -316,9 +316,9 @@ vuepress build .
 
 
 
-## 配置依赖和脚本
+### 配置依赖和脚本
 
-### 配置package.json
+#### 配置package.json
 
 在 `package.json` 里加一些脚本和后面要用的依赖:
 
@@ -353,9 +353,9 @@ yarn docs:build # 或者：npm run docs:build
 
 
 
-## 页面的设置
+### 页面的设置
 
-###  首页
+####  首页
 
 `/docs/README.md`
 
@@ -378,7 +378,7 @@ footer: MIT Licensed | Copyright © 2020 Tsanfer
 
 
 
-### 文档属性
+#### 文档属性
 
 `/docs/.vuepress/config.js`
 
@@ -397,7 +397,7 @@ module.exports = {
 
 
 
-### markdown扩展
+#### markdown扩展
 
 `/docs/.vuepress/config.js`
 
@@ -411,9 +411,9 @@ module.exports = {
 
 
 
-### 默认主题设置
+#### 默认主题设置
 
-####  导航栏
+#####  导航栏
 
 `/docs/.vuepress/config.js`
 
@@ -433,7 +433,7 @@ module.exports = {
 }
 ```
 
-#### 侧边栏
+##### 侧边栏
 
 `/docs/.vuepress/config.js`
 
@@ -452,7 +452,7 @@ module.exports = {
 }
 ```
 
-#### Git仓库
+##### Git仓库
 
 `/docs/.vuepress/config.js`
 
@@ -477,7 +477,7 @@ module.exports = {
 }
 ```
 
-#### 其他
+##### 其他
 
 `/docs/.vuepress/config.js`
 
@@ -492,7 +492,7 @@ module.exports = {
 
 
 
-### 插件
+#### 插件
 
 `/docs/.vuepress/config.js`
 
@@ -513,7 +513,7 @@ module.exports = {
 
 :::
 
-### config.js所有内容
+#### config.js所有内容
 
 ```js
 module.exports = {
@@ -581,9 +581,9 @@ module.exports = {
 
 
 
-# TravisCI生成和发布
+## TravisCI生成和发布
 
-## 创建gh-pages分支
+### 创建gh-pages分支
 
 ![](https://cdn-image.tsanfer.xyz/img/20200316170443.png)
 
@@ -593,7 +593,7 @@ module.exports = {
 
 
 
-## deploy.sh部署文件
+### deploy.sh部署文件
 
 每当 Github 仓库更新时，会触发 Travis CI 执行 `deploy.sh` 脚本
 
@@ -652,7 +652,7 @@ cd -
 
 
 
-## Travis CI 部署文件
+### Travis CI 部署文件
 
 在项目的根目录创建一个名为 `.travis.yml` 的文件
 
@@ -693,9 +693,9 @@ deploy:
 
 
 
-## 生成和使用 Token 
+### 生成和使用 Token 
 
-### 生成Token
+#### 生成Token
 
 在 Settings --> Developer settings --> Personal access tokens 右上角 Generate new toekn 生成新Token 名字随便写，权限不清楚的可以全部选上，也可以参考我下面的配置
 
@@ -713,9 +713,9 @@ deploy:
 
 
 
-## Travis CI 绑定和配置
+### Travis CI 绑定和配置
 
-### 绑定 Github 账号
+#### 绑定 Github 账号
 
 在 Travis CI 里面 Settings ---> Repositories 点击  Manage repositories on GitHub 
 
@@ -727,7 +727,7 @@ deploy:
 
 
 
-### 添加 Token
+#### 添加 Token
 
 在项目的 Settings --> Environment Variables 中输入 Token
 
@@ -756,7 +756,7 @@ deploy:
 
 
 
-## 推送到Github
+### 推送到Github
 
 ```shell
 git add .
@@ -769,7 +769,7 @@ git push -f git@github.com:{Username}/{Repo}.git master
 
 
 
-## 完成
+### 完成
 
 如果没有 Travis CI 触发成功构建没有问题的话就完成了
 
