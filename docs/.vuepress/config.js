@@ -48,14 +48,8 @@ module.exports = {
     mode: 'light',  //默认显示白天模式
     // 评论设置
     valineConfig: {
-      appId:
-        process.env.NODE_ENV === 'development'
-          ? require('./../../.secrets.json').LEANCLOUD_APP_ID
-          : process.env.LEANCLOUD_APP_ID,
-      appKey:
-        process.env.NODE_ENV === 'development'
-          ? require('./../../.secrets.json').LEANCLOUD_APP_KEY
-          : process.env.LEANCLOUD_APP_KEY,
+      appId: process.env.LEANCLOUD_APP_ID,
+      appKey: process.env.LEANCLOUD_APP_KEY,
     }
   },
 
