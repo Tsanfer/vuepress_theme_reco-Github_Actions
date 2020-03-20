@@ -47,7 +47,7 @@ module.exports = {
     authorAvatar: '/avatar.svg',  //作者头像
     mode: 'light',  //默认显示白天模式
     // 评论设置
-    valineConfig: {
+   valineConfig: {
       appId: LEANCLOUD_APP_ID,
       appKey: LEANCLOUD_APP_KEY
     }
