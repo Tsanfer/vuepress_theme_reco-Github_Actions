@@ -48,8 +48,8 @@ module.exports = {
     mode: 'light',  //默认显示白天模式
     // 评论设置
     valineConfig: {
-      appId: 'rlYpNV1FhNaTxRC822xcaMnt-gzGzoHsz',// your appId
-      appKey: 'odyrHu4xJi4E6Dhgugf4UAv4', // your appKey
+      appId: '$LEANCLOUD_APP_ID',// your appId
+      appKey: '$LEANCLOUD_APP_KEY', // your appKey
     }
   },
 
