@@ -49,7 +49,7 @@ module.exports = {
     // 评论设置
    valineConfig: {
       appId: 'rlYpNV1FhNaTxRC822xcaMnt-gzGzoHsz',
-      appKey: 'odyrHu4xJi4E6Dhgugf4UAv4'
+      appKey: 'odyrHu4xJi4E6Dhgugf4UAv4',
     }
   },
 

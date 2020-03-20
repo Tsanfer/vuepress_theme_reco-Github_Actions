@@ -771,7 +771,7 @@ git push -f git@github.com:{Username}/{Repo}.git master
 
 ### 完成
 
-如果没有 Travis CI 触发成功构建没有问题的话就完成了
+如果没有 Travis CI 触发成功，构建没有问题的话就完成了
 
 ![](https://cdn-image.tsanfer.xyz/img/20200316183049.png)
 
