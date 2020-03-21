@@ -24,7 +24,7 @@ jobs:
       run: |
         ls -a docs/.vuepress/dist # 显示生成的目录文件
         echo ${{ secrets.SSH_KEY }} > $HOME/id_rsa
-        chmod 600 $SSH_PATH/id_rsa
+        chmod 600 $HOME/id_rsa
       
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
