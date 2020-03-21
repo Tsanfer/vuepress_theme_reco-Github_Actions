@@ -47,7 +47,7 @@ module.exports = {
     authorAvatar: '/avatar.svg',  //作者头像
     mode: 'light',  //默认显示白天模式
     // 评论设置
-   valineConfig: {
+    valineConfig: {
       appId: 'rlYpNV1FhNaTxRC822xcaMnt-gzGzoHsz',
       appKey: 'odyrHu4xJi4E6Dhgugf4UAv4',
     }
@@ -62,7 +62,7 @@ module.exports = {
 
   // 插件
   plugins: [
-    ['vuepress-plugin-flowchart'],  // 支持流程图
+    ['flowchart'],  // 支持流程图
     [
       '@vuepress-reco/vuepress-plugin-bgm-player',  // BGM播放器
       {

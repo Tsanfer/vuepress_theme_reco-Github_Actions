@@ -16,7 +16,10 @@ jobs:
         
     - name: Build Project
       run: yarn && yarn build
-        
+      env:
+          LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }}
+          LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }}
+          
     - name: List output files
       run: ls -a docs/.vuepress
       
@@ -24,7 +27,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
         ftp-server: sftp://39.107.221.57:22
-        ftp-username: root
+        ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         git-ftp-args: --insecure --remote-root /home/www/htdocs 
         local-dir: docs/.vuepress/dist/ # This folder is NOT going to upload by default unless you add it to .git-ftp-include
