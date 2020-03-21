@@ -21,7 +21,7 @@ jobs:
         LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }} # 评论系统的KEY
 
     - name: List output files
-      run: 
+      run: |
         ls -a docs/.vuepress/dist # 显示生成的目录文件
         echo ${{ secrets.SSH_KEY }} > $HOME/id_rsa
         chmod 600 $SSH_PATH/id_rsa
