@@ -18,7 +18,7 @@ jobs:
       run: yarn && yarn build
         
     - name: List output files
-      run: ls -a /docs/.vuepress
+      run: ls -a docs/.vuepress
       
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
