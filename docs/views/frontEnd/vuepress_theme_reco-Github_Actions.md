@@ -32,6 +32,8 @@ tags:
 
 查看此文档前应先了解，[vuepress基本操作](https://tsanfer.xyz/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C)
 
+:::
+
 参考官方文档进行配置：
 
 ::: tip 提示
@@ -42,7 +44,6 @@ tags:
 [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
 
 [Github链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
-
 :::
 
 
