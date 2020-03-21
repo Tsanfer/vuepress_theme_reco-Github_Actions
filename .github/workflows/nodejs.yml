@@ -28,4 +28,4 @@ jobs:
         ftp-server: sftp://39.107.221.57:22/
         ftp-username: root
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: docs/.vuepress/dist # This folder is NOT going to upload by default unless you add it to .git-ftp-include
+        local-dir: docs/.vuepress/dist/ # This folder is NOT going to upload by default unless you add it to .git-ftp-include
