@@ -15,8 +15,7 @@ jobs:
         node-version: '12.x'
         
     - name: Build Project
-      run: |
-        yarn && yarn build --if-present
+      run: yarn && yarn build
         
     - name: List output files
       run: ls
