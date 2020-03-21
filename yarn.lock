@@ -1012,7 +1012,7 @@
   resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-back-to-top/download/@vuepress-reco/vuepress-plugin-back-to-top-1.0.8.tgz#ae2ef6496d026cf9fd6b8fd01f70df360819a8d0"
   integrity sha1-ri72SW0CbPn9a4/QH3DfNggZqNA=
 
-"@vuepress-reco/vuepress-plugin-bgm-player@1.1.2":
+"@vuepress-reco/vuepress-plugin-bgm-player@^1.1.2":
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-bgm-player/download/@vuepress-reco/vuepress-plugin-bgm-player-1.1.2.tgz#8c1966911c2b349a1ac8acfee5838eda47d99f04"
   integrity sha1-jBlmkRwrNJoayKz+5YOO2kfZnwQ=
@@ -1046,7 +1046,7 @@
   resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-pagation/download/@vuepress-reco/vuepress-plugin-pagation-1.0.6.tgz#dab7cb8e8002926b85bbabb6f4aa489d5114f5f9"
   integrity sha1-2rfLjoACkmuFu6u29KpInVEU9fk=
 
-"@vuepress/core@^1.3.1":
+"@vuepress/core@^1.4.0":
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/@vuepress/core/download/@vuepress/core-1.4.0.tgz#a9b09a2615b1f0bf183541d22e69a126b8220f16"
   integrity sha1-qbCaJhWx8L8YNUHSLmmhJrgiDxY=
@@ -1140,7 +1140,7 @@
   dependencies:
     medium-zoom "^1.0.4"
 
-"@vuepress/plugin-nprogress@1.4.0", "@vuepress/plugin-nprogress@^1.4.0":
+"@vuepress/plugin-nprogress@^1.4.0":
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-nprogress/download/@vuepress/plugin-nprogress-1.4.0.tgz#90bb16ab8d43321e5911dea489986de25adb56d1"
   integrity sha1-kLsWq41DMh5ZEd6kiZht4lrbVtE=
@@ -1174,7 +1174,7 @@
     semver "^6.0.0"
     upath "^1.1.0"
 
-"@vuepress/theme-default@^1.3.1":
+"@vuepress/theme-default@^1.4.0":
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/@vuepress/theme-default/download/@vuepress/theme-default-1.4.0.tgz#f0f70effa0ee863a2e25c7682612c8a808f3e156"
   integrity sha1-8PcO/6DuhjouJcdoJhLIqAjz4VY=
@@ -7915,17 +7915,17 @@ vuepress-plugin-container@^2.0.2:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-flowchart@1.4.3:
+vuepress-plugin-flowchart@^1.4.3:
   version "1.4.3"
   resolved "https://registry.npm.taobao.org/vuepress-plugin-flowchart/download/vuepress-plugin-flowchart-1.4.3.tgz#1692807257c9ba02f764ced0caf930c627f65bdb"
   integrity sha1-FpKAclfJugL3ZM7Qyvkwxif2W9s=
   dependencies:
     flowchart.js "^1.11.3"
 
-vuepress-plugin-reading-progress@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.npm.taobao.org/vuepress-plugin-reading-progress/download/vuepress-plugin-reading-progress-1.0.8.tgz#92c1b6c150548fe59e71ef30a00fe3a962bcaad0"
-  integrity sha1-ksG2wVBUj+Wece8woA/jqWK8qtA=
+vuepress-plugin-reading-progress@^1.0.8:
+  version "1.0.9"
+  resolved "https://registry.npm.taobao.org/vuepress-plugin-reading-progress/download/vuepress-plugin-reading-progress-1.0.9.tgz#800cef1ed93abe9ab7aae0147d269d1b1359ef32"
+  integrity sha1-gAzvHtk6vpq3quAUfSadGxNZ7zI=
 
 vuepress-plugin-smooth-scroll@^0.0.3:
   version "0.0.3"
@@ -7934,7 +7934,7 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-theme-reco@1.3.2:
+vuepress-theme-reco@^1.3.2:
   version "1.3.2"
   resolved "https://registry.npm.taobao.org/vuepress-theme-reco/download/vuepress-theme-reco-1.3.2.tgz#42febe9a4ea3d41d0a618169a75c18eb0022a718"
   integrity sha1-Qv6+mk6j1B0KYYFpp1wY6wAipxg=
@@ -7952,13 +7952,13 @@ vuepress-theme-reco@1.3.2:
     valine "1.3.6"
     vue-click-outside "1.0.7"
 
-vuepress@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.npm.taobao.org/vuepress/download/vuepress-1.3.1.tgz#59355081a2c66ba3c9432ffd6e1d4025f9cf8e24"
-  integrity sha1-WTVQgaLGa6PJQy/9bh1AJfnPjiQ=
+vuepress@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npm.taobao.org/vuepress/download/vuepress-1.4.0.tgz#308037b15baec6e251b835fe1fff7da507302b6b"
+  integrity sha1-MIA3sVuuxuJRuDX+H/99pQcwK2s=
   dependencies:
-    "@vuepress/core" "^1.3.1"
-    "@vuepress/theme-default" "^1.3.1"
+    "@vuepress/core" "^1.4.0"
+    "@vuepress/theme-default" "^1.4.0"
     cac "^6.5.6"
     envinfo "^7.2.0"
     opencollective-postinstall "^2.0.2"

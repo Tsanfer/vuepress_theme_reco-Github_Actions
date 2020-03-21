@@ -32,7 +32,7 @@ module.exports = {
           { text: 'CSDN', link: 'https://blog.csdn.net/qq_27961843/', icon: 'reco-csdn' },
           { text: 'BiliBili', link: 'https://space.bilibili.com/12167681', icon: 'reco-bilibili' },
           { text: 'QQ', link: 'tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1124851454', icon: 'reco-qq' },
-          { text: 'twitter', link: 'https://twitter.com/a1124851454', icon: 'reco-twitter' },
+          { text: 'Twitter', link: 'https://twitter.com/a1124851454', icon: 'reco-twitter' },
           { text: 'Gmail', link: 'mailto:a1124851454@gmail.com', icon: 'reco-mail' },
         ]
       }

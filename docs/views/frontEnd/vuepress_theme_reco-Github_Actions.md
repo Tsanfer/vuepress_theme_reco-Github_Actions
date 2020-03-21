@@ -27,21 +27,19 @@ tags:
   <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions"><img src="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg" alt="Build Status"></a>
   <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" alt="Coverage Status"></a>
 </p>
+
 ::: tip 提示
 
 查看此文档前应先了解，[vuepress基本操作](https://tsanfer.xyz/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C)
 
 参考官方文档进行配置：
 
+::: tip 提示
 [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
 
 [VuePress](https://vuepress.vuejs.org/zh/)
 
 [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
-
-:::
-
-::: tip 提示
 
 [Github链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
@@ -346,3 +344,4 @@ jobs:
 
 最后再把代码上传到Github便可自动触发构建，部署到第三方服务器
 
+> 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！ 
