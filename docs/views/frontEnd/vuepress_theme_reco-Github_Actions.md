@@ -180,7 +180,7 @@ sudo yarn
 
 :::
 
-```js {50,51}
+```js {51,52}
 // docs/.vuepress/config.js
 
 module.exports = {
@@ -282,7 +282,7 @@ module.exports = {
 
 :::
 
-```yml {22,23}
+```yml {22,23,32,33}
 # .github/workflows/nodejs.yml
 
 on: push  # 触发此文件运行的条件
