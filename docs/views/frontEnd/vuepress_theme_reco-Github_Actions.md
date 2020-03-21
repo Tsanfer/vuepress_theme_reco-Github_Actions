@@ -37,13 +37,13 @@ tags:
 参考官方文档进行配置：
 
 ::: tip 提示
+
 [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
 
 [VuePress](https://vuepress.vuejs.org/zh/)
 
 [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
 
-[Github链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 :::
 
 
@@ -180,7 +180,7 @@ sudo yarn
 
 :::
 
-```js {20}
+```js {50,51}
 // docs/.vuepress/config.js
 
 module.exports = {
@@ -282,7 +282,7 @@ module.exports = {
 
 :::
 
-```yml {10,11}
+```yml {22,23}
 # .github/workflows/nodejs.yml
 
 on: push  # 触发此文件运行的条件
