@@ -29,7 +29,6 @@ module.exports = {
       { text: '联系', 
         icon: 'reco-message',
         items: [
-          { text: '博客', link: 'https://tsanfer.xyz', icon: 'reco-blog' },
           { text: 'GitHub', link: 'https://github.com/Tsanfer', icon: 'reco-github' },
           { text: 'CSDN', link: 'https://blog.csdn.net/qq_27961843/', icon: 'reco-csdn' },
           { text: 'BiliBili', link: 'https://space.bilibili.com/12167681', icon: 'reco-bilibili' },
