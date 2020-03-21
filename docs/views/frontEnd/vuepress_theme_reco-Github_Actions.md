@@ -121,7 +121,7 @@ sudo yarn install
     "build": "vuepress build docs"
   },
   "dependencies": {
-    "vuepress": "^1.3.1",
+    "vuepress": "^1.4.0",
     "vuepress-theme-reco": "^1.3.2",
     "vuepress-plugin-flowchart": "^1.4.3",
     "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.2",
@@ -316,7 +316,7 @@ jobs:
         ftp-server: sftp://39.107.221.57:22 # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
         ftp-username: ${{ secrets.FTP_USERNAME }} # FTP用户名
         ftp-password: ${{ secrets.FTP_PASSWORD }} # FTP密码
-        git-ftp-args: --insecure --remote-root /home/www/htdocs # 要部署到服务器的哪个位置（如果是FTP连接的话--insecure不用加）
+        git-ftp-args: --insecure --remote-root /home/www/htdocs # 要部署到服务器的哪个位置（我这用的是SFTP，如果是FTP连接的话--insecure不用加）
         local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
 ```
 
