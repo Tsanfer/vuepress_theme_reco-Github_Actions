@@ -1,30 +1,31 @@
-name: Auto Deploy
-
-on:
-  push:
-    branches:
-      - master
-
+on: push
+name: Build and Publish Front End Framework Website
 jobs:
-  build:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '10.x'
-      - name: Build
-        run: yarn && yarn build
-        env:
-          LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }}
-          LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }}
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
-        env:
-          FTP_SERVER: sftp://39.107.221.57:22/
-          FTP_USERNAME: root
-          FTP_PASSWORD: ${{ secrets.BLOG_FTP_PASSWORD }}
-          LOCAL_DIR: docs/.vuepress/dist
-          REMOTE_DIR: /home/www/htdocs
-          ARGS: --delete --transfer-all --exclude=logreport --verbose
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: 2
+
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        
+    - name: Build Project
+      run: |
+        yarn install
+        yarn build --if-present
+        
+    - name: List output files
+      run: ls
+      
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+      with:
+        ftp-server: ftp://39.107.221.57:22/
+        ftp-username: root
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: docs/.vuepress/dist # This folder is NOT going to upload by default unless you add it to .git-ftp-include
