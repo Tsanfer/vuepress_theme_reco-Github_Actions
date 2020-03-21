@@ -15,12 +15,10 @@ jobs:
         node-version: '12.x'
         
     - name: Build Project
-      run: |
-        npm install
-        npm run build --if-present
+      run: yarn && yarn build
         
     - name: List output files
-      run: ls
+      run: ls /docs/.vuepress
       
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
