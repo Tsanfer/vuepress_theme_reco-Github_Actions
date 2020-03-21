@@ -48,7 +48,7 @@ module.exports = {
     // 评论设置
     valineConfig: {
       appId: process.env.LEANCLOUD_APP_ID,
-      appKey: process.env.LEANCLOUD_APP_ID,
+      appKey: process.env.LEANCLOUD_APP_KEY,
     }
   },
 
