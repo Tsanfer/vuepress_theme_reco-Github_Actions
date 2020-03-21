@@ -1,5 +1,5 @@
 on: push
-name: Build and Publish Front End Framework Website
+name: Github Actions
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
