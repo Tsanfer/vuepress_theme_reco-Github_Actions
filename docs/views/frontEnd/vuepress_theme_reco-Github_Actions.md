@@ -8,6 +8,7 @@ tags:
  - VuePress
  - Github
  - 博客
+ - 持续集成
 ---
 
 ::: tip
