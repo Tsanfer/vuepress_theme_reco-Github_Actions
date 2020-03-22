@@ -13,6 +13,8 @@
 
 
 
+
+
 参考官方文档进行配置：
 
 > [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
@@ -28,7 +30,6 @@
 
 [最终效果链接](https://tsanfer.xyz/)
 
-![](https://cdn-image.tsanfer.xyz/img/20200321232917.png)
 
 
 
