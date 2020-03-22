@@ -1,6 +1,6 @@
 \---
 
-title: 蓝桥杯单片机(CT107D)需要准备的一些文件的写法(First Prepare for Lanqiao Cup MCU Competition)
+title: 蓝桥杯单片机(CT107D)需要准备的一些文件的写法
 
 date: 2020-03-02
 
