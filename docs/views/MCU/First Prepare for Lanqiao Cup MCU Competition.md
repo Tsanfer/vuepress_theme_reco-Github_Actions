@@ -1,20 +1,12 @@
-\---
-
+---
 title: 蓝桥杯单片机(CT107D)需要准备的一些文件的写法
-
 date: 2020-03-02
-
 sidebar: 'auto'
-
 categories:
-
- \- MCU
-
+ - MCU
 tags:
-
- \- 单片机
-
-\---
+ - 单片机
+---
 
 
 
