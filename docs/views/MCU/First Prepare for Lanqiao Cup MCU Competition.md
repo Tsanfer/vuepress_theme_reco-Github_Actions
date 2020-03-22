@@ -1294,13 +1294,6 @@ uint sonic_get(void)
 - [x] pwm
 - [ ] 客观题
 
-*[hc138]: 3位译码器
-*[drivers]:步进电机，直流电机，继电器，蜂鸣器，功放
-*[ds18b20]:温度传感器
-*[ds1302]:时钟芯片
-*[AT24C02]:EEPROM
-*[PCF8591]:ADC/DAC
-
 [1]:https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/archive/Sources.zip
 [2]:https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/raw/master/Schematic_Circuit_Diagram%20_(%E7%94%B5%E8%B7%AF%E5%9B%BE)/CT107D%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86%E5%9B%BE.pdf
 [3]:https://assets.nexperia.com/documents/data-sheet/74HC_HCT138.pdf
