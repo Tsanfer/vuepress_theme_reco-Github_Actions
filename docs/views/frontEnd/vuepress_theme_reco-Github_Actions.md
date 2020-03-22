@@ -16,6 +16,10 @@ tags:
 
 :::
 
+
+
+[[](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
+
 <!-- more -->
 
 > [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)

@@ -20,7 +20,7 @@ tags:
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 
-> [最新博客链接](https://tsanfer.xyz/创建-vuepress-githubpages-travisci-在线文档)
+> [最新博客链接](https://tsanfer.xyz/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html)
 
 > [VuePress 在线文档链接_Github Pages](https://tsanfer.github.io/VuePress-GithubPages-TravisCI/)
 
