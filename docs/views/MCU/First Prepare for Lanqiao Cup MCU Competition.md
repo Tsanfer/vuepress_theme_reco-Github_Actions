@@ -1,4 +1,25 @@
+\---
+
+title: 蓝桥杯单片机(CT107D)需要准备的一些文件的写法(First Prepare for Lanqiao Cup MCU Competition)
+
+date: 2020-03-02
+
+sidebar: 'auto'
+
+categories:
+
+ \- MCU
+
+tags:
+
+ \- 单片机
+
+\---
+
+
+
 ## 实物图
+
 ![CT107D实物图](https://img-blog.csdnimg.cn/20190902221159377.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI3OTYxODQz,size_16,color_FFFFFF,t_70)
 ## 电路原理图
 ![CT107D电路原理图](https://img-blog.csdnimg.cn/20190219230002735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI3OTYxODQz,size_16,color_FFFFFF,t_70)
