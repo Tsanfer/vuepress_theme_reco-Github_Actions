@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@master # 切换分支到master
       with:
-        fetch-depth: 2
+        fetch-depth: 10
 
     - name: Use Node.js 12.x  
       uses: actions/setup-node@v1
