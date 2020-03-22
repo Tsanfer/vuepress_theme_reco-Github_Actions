@@ -30,6 +30,8 @@ tags:
 
 ## 最终效果
 
+[最终效果链接](https://tsanfer.xyz/VuePress-GithubPages-TravisCI/https://tsanfer.xyz/VuePress-GithubPages-TravisCI/)
+
 ![](https://cdn-image.tsanfer.xyz/img/20200316184115.png)
 
 
