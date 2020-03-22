@@ -1,50 +1,26 @@
----
-title: vuepress-theme-reco + Github Actions 构建静态博客，部署到第三方服务器
-date: 2020-03-21
-sidebar: 'auto'
-categories:
- - 前端
-tags:
- - VuePress
- - Github
- - 博客
----
-
-::: tip
-
-先下载主题模板，再根据自己的需要进行相应的修改，再根据自己的服务器配置Github Actions文件，最后上传到Github，触发Github Actions自动构建部署到服务器
-
-:::
-
-<!-- more -->
-
-> [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
-
-> [Github链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
-
 
 <p align="center">
   <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions"><img src="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg" alt="Build Status"></a>
   <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" alt="Coverage Status"></a>
 </p>
 
-::: tip 提示
+
+> [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
+
+> [Github链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
 查看此文档前应先了解，[vuepress基本操作](https://tsanfer.xyz/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C)
 
-:::
+
 
 参考官方文档进行配置：
 
-::: tip 提示
+> [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
 
-[vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
+> [VuePress](https://vuepress.vuejs.org/zh/)
 
-[VuePress](https://vuepress.vuejs.org/zh/)
+> [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
 
-[SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
-
-:::
 
 
 
@@ -174,15 +150,11 @@ sudo yarn
 
 然后根据需要更改一些内容和设置，参考官方的文档，可自行取舍相应内容
 
-::: tip 提示
+> [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
+>
+> [VuePress](https://vuepress.vuejs.org/zh/)
 
-[vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
-
-[VuePress](https://vuepress.vuejs.org/zh/)
-
-:::
-
-```js {51,52}
+```javascript
 // docs/.vuepress/config.js
 
 module.exports = {
@@ -278,13 +250,9 @@ module.exports = {
 
 在Github网页上添加Github Actions配置文件，参考官方的文档，可自行取舍相应内容，其中需要保密的部分需要添加Github Secrets环境变量
 
-::: tip 提示
+> [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
 
-[SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
-
-:::
-
-```yml {22,23,32,33}
+```yml
 # .github/workflows/nodejs.yml
 
 on: push  # 触发此文件运行的条件

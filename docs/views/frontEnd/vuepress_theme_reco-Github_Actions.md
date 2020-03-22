@@ -182,7 +182,7 @@ sudo yarn
 
 :::
 
-```js {51,52}
+```javascript {51,52}
 // docs/.vuepress/config.js
 
 module.exports = {
