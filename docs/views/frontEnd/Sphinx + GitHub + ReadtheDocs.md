@@ -1,16 +1,16 @@
 ---
 title: 创建Sphinx + GitHub + ReadtheDocs托管文档
 date: 2020-03-07
-sidebar: 'auto'
+sidebar: "auto"
 categories:
- - 前端
+  - 前端
 tags:
- - Github
- - 在线文档
+  - Github
+  - 在线文档
 ---
 
-::: tip 
-在本地配置好Linux环境（我用的WSL），然后配置好Sphinx生成文档的样式，最后推送到Github，并触发Readthedocs自动构建、生成在线文档
+::: tip
+在本地配置好 Linux 环境（我用的 WSL），然后配置好 Sphinx 生成文档的样式，最后推送到 Github，并触发 Readthedocs 自动构建、生成在线文档
 :::
 
 <!-- more -->
@@ -22,21 +22,21 @@ frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86
 src="https://music.163.com/outchain/player?type=2&id=465675050&auto=0&height=66">
 </iframe>
 
-|[Sphinx](https://www.sphinx-doc.org/)|[Github](https://github.com/)|[Readthedocs](https://readthedocs.org/)|
-|:-:|:-:|:-:|
-|[<img src="https://i.loli.net/2020/02/19/JP8td4QvCiY1L3g.png" width="300px" />](https://www.sphinx-doc.org/)|[<img src="https://i.loli.net/2020/02/19/j2Ad8meR5UF3O6P.png" width="300px" />](https://github.com/)|[<img src="https://i.loli.net/2020/02/19/oWvA34qxU9DQyYu.png" width="300px" />](https://readthedocs.org/)|
+|                                    [Sphinx](https://www.sphinx-doc.org/)                                     |                                    [Github](https://github.com/)                                     |                                  [Readthedocs](https://readthedocs.org/)                                  |
+| :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+| [<img src="https://i.loli.net/2020/02/19/JP8td4QvCiY1L3g.png" width="300px" />](https://www.sphinx-doc.org/) | [<img src="https://i.loli.net/2020/02/19/j2Ad8meR5UF3O6P.png" width="300px" />](https://github.com/) | [<img src="https://i.loli.net/2020/02/19/oWvA34qxU9DQyYu.png" width="300px" />](https://readthedocs.org/) |
 
 ## 最终效果
 
 ![](https://i.loli.net/2020/02/20/SmIoev5lCOQiXJw.png)
 
-## Linux配置
+## Linux 配置
 
->Win10 Ubuntu子系统路径：`%USERNAME%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs`
+> Win10 Ubuntu 子系统路径：`%USERNAME%\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs`
 
-### 更换Ubuntu源
+### 更换 Ubuntu 源
+
 #### step 1: 首先看看国内有哪些源
-
 
 |   名称   |                     域名                      |
 | :------: | :-------------------------------------------: |
@@ -61,11 +61,12 @@ Ubuntu 18.04.1，查出来的代号就是 bionic.
 紫色边框：Ubuntu 的代号（Codename）
 
 #### step 4: 修改源文件 sources.list
+
 先备份
 
 `sudo cp /etc/apt/sources.list /etc/apt/sources.list.bcakup`
 
-再修改（如改为163源）
+再修改（如改为 163 源）
 
 ```bash
 #163源
@@ -88,6 +89,7 @@ deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe
 ```
 
 #### step 5: 更新软件列表和升级
+
 更新软件列表（检测出可更新的软件）：
 
 `sudo apt update`
@@ -96,7 +98,7 @@ deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe
 
 `sudo apt upgrade`
 
-### 安装Python3、pip
+### 安装 Python3、pip
 
 ```bash
 # 安装python3
@@ -105,10 +107,9 @@ sudo apt install python3
 sudo apt install python3-pip
 ```
 
-#### 更换pip源
+#### 更换 pip 源
 
-pip国内的一些镜像
-
+pip 国内的一些镜像
 
 |     名称     |                   域名                    |
 | :----------: | :---------------------------------------: |
@@ -124,9 +125,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 trusted-host=mirrors.aliyun.com
 ```
 
-
-
-## Github配置
+## Github 配置
 
 克隆 一个新的公共的空白仓库到本地 `~\Sphinx_GitHub_ReadtheDocs`
 
@@ -138,17 +137,15 @@ trusted-host=mirrors.aliyun.com
 └── README.md
 ```
 
+## Sphinx 配置
 
-
-## Sphinx配置
-
-### 安装Sphinx、及其插件
+### 安装 Sphinx、及其插件
 
 ```bash
 pip3 install sphinx sphinx_rtd_theme recommonmark sphinx-markdown-tables sphinxemoji
 ```
 
-### 初始化Sphinx
+### 初始化 Sphinx
 
 ```bash
 # 进入Git根目录
@@ -192,8 +189,7 @@ make html
 
 浏览器打开`./build/index.html`查看
 
-
-### 配置Sphinx主题，插件
+### 配置 Sphinx 主题，插件
 
 配置`./source/conf.py`配置文件：
 
@@ -221,7 +217,7 @@ html_theme = 'sphinx_rtd_theme'
 master_doc = 'index'
 ```
 
-添加`./requirements.txt` pip要求文件（**Readthedocs配置**时需要用到）
+添加`./requirements.txt` pip 要求文件（**Readthedocs 配置**时需要用到）
 
 ```text
 # markdown suport
@@ -248,7 +244,7 @@ sphinx-rtd-theme
 .. toctree::
    :maxdepth: 2
    :numbered:
-   
+
    Sphinx_GitHub_ReadtheDocs
 ```
 
@@ -258,21 +254,19 @@ sphinx-rtd-theme
 # here is a test markdown file
 ```
 
-然后同步到Github
+然后同步到 Github
 
-
-
-## Readthedocs配置
+## Readthedocs 配置
 
 导入代码库:
 ![](https://i.loli.net/2020/02/18/OvZl5xmkRyiWn1U.png)
 
-指定pip要求文件: `./requirements.txt`
+指定 pip 要求文件: `./requirements.txt`
 ![](https://i.loli.net/2020/02/18/FbK8JTxoN72M5G9.png)
 
 **完成**
 
-> 官方Sphinx + Readthedocs教程
+> 官方 Sphinx + Readthedocs 教程
 
 <iframe
 src="https://player.bilibili.com/player.html?aid=79278898&cid=135670902&page=1"

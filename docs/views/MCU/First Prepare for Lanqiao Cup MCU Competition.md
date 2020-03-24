@@ -1,35 +1,33 @@
 ---
 title: 蓝桥杯单片机(CT107D)需要准备的一些文件的写法
 date: 2020-03-02
-sidebar: 'auto'
+sidebar: "auto"
 categories:
- - MCU
+  - MCU
 tags:
- - 单片机
+  - 单片机
 ---
-
-
 
 ## 实物图
 
 ![CT107D实物图](https://img-blog.csdnimg.cn/20190902221159377.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI3OTYxODQz,size_16,color_FFFFFF,t_70)
+
 ## 电路原理图
+
 ![CT107D电路原理图](https://img-blog.csdnimg.cn/20190219230002735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI3OTYxODQz,size_16,color_FFFFFF,t_70)
-- [CT107D电路原理图][2] 
 
+- [CT107D 电路原理图][2]
 
-### ***[独立下载程序(可直接下载运行)_CT107D赛前准备][9]*** ###
+### **_[独立下载程序(可直接下载运行)\_CT107D 赛前准备][9]_**
 
-### ***[独立下载程序(可直接下载运行)_CT107D赛前准备_含USB转串口驱动][10]*** ###
+### **_[独立下载程序(可直接下载运行)*CT107D 赛前准备*含 USB 转串口驱动][10]_**
 
 **<font color=#0099ff>更新时间：2019-3-22</font>**
 
-**[GitHub链接][4]**
+**[GitHub 链接][4]**
 
-- **[所有文件(源代码)][1]** 
+- **[所有文件(源代码)][1]**
   **`common.h` `main.c` `timer.c` `hc138.c` `led.c` `drivers.c` `digital_tube.c` `key.c` `ds18b20.c` `ds1302.c` `i2c.c` `sonic_infra.c`**
-
-
 
 ## 功能介绍
 
@@ -67,17 +65,14 @@ Declare variable first, then operate;  //uchar i;  TR0=0;
 (协议传输中拉低拉高需要一定的时间，因查看相应的说明书)；// PCF8591的速度比I2C慢,SCL需要延迟5us
 ```
 
-
-  ### 
-
-
+###
 
 ## 所有文件(all files)
 
-
-  ### common.h
+### common.h
 
 **`common.h`**
+
 ```c
 #ifndef COMMON_H
 #define COMMON_H
@@ -132,6 +127,7 @@ extern void dac_set(uchar dat);
 ```
 
 ### main.c
+
 **`main.c`**
 
 ```c
@@ -167,6 +163,7 @@ void main(void)
 ```
 
 ### timer.c
+
 **`timer.c`**
 
 ```c
@@ -305,7 +302,7 @@ void cont_run(void)
 				case 16:led_on_N(~key_val);break;
 				default:break;
 			}
-		}	
+		}
 	}
 	else
 	{
@@ -476,7 +473,7 @@ void pwm_run(void)
 				disp_val[5]=pwm_data/100;
 				disp_val[6]=0x11;
 				disp_val[7]=0x11;
-			}	
+			}
 		}
 	}
 }
@@ -489,7 +486,7 @@ void Timer0_Routine(void) interrupt 1
 	{
 		clock=0;
 		disp_scan();
-	}	
+	}
 	pwm_run();
 	TR0=1;
 }
@@ -551,12 +548,13 @@ void Uart(void) interrupt 4
 //{
 //	//50ms
 //	AUXR&=0xef;
-//	
+//
 //	AUXR|=0x10;
 //}
 ```
 
 ### hc138.c
+
 **`hc138.c`**
 
 ```c
@@ -600,6 +598,7 @@ void hc138_seg(void)
 ```
 
 ### led.c
+
 **`led.c`**
 
 ```c
@@ -623,6 +622,7 @@ void led_on_N(uchar led)
 ```
 
 ### drivers.c
+
 **`drivers.c`**
 
 ```c
@@ -690,6 +690,7 @@ void buzz_off(void)
 ```
 
 ### digital_tube.c
+
 **`digital_tube.c`**
 
 ```c
@@ -734,6 +735,7 @@ void disp_val_none(void)
 ```
 
 ### key.c
+
 **`key.c`**
 
 ```c
@@ -795,6 +797,7 @@ void key_scan(void)
 ```
 
 ### ds18b20.c
+
 **`ds18b20.c`**
 
 ```c
@@ -897,6 +900,7 @@ uchar ds18b20_get(void)
 ```
 
 ### ds1302.c (burst_mode)
+
 **`ds1302.c`**
 
 ```c
@@ -1003,6 +1007,7 @@ void ds1302Init(void)
 ```
 
 ### i2c.c (Page_Write, Random_Sequential_Read)
+
 **`i2c.c`**
 
 ```c
@@ -1207,7 +1212,9 @@ void e2_read(uchar word,uchar *dat,uchar len)
 //	}
 //}
 ```
+
 ### sonic_infra.c
+
 **`sonic_infra.c`**
 
 ```c
@@ -1277,6 +1284,7 @@ uint sonic_get(void)
 	return distance;
 }
 ```
+
 </br>
 
 - [x] common.h
@@ -1294,13 +1302,13 @@ uint sonic_get(void)
 - [x] pwm
 - [ ] 客观题
 
-[1]:https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/archive/Sources.zip
-[2]:https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/raw/master/Schematic_Circuit_Diagram%20_(%E7%94%B5%E8%B7%AF%E5%9B%BE)/CT107D%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86%E5%9B%BE.pdf
-[3]:https://assets.nexperia.com/documents/data-sheet/74HC_HCT138.pdf
-[4]:https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition
-[5]:https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf
-[6]:https://datasheets.maximintegrated.com/en/ds/DS1302.pdf
-[7]:http://html.alldatasheet.com/html-pdf/56063/ATMEL/AT24C02/126/1/AT24C02.html
-[8]:https://www.nxp.com/docs/en/data-sheet/PCF8591.pdf
-[9]:https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/raw/master/%E7%8B%AC%E7%AB%8B%E4%B8%8B%E8%BD%BD%E7%A8%8B%E5%BA%8F(%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E8%BF%90%E8%A1%8C)_CT107D%E8%B5%9B%E5%89%8D%E5%87%86%E5%A4%87.exe
-[10]:https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/raw/master/%E7%8B%AC%E7%AB%8B%E4%B8%8B%E8%BD%BD%E7%A8%8B%E5%BA%8F(%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E8%BF%90%E8%A1%8C)_CT107D%E8%B5%9B%E5%89%8D%E5%87%86%E5%A4%87_%E5%90%ABUSB%E8%BD%AC%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8.exe
+[1]: https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/archive/Sources.zip
+[2]: https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/raw/master/Schematic_Circuit_Diagram%20_(%E7%94%B5%E8%B7%AF%E5%9B%BE)/CT107D%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86%E5%9B%BE.pdf
+[3]: https://assets.nexperia.com/documents/data-sheet/74HC_HCT138.pdf
+[4]: https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition
+[5]: https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf
+[6]: https://datasheets.maximintegrated.com/en/ds/DS1302.pdf
+[7]: http://html.alldatasheet.com/html-pdf/56063/ATMEL/AT24C02/126/1/AT24C02.html
+[8]: https://www.nxp.com/docs/en/data-sheet/PCF8591.pdf
+[9]: https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/raw/master/%E7%8B%AC%E7%AB%8B%E4%B8%8B%E8%BD%BD%E7%A8%8B%E5%BA%8F(%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E8%BF%90%E8%A1%8C)_CT107D%E8%B5%9B%E5%89%8D%E5%87%86%E5%A4%87.exe
+[10]: https://github.com/Tsanfer/Lanqiao_Cup_MCU_Competition/raw/master/%E7%8B%AC%E7%AB%8B%E4%B8%8B%E8%BD%BD%E7%A8%8B%E5%BA%8F(%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E8%BF%90%E8%A1%8C)_CT107D%E8%B5%9B%E5%89%8D%E5%87%86%E5%A4%87_%E5%90%ABUSB%E8%BD%AC%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8.exe
