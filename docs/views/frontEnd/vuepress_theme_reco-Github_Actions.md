@@ -402,7 +402,5 @@ jobs:
 
 最后再把代码上传到 Github 便可自动触发构建，部署到第三方服务器
 
-上传步骤（主要是试验一下asciinema）
-
 
 > 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！
