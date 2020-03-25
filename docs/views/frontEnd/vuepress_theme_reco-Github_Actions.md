@@ -402,9 +402,9 @@ jobs:
 
 最后再把代码上传到 Github 便可自动触发构建，部署到第三方服务器
 
+上传步骤（主要是试验一下asciinema）
 
-
-
+<script id="asciicast-DK56U2Swbp4xgjdeUQU8fgRWn" src="https://asciinema.org/a/DK56U2Swbp4xgjdeUQU8fgRWn.js" async></script>
 
 
 
