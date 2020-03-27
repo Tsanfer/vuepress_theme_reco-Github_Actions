@@ -72,9 +72,10 @@ module.exports = {
     ],
     sidebar: "auto", //在所有页面中启用自动生成侧栏
     record: "蜀ICP备20005033号-1",
-    recordLink: 'https://icp.chinaz.com/tsanfer.xyz',
-    cyberSecurityRecord: '川公网安备 51110202000301号',
-    cyberSecurityLink: 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51110202000301',
+    recordLink: "https://icp.chinaz.com/tsanfer.xyz",
+    cyberSecurityRecord: "川公网安备 51110202000301号",
+    cyberSecurityLink:
+      "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51110202000301",
     startYear: "2020", // 项目开始时间，只填写年份
     lastUpdated: "最后更新时间", // string | boolean
     author: "Tsanfer",
@@ -144,8 +145,7 @@ module.exports = {
           {
             name: "Forever",
             artist: "PIKASONIC",
-            url:
-              "https://cdn-image.tsanfer.xyz/music/forever%20mst.mp3",
+            url: "https://cdn-image.tsanfer.xyz/music/forever%20mst.mp3",
             cover:
               "https://p1.music.126.net/LjXufn3OaIgf8OwaEP_xcQ==/109951164419438501.jpg"
           },
@@ -178,6 +178,7 @@ module.exports = {
     ],
     ["vuepress-plugin-smooth-scroll"], // 平滑滚动
     ["@vuepress/nprogress"], // 加载进度条
-    ["reading-progress"] // 阅读进度条
+    ["reading-progress"], // 阅读进度条
+    ["vuepress-plugin-code-copy", true]
   ]
 };

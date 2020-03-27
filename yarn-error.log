@@ -1,45 +1,40 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js
 
 PATH: 
-  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64_win/compiler:/mnt/e/Program Files (x86)/NetSarang/Xftp 6/:/mnt/e/Program Files (x86)/STMicroelectronics/st_toolset/asm:/mnt/e/Program Files (x86)/NetSarang/Xshell 6/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/e/Program Files/nodejs/:/mnt/e/Program Files/wsl-terminal-0.9.0/wsl-terminal:/mnt/c/ProgramData/chocolatey/bin:/mnt/e/Program Files (x86)/Yarn/bin/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Admin/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Admin/AppData/Local/GitHubDesktop/bin:/mnt/e/intelFPGA/18.0/modelsim_ae/win32aloem:/mnt/e/intelFPGA/18.0/modelsim_ase/win32aloem:/mnt/e/Users/Admin/AppData/Local/Programs/Fiddler:/mnt/c/Users/Admin/AppData/Roaming/npm:/mnt/c/Users/Admin/AppData/Local/Yarn/bin:/mnt/d/Program Files/Microsoft VS Code/bin
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
 
 Yarn version: 
   1.22.4
 
 Node version: 
-  8.10.0
+  12.16.1
 
 Platform: 
   linux x64
 
 Trace: 
-  Error: connect ECONNREFUSED 47.246.23.102:443
-      at Object._errnoException (util.js:1022:11)
-      at _exceptionWithHostPort (util.js:1044:20)
-      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+  SyntaxError: /mnt/k/Git_Bash/my-blog/package.json: Unexpected token } in JSON at position 413
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
-    "name": "tsanfer_blog",
-    "description": "personal blog",
-    "main": "index.js",
-    "repository": "https://github.com/Tsanfer",
-    "author": "Tsanfer",
-    "license": "MIT",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
       "dev": "vuepress dev docs",
       "build": "vuepress build docs"
     },
     "dependencies": {
-      "vuepress": "1.3.1",
-      "vuepress-theme-reco": "1.3.2",
-      "vuepress-plugin-flowchart": "1.4.3",
-      "@vuepress-reco/vuepress-plugin-bgm-player": "1.1.2",
-      "vuepress-plugin-dynamic-title": "0.0.5",
-      "vuepress-plugin-mathjax": "1.2.8",
-      "@vuepress/plugin-nprogress": "1.4.0"
+      "vuepress": "^1.4.0",
+      "vuepress-theme-reco": "^1.3.2",
+      "vuepress-plugin-flowchart": "^1.4.3",
+      "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.2",
+      "@vuepress/plugin-nprogress": "^1.4.0",
+      "vuepress-plugin-reading-progress": "^1.0.8",
+      "vuepress-plugin-code-copy": "^1.0.6",
     }
   }
 
@@ -1061,7 +1056,7 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-back-to-top/download/@vuepress-reco/vuepress-plugin-back-to-top-1.0.8.tgz#ae2ef6496d026cf9fd6b8fd01f70df360819a8d0"
     integrity sha1-ri72SW0CbPn9a4/QH3DfNggZqNA=
   
-  "@vuepress-reco/vuepress-plugin-bgm-player@1.1.2":
+  "@vuepress-reco/vuepress-plugin-bgm-player@^1.1.2":
     version "1.1.2"
     resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-bgm-player/download/@vuepress-reco/vuepress-plugin-bgm-player-1.1.2.tgz#8c1966911c2b349a1ac8acfee5838eda47d99f04"
     integrity sha1-jBlmkRwrNJoayKz+5YOO2kfZnwQ=
@@ -1095,7 +1090,7 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/@vuepress-reco/vuepress-plugin-pagation/download/@vuepress-reco/vuepress-plugin-pagation-1.0.6.tgz#dab7cb8e8002926b85bbabb6f4aa489d5114f5f9"
     integrity sha1-2rfLjoACkmuFu6u29KpInVEU9fk=
   
-  "@vuepress/core@^1.3.1":
+  "@vuepress/core@^1.4.0":
     version "1.4.0"
     resolved "https://registry.npm.taobao.org/@vuepress/core/download/@vuepress/core-1.4.0.tgz#a9b09a2615b1f0bf183541d22e69a126b8220f16"
     integrity sha1-qbCaJhWx8L8YNUHSLmmhJrgiDxY=
@@ -1223,7 +1218,7 @@ Lockfile:
       semver "^6.0.0"
       upath "^1.1.0"
   
-  "@vuepress/theme-default@^1.3.1":
+  "@vuepress/theme-default@^1.4.0":
     version "1.4.0"
     resolved "https://registry.npm.taobao.org/@vuepress/theme-default/download/@vuepress/theme-default-1.4.0.tgz#f0f70effa0ee863a2e25c7682612c8a808f3e156"
     integrity sha1-8PcO/6DuhjouJcdoJhLIqAjz4VY=
@@ -1407,7 +1402,17 @@ Lockfile:
       mime-types "~2.1.24"
       negotiator "0.6.2"
   
-  acorn@^6.2.1:
+  acorn-dynamic-import@^4.0.0:
+    version "4.0.0"
+    resolved "https://registry.npm.taobao.org/acorn-dynamic-import/download/acorn-dynamic-import-4.0.0.tgz#482210140582a36b83c3e342e1cfebcaa9240948"
+    integrity sha1-SCIQFAWCo2uDw+NC4c/ryqkkCUg=
+  
+  acorn-jsx@^5.0.1:
+    version "5.2.0"
+    resolved "https://registry.npm.taobao.org/acorn-jsx/download/acorn-jsx-5.2.0.tgz#4c66069173d6fdd68ed85239fc256226182b2ebe"
+    integrity sha1-TGYGkXPW/daO2FI5/CViJhgrLr4=
+  
+  acorn@^6.1.1, acorn@^6.2.1:
     version "6.4.1"
     resolved "https://registry.npm.taobao.org/acorn/download/acorn-6.4.1.tgz?cache=0&sync_timestamp=1583796606796&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Facorn%2Fdownload%2Facorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
     integrity sha1-Ux5Yuj9RudrLmmZGyk3r9bFMpHQ=
@@ -1567,7 +1572,7 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/array-flatten/download/array-flatten-1.1.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Farray-flatten%2Fdownload%2Farray-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
     integrity sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=
   
-  array-flatten@^2.1.0, array-flatten@^2.1.2:
+  array-flatten@^2.1.0:
     version "2.1.2"
     resolved "https://registry.npm.taobao.org/array-flatten/download/array-flatten-2.1.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Farray-flatten%2Fdownload%2Farray-flatten-2.1.2.tgz#24ef80a28c1a893617e2149b0c6d0d788293b099"
     integrity sha1-JO+AoowaiTYX4hSbDG0NeIKTsJk=
@@ -1943,6 +1948,20 @@ Lockfile:
       caniuse-lite "^1.0.30001030"
       electron-to-chromium "^1.3.363"
       node-releases "^1.1.50"
+  
+  buble@^0.19.7:
+    version "0.19.8"
+    resolved "https://registry.npm.taobao.org/buble/download/buble-0.19.8.tgz#d642f0081afab66dccd897d7b6360d94030b9d3d"
+    integrity sha1-1kLwCBr6tm3M2JfXtjYNlAMLnT0=
+    dependencies:
+      acorn "^6.1.1"
+      acorn-dynamic-import "^4.0.0"
+      acorn-jsx "^5.0.1"
+      chalk "^2.4.2"
+      magic-string "^0.25.3"
+      minimist "^1.2.0"
+      os-homedir "^2.0.0"
+      regexpu-core "^4.5.4"
   
   buffer-from@^1.0.0:
     version "1.1.1"
@@ -2360,6 +2379,16 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/component-emitter/download/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
     integrity sha1-FuQHD7qK4ptnnyIVhT7hgasuq8A=
   
+  component-props@1.1.1:
+    version "1.1.1"
+    resolved "https://registry.npm.taobao.org/component-props/download/component-props-1.1.1.tgz#f9b7df9b9927b6e6d97c9bd272aa867670f34944"
+    integrity sha1-+bffm5kntubZfJvScqqGdnDzSUQ=
+  
+  component-xor@0.0.4:
+    version "0.0.4"
+    resolved "https://registry.npm.taobao.org/component-xor/download/component-xor-0.0.4.tgz#c55d83ccc1b94cd5089a4e93fa7891c7263e59aa"
+    integrity sha1-xV2DzMG5TNUImk6T+niRxyY+Wao=
+  
   compressible@~2.0.16:
     version "2.0.18"
     resolved "https://registry.npm.taobao.org/compressible/download/compressible-2.0.18.tgz#af53cca6b070d4c3c0750fbd77286a6d7cc46fba"
@@ -2511,7 +2540,7 @@ Lockfile:
       browserslist "^4.8.3"
       semver "7.0.0"
   
-  core-js@^2.4.0:
+  core-js@^2.4.0, core-js@^2.6.5:
     version "2.6.11"
     resolved "https://registry.npm.taobao.org/core-js/download/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
     integrity sha1-OIMUafmSK97Y7iHJ3EaYXgOZMIw=
@@ -2797,6 +2826,11 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/de-indent/download/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
     integrity sha1-sgOOhG3DO6pXlhKNCAS0VbjB4h0=
   
+  debounce@^1.2.0:
+    version "1.2.0"
+    resolved "https://registry.npm.taobao.org/debounce/download/debounce-1.2.0.tgz#44a540abc0ea9943018dc0eaa95cce87f65cd131"
+    integrity sha1-RKVAq8DqmUMBjcDqqVzOh/Zc0TE=
+  
   debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.9:
     version "2.6.9"
     resolved "https://registry.npm.taobao.org/debug/download/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -2841,13 +2875,6 @@ Lockfile:
     integrity sha1-gKTdMjdIOEv6JICDYirt7Jgq3/M=
     dependencies:
       mimic-response "^1.0.0"
-  
-  deconstruct-merge@^1.1.0:
-    version "1.1.0"
-    resolved "https://registry.npm.taobao.org/deconstruct-merge/download/deconstruct-merge-1.1.0.tgz#ed9986ce729d9e67bdbc5780a771a021947ab3d3"
-    integrity sha1-7ZmGznKdnme9vFeAp3GgIZR6s9M=
-    dependencies:
-      array-flatten "^2.1.2"
   
   deep-equal@^1.0.1:
     version "1.1.1"
@@ -3029,6 +3056,14 @@ Lockfile:
     integrity sha1-ZyGp2u4uKTaClVtq/kFncWJ7t2g=
     dependencies:
       utila "~0.4"
+  
+  dom-iterator@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.npm.taobao.org/dom-iterator/download/dom-iterator-1.0.0.tgz#9c09899846ec41c2d257adc4d6015e4759ef05ad"
+    integrity sha1-nAmJmEbsQcLSV63E1gFeR1nvBa0=
+    dependencies:
+      component-props "1.1.1"
+      component-xor "0.0.4"
   
   dom-serializer@0:
     version "0.2.2"
@@ -3270,11 +3305,6 @@ Lockfile:
     dependencies:
       esrecurse "^4.1.0"
       estraverse "^4.1.1"
-  
-  esm@^3.0.34:
-    version "3.2.25"
-    resolved "https://registry.npm.taobao.org/esm/download/esm-3.2.25.tgz#342c18c29d56157688ba5ce31f8431fbb795cc10"
-    integrity sha1-NCwYwp1WFXaIulzjH4Qx+7eVzBA=
   
   esprima@^4.0.0:
     version "4.0.1"
@@ -5014,6 +5044,13 @@ Lockfile:
     dependencies:
       yallist "^3.0.2"
   
+  magic-string@^0.25.3:
+    version "0.25.7"
+    resolved "https://registry.npm.taobao.org/magic-string/download/magic-string-0.25.7.tgz?cache=0&sync_timestamp=1583500499850&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmagic-string%2Fdownload%2Fmagic-string-0.25.7.tgz#3f497d6fd34c669c6798dcb821f2ef31f5445051"
+    integrity sha1-P0l9b9NMZpxnmNy4IfLvMfVEUFE=
+    dependencies:
+      sourcemap-codec "^1.4.4"
+  
   make-dir@^2.0.0:
     version "2.1.0"
     resolved "https://registry.npm.taobao.org/make-dir/download/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
@@ -5090,13 +5127,6 @@ Lockfile:
       linkify-it "^2.0.0"
       mdurl "^1.0.1"
       uc.micro "^1.0.5"
-  
-  mathjax3@3.0.0-beta.3:
-    version "3.0.0-beta.3"
-    resolved "https://registry.npm.taobao.org/mathjax3/download/mathjax3-3.0.0-beta.3.tgz#c3072a59304b4b612aa9516eb672b07000c9a3d5"
-    integrity sha1-wwcqWTBLS2EqqVFutnKwcADJo9U=
-    dependencies:
-      esm "^3.0.34"
   
   md5.js@^1.3.4:
     version "1.3.5"
@@ -5655,6 +5685,11 @@ Lockfile:
     version "0.3.0"
     resolved "https://registry.npm.taobao.org/os-browserify/download/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
     integrity sha1-hUNzx/XCMVkU/Jv8a9gjj92h7Cc=
+  
+  os-homedir@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.npm.taobao.org/os-homedir/download/os-homedir-2.0.0.tgz#a0c76bb001a8392a503cbd46e7e650b3423a923c"
+    integrity sha1-oMdrsAGoOSpQPL1G5+ZQs0I6kjw=
   
   os-locale@^1.4.0:
     version "1.4.0"
@@ -6259,7 +6294,7 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/pretty-time/download/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
     integrity sha1-/7dCmvq7hTXDRqNOQYc63z103Q4=
   
-  prismjs@^1.13.0:
+  prismjs@^1.13.0, prismjs@^1.16.0:
     version "1.19.0"
     resolved "https://registry.npm.taobao.org/prismjs/download/prismjs-1.19.0.tgz?cache=0&sync_timestamp=1578923040103&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprismjs%2Fdownload%2Fprismjs-1.19.0.tgz#713afbd45c3baca4b321569f2df39e17e729d4dc"
     integrity sha1-cTr71Fw7rKSzIVafLfOeF+cp1Nw=
@@ -6558,7 +6593,7 @@ Lockfile:
       define-properties "^1.1.3"
       es-abstract "^1.17.0-next.1"
   
-  regexpu-core@^4.7.0:
+  regexpu-core@^4.5.4, regexpu-core@^4.7.0:
     version "4.7.0"
     resolved "https://registry.npm.taobao.org/regexpu-core/download/regexpu-core-4.7.0.tgz#fcbf458c50431b0bb7b45d6967b8192d91f3d938"
     integrity sha1-/L9FjFBDGwu3tF1pZ7gZLZHz2Tg=
@@ -7053,6 +7088,11 @@ Lockfile:
     version "0.7.3"
     resolved "https://registry.npm.taobao.org/source-map/download/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
     integrity sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=
+  
+  sourcemap-codec@^1.4.4:
+    version "1.4.8"
+    resolved "https://registry.npm.taobao.org/sourcemap-codec/download/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
+    integrity sha1-6oBL2UhXQC5pktBaOO8a41qatMQ=
   
   spdy-transport@^3.0.0:
     version "3.0.0"
@@ -7613,6 +7653,13 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/underscore/download/underscore-1.9.2.tgz#0c8d6f536d6f378a5af264a72f7bec50feb7cf2f"
     integrity sha1-DI1vU21vN4pa8mSnL3vsUP63zy8=
   
+  unescape@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.npm.taobao.org/unescape/download/unescape-1.0.1.tgz#956e430f61cad8a4d57d82c518f5e6cc5d0dda96"
+    integrity sha1-lW5DD2HK2KTVfYLFGPXmzF0N2pY=
+    dependencies:
+      extend-shallow "^2.0.1"
+  
   unicode-canonical-property-names-ecmascript@^1.0.4:
     version "1.0.4"
     resolved "https://registry.npm.taobao.org/unicode-canonical-property-names-ecmascript/download/unicode-canonical-property-names-ecmascript-1.0.4.tgz#2619800c4c825800efdd8343af7dd9933cbe2818"
@@ -7895,6 +7942,28 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/vue-i18n/download/vue-i18n-8.15.5.tgz#e39e4724c88ec38ef72217de325e8b10a35718cf"
     integrity sha1-455HJMiOw473IhfeMl6LEKNXGM8=
   
+  vue-inbrowser-compiler@^3.21.0:
+    version "3.23.0"
+    resolved "https://registry.npm.taobao.org/vue-inbrowser-compiler/download/vue-inbrowser-compiler-3.23.0.tgz#ce71d09819fac836870fc92fc6e5b4779e8e8183"
+    integrity sha1-znHQmBn6yDaHD8kvxuW0d56OgYM=
+    dependencies:
+      acorn "^6.1.1"
+      acorn-jsx "^5.0.1"
+      buble "^0.19.7"
+      camelcase "^5.3.1"
+      walkes "^0.2.1"
+  
+  vue-live@^1.4.3:
+    version "1.5.1"
+    resolved "https://registry.npm.taobao.org/vue-live/download/vue-live-1.5.1.tgz#6c2f432a5d2ae37c43d64500ca47f29391695f10"
+    integrity sha1-bC9DKl0q43xD1kUAykfyk5FpXxA=
+    dependencies:
+      core-js "^2.6.5"
+      debounce "^1.2.0"
+      prismjs "^1.16.0"
+      vue-inbrowser-compiler "^3.21.0"
+      vue-prism-editor "^0.3.0"
+  
   vue-loader@^15.7.1:
     version "15.9.0"
     resolved "https://registry.npm.taobao.org/vue-loader/download/vue-loader-15.9.0.tgz#5d4b0378a4606188fc83e587ed23c94bc3a10998"
@@ -7905,6 +7974,15 @@ Lockfile:
       loader-utils "^1.1.0"
       vue-hot-reload-api "^2.3.0"
       vue-style-loader "^4.1.0"
+  
+  vue-prism-editor@^0.3.0:
+    version "0.3.0"
+    resolved "https://registry.npm.taobao.org/vue-prism-editor/download/vue-prism-editor-0.3.0.tgz#8ff2c3acb3a7de5b5fe98c0b8501bfccccb1c295"
+    integrity sha1-j/LDrLOn3ltf6YwLhQG/zMyxwpU=
+    dependencies:
+      dom-iterator "^1.0.0"
+      escape-html "^1.0.3"
+      unescape "^1.0.1"
   
   vue-property-decorator@^8.1.1:
     version "8.4.1"
@@ -7976,12 +8054,10 @@ Lockfile:
       toposort "^1.0.0"
       util.promisify "1.0.0"
   
-  vuepress-mergeable@^1.0.2:
-    version "1.1.3"
-    resolved "https://registry.npm.taobao.org/vuepress-mergeable/download/vuepress-mergeable-1.1.3.tgz#e4513adf4b9020a8e8e08e74b41f30c3ce5862a8"
-    integrity sha1-5FE630uQIKjo4I50tB8ww85YYqg=
-    dependencies:
-      deconstruct-merge "^1.1.0"
+  vuepress-plugin-code-copy@^1.0.6:
+    version "1.0.6"
+    resolved "https://registry.npm.taobao.org/vuepress-plugin-code-copy/download/vuepress-plugin-code-copy-1.0.6.tgz#6431dab764b48b5b203e4936d98b1943651ce4ad"
+    integrity sha1-ZDHat2S0i1sgPkk22YsZQ2Uc5K0=
   
   vuepress-plugin-container@^2.0.2:
     version "2.1.2"
@@ -7990,26 +8066,26 @@ Lockfile:
     dependencies:
       markdown-it-container "^2.0.0"
   
-  vuepress-plugin-dynamic-title@0.0.5:
-    version "0.0.5"
-    resolved "https://registry.npm.taobao.org/vuepress-plugin-dynamic-title/download/vuepress-plugin-dynamic-title-0.0.5.tgz#32b2c6f381c94aa7b247a9833c63c055300463d6"
-    integrity sha1-MrLG84HJSqeyR6mDPGPAVTAEY9Y=
-  
-  vuepress-plugin-flowchart@1.4.3:
+  vuepress-plugin-flowchart@^1.4.3:
     version "1.4.3"
     resolved "https://registry.npm.taobao.org/vuepress-plugin-flowchart/download/vuepress-plugin-flowchart-1.4.3.tgz#1692807257c9ba02f764ced0caf930c627f65bdb"
     integrity sha1-FpKAclfJugL3ZM7Qyvkwxif2W9s=
     dependencies:
       flowchart.js "^1.11.3"
   
-  vuepress-plugin-mathjax@1.2.8:
-    version "1.2.8"
-    resolved "https://registry.npm.taobao.org/vuepress-plugin-mathjax/download/vuepress-plugin-mathjax-1.2.8.tgz#decec38e9dbb82de9cf79f042463fa4a56e25340"
-    integrity sha1-3s7Djp27gt6c958EJGP6SlbiU0A=
+  vuepress-plugin-live@^1.4.2:
+    version "1.4.2"
+    resolved "https://registry.npm.taobao.org/vuepress-plugin-live/download/vuepress-plugin-live-1.4.2.tgz#cfb39cf20dfdb32cda8b65a5c68a8058d2f07b2a"
+    integrity sha1-z7Oc8g39syzai2WlxoqAWNLweyo=
     dependencies:
-      lru-cache "^5.1.1"
-      mathjax3 "3.0.0-beta.3"
-      vuepress-mergeable "^1.0.2"
+      acorn "^6.1.1"
+      vue-live "^1.4.3"
+      walkes "^0.2.1"
+  
+  vuepress-plugin-reading-progress@^1.0.8:
+    version "1.0.9"
+    resolved "https://registry.npm.taobao.org/vuepress-plugin-reading-progress/download/vuepress-plugin-reading-progress-1.0.9.tgz#800cef1ed93abe9ab7aae0147d269d1b1359ef32"
+    integrity sha1-gAzvHtk6vpq3quAUfSadGxNZ7zI=
   
   vuepress-plugin-smooth-scroll@^0.0.3:
     version "0.0.3"
@@ -8018,7 +8094,7 @@ Lockfile:
     dependencies:
       smoothscroll-polyfill "^0.4.3"
   
-  vuepress-theme-reco@1.3.2:
+  vuepress-theme-reco@^1.3.2:
     version "1.3.2"
     resolved "https://registry.npm.taobao.org/vuepress-theme-reco/download/vuepress-theme-reco-1.3.2.tgz#42febe9a4ea3d41d0a618169a75c18eb0022a718"
     integrity sha1-Qv6+mk6j1B0KYYFpp1wY6wAipxg=
@@ -8036,17 +8112,22 @@ Lockfile:
       valine "1.3.6"
       vue-click-outside "1.0.7"
   
-  vuepress@1.3.1:
-    version "1.3.1"
-    resolved "https://registry.npm.taobao.org/vuepress/download/vuepress-1.3.1.tgz#59355081a2c66ba3c9432ffd6e1d4025f9cf8e24"
-    integrity sha1-WTVQgaLGa6PJQy/9bh1AJfnPjiQ=
+  vuepress@^1.4.0:
+    version "1.4.0"
+    resolved "https://registry.npm.taobao.org/vuepress/download/vuepress-1.4.0.tgz#308037b15baec6e251b835fe1fff7da507302b6b"
+    integrity sha1-MIA3sVuuxuJRuDX+H/99pQcwK2s=
     dependencies:
-      "@vuepress/core" "^1.3.1"
-      "@vuepress/theme-default" "^1.3.1"
+      "@vuepress/core" "^1.4.0"
+      "@vuepress/theme-default" "^1.4.0"
       cac "^6.5.6"
       envinfo "^7.2.0"
       opencollective-postinstall "^2.0.2"
       update-notifier "^4.0.0"
+  
+  walkes@^0.2.1:
+    version "0.2.1"
+    resolved "https://registry.npm.taobao.org/walkes/download/walkes-0.2.1.tgz#7eca144fe67ed32782fffe6e8e95fb4481864796"
+    integrity sha1-fsoUT+Z+0yeC//5ujpX7RIGGR5Y=
   
   watchpack@^1.6.0:
     version "1.6.0"
