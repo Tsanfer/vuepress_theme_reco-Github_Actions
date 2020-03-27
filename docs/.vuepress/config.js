@@ -126,12 +126,28 @@ module.exports = {
               "https://p2.music.126.net/qOOTIykbSLw9RHB0vI83GA==/737772302281958.jpg"
           },
           {
+            name: "Reconfig",
+            artist: "Shortwire",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/Reconfig%20-%20Shortwire.mp3",
+            cover:
+              "https://p2.music.126.net/2oouVh_rHOv1nZXYapF41A==/109951163606358209.jpg"
+          },
+          {
             name: "Broken Boy",
             artist: "Tonspender",
             url:
               "https://cdn-image.tsanfer.xyz/music/Tonspender%20-%20Broken%20Boy.flac",
             cover:
               "https://p2.music.126.net/4TnTRyHqa3-D2H1UnOa00w==/109951163666994621.jpg"
+          },
+          {
+            name: "Forever",
+            artist: "PIKASONIC",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/forever%20mst.mp3",
+            cover:
+              "https://p1.music.126.net/LjXufn3OaIgf8OwaEP_xcQ==/109951164419438501.jpg"
           },
           {
             name: "Life Of Sin Pt. 4",
