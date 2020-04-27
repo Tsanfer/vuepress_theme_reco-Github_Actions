@@ -26,7 +26,7 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
-          ftp-server: sftp://39.107.221.57:22 # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
+          ftp-server: sftp://${{ secrets.FTP_IP }} # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
           ftp-username: ${{ secrets.FTP_USERNAME }} # FTP用户名
           ftp-password: ${{ secrets.FTP_PASSWORD }} # FTP密码
           git-ftp-args: --insecure --remote-root /home/www/htdocs # 要部署到服务器的哪个位置（如果是FTP连接的话--insecure不用加）
