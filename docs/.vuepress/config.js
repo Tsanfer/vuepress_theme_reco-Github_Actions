@@ -97,7 +97,6 @@ module.exports = {
 
   // 插件
   plugins: [
-    ["flowchart"], // 支持流程图
     [
       "@vuepress-reco/vuepress-plugin-bgm-player", // BGM播放器
       {
@@ -176,12 +175,18 @@ module.exports = {
         ]
       }
     ],
+    [
+      'social-share',
+      {
+        networks: ['qq', 'weibo','twitter', 'facebook', 'email'],
+        email: 'a1124851454@gmail.com',
+        twitterUser: 'a1124851454',
+      },
+    ],
+    ["flowchart"], // 支持流程图
     ["vuepress-plugin-smooth-scroll"], // 平滑滚动
     ["@vuepress/nprogress"], // 加载进度条
     ["reading-progress"], // 阅读进度条
     ["vuepress-plugin-code-copy", true],
-    ['@ikangxu/vuepress-plugin-share', {
-      supports: ['qq-qzone', 'renren', 'douban', 'sina-weibo', 'wechat', 'tieba-baidu', 'qq']
-    }]
   ]
 };
