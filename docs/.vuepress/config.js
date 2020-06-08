@@ -179,6 +179,9 @@ module.exports = {
     ["vuepress-plugin-smooth-scroll"], // 平滑滚动
     ["@vuepress/nprogress"], // 加载进度条
     ["reading-progress"], // 阅读进度条
-    ["vuepress-plugin-code-copy", true]
+    ["vuepress-plugin-code-copy", true],
+    ['@ikangxu/vuepress-plugin-share', {
+      supports: ['qq-qzone', 'renren', 'douban', 'sina-weibo', 'wechat', 'tieba-baidu', 'qq']
+    }]
   ]
 };
