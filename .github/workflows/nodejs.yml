@@ -15,14 +15,14 @@ jobs:
           node-version: "12.x"
 
       - name: Build Project # 此步骤（step）的名字
-        run: yarn && yarn build # 下载依赖和构建项目
+        run: yarn && yarn docs:dev # 下载依赖和构建项目
         env:
           LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }} # 评论系统的ID
           LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }} # 评论系统的KEY
 
       - name: List output files
         run: ls -a docs/.vuepress/dist # 显示生成的目录文件
-  
+
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
