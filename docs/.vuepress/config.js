@@ -32,6 +32,7 @@ module.exports = {
       //导航栏设置
       { text: "主页", link: "/", icon: "reco-home" },
       { text: "时间线", link: "/timeline/", icon: "reco-date" },
+      { text: '订阅', link: 'https://tsanfer.xyz/rss.xml', icon: 'reco-rss'},
       {
         text: "联系",
         icon: "reco-message",
@@ -181,6 +182,13 @@ module.exports = {
         networks: ["qq", "weibo", "twitter", "facebook", "email"], //分享类型
         email: "a1124851454@gmail.com", //email地址
         twitterUser: "a1124851454", //Twitter账号
+      },
+    ],
+    [
+      "@vuepress-reco/vuepress-plugin-rss",
+      {
+        site_url: "https://tsanfer.xyz",
+        copyright: "Tsanfer",
       },
     ],
     ["flowchart"], // 支持流程图

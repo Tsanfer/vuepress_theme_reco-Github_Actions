@@ -12,6 +12,7 @@
     "vuepress-plugin-reading-progress": "^1.0.9",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-social-share": "^0.3.0",
-    "vue-class-component": "^7.2.3"
+    "vue-class-component": "^7.2.3",
+    "@vuepress-reco/vuepress-plugin-rss": "^1.0.1"
   }
 }
