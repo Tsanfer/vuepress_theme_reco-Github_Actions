@@ -176,17 +176,17 @@ module.exports = {
       }
     ],
     [
-      'social-share',
+      'social-share', //分享插件
       {
-        networks: ['qq', 'weibo','twitter', 'facebook', 'email'],
-        email: 'a1124851454@gmail.com',
-        twitterUser: 'a1124851454',
+        networks: ['qq', 'weibo','twitter', 'facebook', 'email'], //分享类型
+        email: 'a1124851454@gmail.com', //email地址
+        twitterUser: 'a1124851454', //Twitter账号
       },
     ],
     ["flowchart"], // 支持流程图
     ["vuepress-plugin-smooth-scroll"], // 平滑滚动
     ["@vuepress/nprogress"], // 加载进度条
     ["reading-progress"], // 阅读进度条
-    ["vuepress-plugin-code-copy", true],
+    ["vuepress-plugin-code-copy", true], //一键复制代码插件
   ]
 };
