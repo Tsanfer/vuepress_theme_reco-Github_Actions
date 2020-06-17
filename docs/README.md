@@ -4,7 +4,9 @@ bgImage: "/background.jpg"
 bgImageStyle: { height: "350px" }
 ---
 
-<social-share />
+<p align="center">
+  <social-share />
+</p>
 
 <!--
 <div style="width:300px;margin:0 auto; padding:20px 0;">
