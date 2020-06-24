@@ -68,6 +68,11 @@ module.exports = {
             link: "mailto:a1124851454@gmail.com",
             icon: "reco-mail",
           },
+          {
+            text: "个人网盘",
+            link: "http://39.107.221.57:8080",
+            icon: "reco-account",
+          },
         ],
       },
     ],
