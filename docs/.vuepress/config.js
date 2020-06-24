@@ -33,6 +33,7 @@ module.exports = {
       { text: "主页", link: "/", icon: "reco-home" },
       { text: "时间线", link: "/timeline/", icon: "reco-date" },
       { text: '订阅', link: 'https://tsanfer.xyz/rss.xml', icon: 'reco-rss'},
+      { text: "个人网盘", link: "http://39.107.221.57:8080", icon: "reco-account"},
       {
         text: "联系",
         icon: "reco-message",
@@ -67,11 +68,6 @@ module.exports = {
             text: "Gmail",
             link: "mailto:a1124851454@gmail.com",
             icon: "reco-mail",
-          },
-          {
-            text: "个人网盘",
-            link: "http://39.107.221.57:8080",
-            icon: "reco-account",
           },
         ],
       },
