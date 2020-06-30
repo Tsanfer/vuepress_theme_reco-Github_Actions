@@ -32,7 +32,7 @@ module.exports = {
       //导航栏设置
       { text: "主页", link: "/", icon: "reco-home" },
       { text: "时间线", link: "/timeline/", icon: "reco-date" },
-      { text: '订阅', link: 'https://tsanfer.xyz/rss.xml', icon: 'reco-rss'},
+      { text: "订阅", link: "https://tsanfer.xyz/rss.xml", icon: "reco-rss" },
       {
         text: "联系",
         icon: "reco-message",
@@ -190,10 +190,10 @@ module.exports = {
       },
     ],
     [
-      "@vuepress-reco/vuepress-plugin-rss",
+      "@vuepress-reco/vuepress-plugin-rss", //RSS插件
       {
-        site_url: "https://tsanfer.xyz",
-        copyright: "Tsanfer",
+        site_url: "https://tsanfer.xyz", //网站地址
+        copyright: "Tsanfer", //版权署名
       },
     ],
     ["flowchart"], // 支持流程图
