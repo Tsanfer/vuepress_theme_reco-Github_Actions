@@ -1,5 +1,5 @@
 ---
-title: vuepress-theme-reco + Github Actions 构建静态博客，部署到第三方服务器
+title: vuepress-theme-reco + Github Actions 搭建静态博客，自动构建部署到第三方服务器
 date: 2020-03-21
 sidebar: "auto"
 categories:
