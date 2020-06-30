@@ -393,7 +393,7 @@ module.exports = {
 
 :::
 
-```yml {22,23,32,33}
+```yml
 # .github/workflows/nodejs.yml
 
 on: push # 触发此文件运行的条件
