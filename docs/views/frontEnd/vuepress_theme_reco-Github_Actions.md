@@ -170,7 +170,7 @@ sudo yarn
 
 :::
 
-```javascript {83,84}
+```javascript
 // docs/.vuepress/config.js
 
 module.exports = {
