@@ -78,7 +78,7 @@ module.exports = {
     ],
     sidebar: "auto", //在所有页面中启用自动生成侧栏
     record: "蜀ICP备20005033号-1",
-    recordLink: "https://icp.chinaz.com/tsanfer.xyz",
+    recordLink: "https://icp.chinaz.com/home/info?host=tsanfer.xyz",
     cyberSecurityRecord: "川公网安备 51110202000301号",
     cyberSecurityLink:
       "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51110202000301",
