@@ -1,7 +1,7 @@
 <p align="center">
     <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions"><img src="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg" alt="Build Status"></a>
     <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
-    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network/members"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
     <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions">
     <img alt="Security Headers" src="https://img.shields.io/security-headers?url=https%3A%2F%2Ftsanfer.xyz">
