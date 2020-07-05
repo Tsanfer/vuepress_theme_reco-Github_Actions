@@ -1,8 +1,12 @@
 <p align="center">
-    <a href="http://hits.dwyl.com/Tsanfer/vuepress_theme_reco-Github_Actions"><img src="http://hits.dwyl.com/Tsanfer/vuepress_theme_reco-Github_Actions.svg" alt="HitCount"></a>
     <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions"><img src="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions">
+    <img alt="Security Headers" src="https://img.shields.io/security-headers?url=https%3A%2F%2Ftsanfer.xyz">
+    <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m785511761-0cc3defdbedd106e8bc838e1">
     <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Coverage Status"></a>
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" alt="Coverage Status"></a> 
 </p>
 
 > [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
