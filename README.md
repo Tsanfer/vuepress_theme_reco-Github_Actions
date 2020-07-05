@@ -6,7 +6,7 @@
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions">
     <img alt="Security Headers" src="https://img.shields.io/security-headers?url=https%3A%2F%2Ftsanfer.xyz">
     <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m785511761-0cc3defdbedd106e8bc838e1">
-    <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Coverage Status"></a>
+    <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code%20style-prettier-ff69b4" alt="Coverage Status"></a>
 </p>
 
 > [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
