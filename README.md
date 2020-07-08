@@ -417,4 +417,8 @@ jobs:
 
 最后再把代码上传到 Github 便可自动触发构建，部署到第三方服务器
 
+<p align="center">
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE"><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png" alt="WTFPL License"></a>
+</p>
+
 > 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！
