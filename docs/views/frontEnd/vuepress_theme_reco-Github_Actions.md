@@ -24,8 +24,14 @@ tags:
 > [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
 <p align="center">
-  <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions"><img src="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg" alt="Build Status"></a>
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" alt="Coverage Status"></a>
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions"><img src="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network/members"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions">
+    <img alt="Security Headers" src="https://img.shields.io/security-headers?url=https%3A%2F%2Ftsanfer.xyz">
+    <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m785511761-0cc3defdbedd106e8bc838e1">
+    <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code%20style-prettier-ff69b4" alt="Coverage Status"></a>
 </p>
 
 ::: tip 提示
@@ -447,5 +453,9 @@ jobs:
 - Value: admin
 
 最后再把代码上传到 Github 便可自动触发构建，部署到第三方服务器
+
+<p align="center">
+    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE"><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png" alt="WTFPL License"></a>
+</p>
 
 > 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！

@@ -87,6 +87,7 @@ module.exports = {
     author: "Tsanfer",
     authorAvatar: "/avatar.svg", //作者头像
     mode: "light", //默认显示白天模式
+    codeTheme: "okaidia", // default 'tomorrow'
     // 评论设置
     valineConfig: {
       appId: process.env.LEANCLOUD_APP_ID,
