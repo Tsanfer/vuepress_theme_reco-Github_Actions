@@ -1,5 +1,5 @@
 on: push # 触发此文件运行的条件
-name: Github Actions # 此工作流程（workflow）的名字
+name: CI/CD # 此工作流程（workflow）的名字
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action # 此任务（job）的名字
