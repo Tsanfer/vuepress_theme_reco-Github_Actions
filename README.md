@@ -1,16 +1,16 @@
-<p align="center">
-    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions"><img src="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg" alt="Build Status"></a>
-    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
-    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network/members"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
-    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions"></a>
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions">
-    <img alt="Security Headers" src="https://img.shields.io/security-headers?url=https%3A%2F%2Ftsanfer.xyz">
-    <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m785511761-0cc3defdbedd106e8bc838e1">
-    <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code%20style-prettier-ff69b4" alt="Coverage Status"></a>
-</p>
+
+# vuepress-theme-reco + Github Actions 搭建静态博客，自动构建部署到第三方服务器
+
+[![Build Status](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
+[![GitHub stars](https://img.shields.io/github/stars/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network/members)
+[![GitHub license](https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
+![GitHub repo size](https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions)
+![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Ftsanfer.xyz)
+![Uptime Robot status](https://img.shields.io/uptimerobot/status/m785511761-0cc3defdbedd106e8bc838e1)
+[![Coverage Status](https://img.shields.io/badge/code%20style-prettier-ff69b4)](https://github.com/prettier/prettier)
 
 > [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
-
 > [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
 查看此文档前应先了解，[vuepress 基本操作](https://tsanfer.xyz/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C)
@@ -18,16 +18,14 @@
 参考官方文档进行配置：
 
 > [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
-
 > [VuePress](https://vuepress.vuejs.org/zh/)
-
 > [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
 
 ## 最终效果
 
 [最终效果链接](https://tsanfer.xyz/)
 
-![](https://cdn-image.tsanfer.xyz/img/20200322150711.png)
+![最终效果](https://cdn-image.tsanfer.xyz/img/20200322150711.png)
 
 ## 思路
 
@@ -113,26 +111,26 @@ sudo yarn
 
 ```bash
 .
-├── .git-ftp-include	// 用于最后指定需要部署的文件或文件夹
-├── .gitattributes	// 用于统一文件内编码的换行符
+├── .git-ftp-include // 用于最后指定需要部署的文件或文件夹
+├── .gitattributes // 用于统一文件内编码的换行符
 ├── .github
 │   └── workflows
-│       └── nodejs.yml	// Github Actions的配置文件
-├── .gitignore	// 忽略上传到Github的文件或目录
-├── LICENSE	// 许可证文件
-├── README.md	// Github项目展示文件
-├── docs	// VuePress项目根目录
-│   ├── .vuepress	// 存放配置文件的文件夹
-│   │   ├── config.js	// 整个工程的配置文件
-│   │   ├── dist	// 最后生成的文件目录
-│   │   ├── public	// 媒体文件夹（主要是图片）
-│   │   └── styles	// 网页样式文件夹（里面空的，没有用）
-│   ├── README.md	// 网页首页文件
-│   └── views	// 存放markdown文件的文件夹（可以不要直接把markdown文件放在docs里面）
-│       └── frontEnd	// 分类目录（也可以不要分类目录直接放在views里面）
-├── package.json	// 指定依赖，项目脚本，Node.js项目描述文件
-├── yarn-error.log	// 记录构建失败的日志文件
-└── yarn.lock	// 变更依赖时自动生成和更新
+│       └── nodejs.yml // Github Actions的配置文件
+├── .gitignore // 忽略上传到Github的文件或目录
+├── LICENSE // 许可证文件
+├── README.md // Github项目展示文件
+├── docs // VuePress项目根目录
+│   ├── .vuepress // 存放配置文件的文件夹
+│   │   ├── config.js // 整个工程的配置文件
+│   │   ├── dist // 最后生成的文件目录
+│   │   ├── public // 媒体文件夹（主要是图片）
+│   │   └── styles // 网页样式文件夹（里面空的，没有用）
+│   ├── README.md // 网页首页文件
+│   └── views // 存放markdown文件的文件夹（可以不要直接把markdown文件放在docs里面）
+│       └── frontEnd // 分类目录（也可以不要分类目录直接放在views里面）
+├── package.json // 指定依赖，项目脚本，Node.js项目描述文件
+├── yarn-error.log // 记录构建失败的日志文件
+└── yarn.lock // 变更依赖时自动生成和更新
 ```
 
 ### 添加博客配置
@@ -398,7 +396,7 @@ jobs:
 
 ```
 
-```
+```txt
 // .git-ftp-include
 
 !docs/.vuepress/dist/
@@ -417,8 +415,6 @@ jobs:
 
 最后再把代码上传到 Github 便可自动触发构建，部署到第三方服务器
 
-<p align="center">
-    <a href="https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/WTFPL_badge.svg" alt="WTFPL License"></a>
-</p>
+[![WTFPL License](https://upload.wikimedia.org/wikipedia/commons/0/0a/WTFPL_badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
 
 > 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！
