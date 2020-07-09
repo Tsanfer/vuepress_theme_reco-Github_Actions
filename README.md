@@ -1,14 +1,12 @@
 
 # vuepress-theme-reco + Github Actions 搭建静态博客，自动构建部署到第三方服务器
 
-[![Build Status](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
+[![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
 [![GitHub stars](https://img.shields.io/github/stars/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network/members)
 [![GitHub license](https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions)
-![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Ftsanfer.xyz)
-![Uptime Robot status](https://img.shields.io/uptimerobot/status/m785511761-0cc3defdbedd106e8bc838e1)
-[![Coverage Status](https://img.shields.io/badge/code%20style-prettier-ff69b4)](https://github.com/prettier/prettier)
+[![Lint Code Style](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Lint%20Code%20Style/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions?query=workflow%3A%22Lint+Code+Style%22)
 
 > [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
 > [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
