@@ -1,7 +1,7 @@
 
 # vuepress-theme-reco + Github Actions 搭建静态博客，自动构建部署到第三方服务器
 
-[![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Github%20Actions/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
+[![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/CI/CD/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
 [![GitHub stars](https://img.shields.io/github/stars/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network/members)
 [![GitHub license](https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
