@@ -24,11 +24,11 @@ src="https://music.163.com/outchain/player?type=2&id=465675050&auto=0&height=66"
 
 |                                    [Sphinx](https://www.sphinx-doc.org/)                                     |                                    [Github](https://github.com/)                                     |                                  [Readthedocs](https://readthedocs.org/)                                  |
 | :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-| [<img src="https://i.loli.net/2020/02/19/JP8td4QvCiY1L3g.png" width="300px" />](https://www.sphinx-doc.org/) | [<img src="https://i.loli.net/2020/02/19/j2Ad8meR5UF3O6P.png" width="300px" />](https://github.com/) | [<img src="https://i.loli.net/2020/02/19/oWvA34qxU9DQyYu.png" width="300px" />](https://readthedocs.org/) |
+<!-- | [<img src="https://i.loli.net/2020/02/19/JP8td4QvCiY1L3g.png" width="300px" />](https://www.sphinx-doc.org/) | [<img src="https://i.loli.net/2020/02/19/j2Ad8meR5UF3O6P.png" width="300px" />](https://github.com/) | [<img src="https://i.loli.net/2020/02/19/oWvA34qxU9DQyYu.png" width="300px" />](https://readthedocs.org/) | -->
 
 ## 最终效果
 
-![](https://i.loli.net/2020/02/20/SmIoev5lCOQiXJw.png)
+![最终效果](https://i.loli.net/2020/02/20/SmIoev5lCOQiXJw.png)
 
 ## Linux 配置
 
@@ -54,7 +54,7 @@ Ubuntu 18.04.1，查出来的代号就是 bionic.
 
 #### step 3: 编辑源
 
-![](https://cdn-image.tsanfer.xyz/img/20190121012630368.png)
+![编辑源](https://cdn-image.tsanfer.xyz/img/20190121012630368.png)
 
 红色边框：服务器地址
 
@@ -113,9 +113,9 @@ pip 国内的一些镜像
 
 |     名称     |                   域名                    |
 | :----------: | :---------------------------------------: |
-|    阿里云    |  https://mirrors.aliyun.com/pypi/simple/  |
-| 中国科技大学 | https://pypi.mirrors.ustc.edu.cn/simple/  |
-|   清华大学   | https://pypi.tuna.tsinghua.edu.cn/simple/ |
+|    阿里云    |  [阿里云](https://mirrors.aliyun.com/pypi/simple/)  |
+| 中国科技大学 | [中国科技大学](https://pypi.mirrors.ustc.edu.cn/simple/)  |
+|   清华大学   | [清华大学](https://pypi.tuna.tsinghua.edu.cn/simple/) |
 
 修改 ~/.pip/pip.conf (没有就创建一个)， 内容如下：
 
@@ -250,7 +250,7 @@ sphinx-rtd-theme
 
 创建`./source/Sphinx_GitHub_ReadtheDocs.md`文件
 
-```
+```md
 # here is a test markdown file
 ```
 
@@ -259,12 +259,12 @@ sphinx-rtd-theme
 ## Readthedocs 配置
 
 导入代码库:
-![](https://i.loli.net/2020/02/18/OvZl5xmkRyiWn1U.png)
+![导入代码库](https://i.loli.net/2020/02/18/OvZl5xmkRyiWn1U.png)
 
 指定 pip 要求文件: `./requirements.txt`
-![](https://i.loli.net/2020/02/18/FbK8JTxoN72M5G9.png)
+![指定 pip 要求文件](https://i.loli.net/2020/02/18/FbK8JTxoN72M5G9.png)
 
-**完成**
+### 完成
 
 > 官方 Sphinx + Readthedocs 教程
 
