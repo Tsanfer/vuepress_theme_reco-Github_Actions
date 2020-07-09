@@ -16,7 +16,13 @@ jobs:
 
       - name: Super-Linter
         uses: github/super-linter@v3.3.0
-
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_YAML: true
+          VALIDATE_JSON: true
+          VALIDATE_MD: true
+          VALIDATE_JAVASCRIPT_STANDARD: true
+          
       - name: Build Project # 此步骤（step）的名字
         run: yarn install && yarn docs:build # 下载依赖和构建项目
         env:
