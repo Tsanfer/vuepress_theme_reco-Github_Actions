@@ -28,7 +28,7 @@ jobs:
         run: yarn install
 
       - name: generate coverage report
-        run: cd ./docs/.vuepress/ && yarn istanbul cover test.js
+        run: cd ./docs/.vuepress/ && yarn istanbul cover config.js
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
