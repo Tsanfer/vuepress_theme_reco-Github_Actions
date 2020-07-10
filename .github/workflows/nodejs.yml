@@ -20,7 +20,7 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ./
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package.json') }}
           restore-keys: |
 
       - name: Build Project # 此步骤（step）的名字
