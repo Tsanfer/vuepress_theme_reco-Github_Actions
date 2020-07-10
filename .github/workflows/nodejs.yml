@@ -36,7 +36,7 @@ jobs:
           path: /docs/.vuepress/dist # or path/to/artifact
 
       - name: Get yarn cache directory path
-        id: /
+        id: yarn-cache-dir-path.outputs
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - uses: actions/cache@v2
