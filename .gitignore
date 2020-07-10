@@ -3,3 +3,4 @@ docs/.vuepress/dist/
 *.log
 yarn.lock
 yarn-error.log
+docs/.vuepress/coverage/
