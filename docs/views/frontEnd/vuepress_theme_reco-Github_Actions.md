@@ -19,8 +19,7 @@ tags:
 
 <!-- more -->
 
-> [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
-> [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
+> [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html) > [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
 [![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/CI/CD/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
 [![Lint Code Style](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Lint%20Code%20Style/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
@@ -124,7 +123,6 @@ sudo yarn install
     "@vuepress-reco/vuepress-plugin-rss": "^1.0.1"
   }
 }
-
 ```
 
 然后，安装依赖
@@ -381,7 +379,6 @@ module.exports = {
     ["vuepress-plugin-code-copy", true], //一键复制代码插件
   ],
 };
-
 ```
 
 ## Github Actions 配置
@@ -429,7 +426,6 @@ jobs:
           ftp-password: ${{ secrets.FTP_PASSWORD }} # FTP密码
           git-ftp-args: --insecure # （如果是FTP连接的话--insecure不用加）
           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
-
 ```
 
 ```txt

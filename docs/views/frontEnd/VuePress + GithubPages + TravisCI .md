@@ -20,10 +20,10 @@ tags:
 [![Build Status](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI.svg?branch=master)](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-> [最新博客链接](https://tsanfer.xyz/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html)
-> [VuePress 在线文档链接\_Github Pages](https://tsanfer.github.io/VuePress-GithubPages-TravisCI/)
-> **[VuePress 在线文档链接\_博客服务器](https://tsanfer.xyz/VuePress-GithubPages-TravisCI/)（如果上面进不去，可以进这个，服务器在阿里云）**
-> [Github 链接](https://github.com/Tsanfer/VuePress-GithubPages-TravisCI)
+- > [最新博客链接](https://tsanfer.xyz/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html)
+- > [VuePress 在线文档链接\_Github Pages](https://tsanfer.github.io/VuePress-GithubPages-TravisCI/)
+- > **[VuePress 在线文档链接\_博客服务器](https://tsanfer.xyz/VuePress-GithubPages-TravisCI/)（如果上面进不去，可以进这个，服务器在阿里云）**
+- > [Github 链接](https://github.com/Tsanfer/VuePress-GithubPages-TravisCI)
 
 ## 最终效果
 
@@ -204,7 +204,7 @@ https://registry.yarnpkg.com
 yarn config set registry https://registry.npm.taobao.org
 ```
 
-#### 安装VuePress
+#### VuePress
 
 ```shell
 # 先进入安装目录，就是刚刚克隆的仓库
@@ -364,9 +364,9 @@ module.exports = {
   head: [
     [
       "link",
-      { rel: "icon", href: "/gamepad_game_128px.ico" } //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
-    ]
-  ]
+      { rel: "icon", href: "/gamepad_game_128px.ico" }, //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
+    ],
+  ],
 };
 ```
 
@@ -377,8 +377,8 @@ module.exports = {
 ```js
 module.exports = {
   markdown: {
-    lineNumbers: true //是否在每个代码块的左侧显示行号
-  }
+    lineNumbers: true, //是否在每个代码块的左侧显示行号
+  },
 };
 ```
 
@@ -397,9 +397,9 @@ module.exports = {
       { text: "创建Github仓库", link: "/pages/Github.md" },
       { text: "配置VuePress", link: "/pages/VuePress.md" },
       { text: "TravisCI生成和发布", link: "/pages/TravisCI.md" },
-      { text: "博客", link: "https://tsanfer.xyz" }
-    ]
-  }
+      { text: "博客", link: "https://tsanfer.xyz" },
+    ],
+  },
 };
 ```
 
@@ -415,9 +415,9 @@ module.exports = {
       ["/pages/flow.md", "思路"],
       ["/pages/Github.md", "创建Github仓库"],
       ["/pages/VuePress.md", "配置VuePress"],
-      ["/pages/TravisCI.md", "TravisCI生成和发布"]
-    ]
-  }
+      ["/pages/TravisCI.md", "TravisCI生成和发布"],
+    ],
+  },
 };
 ```
 
@@ -441,8 +441,8 @@ module.exports = {
     // 默认是 false, 设置为 true 来启用
     editLinks: true,
     // 默认为 "Edit this page"
-    editLinkText: "在 Github 上编辑此页"
-  }
+    editLinkText: "在 Github 上编辑此页",
+  },
 };
 ```
 
@@ -454,8 +454,8 @@ module.exports = {
 module.exports = {
   themeConfig: {
     smoothScroll: true, //页面滚动效果
-    lastUpdated: "最后更新" // string | boolean
-  }
+    lastUpdated: "最后更新", // string | boolean
+  },
 };
 ```
 
@@ -468,8 +468,8 @@ module.exports = {
   plugins: [
     "@vuepress/medium-zoom", //zooming images like Medium（页面弹框居中显示）
     "@vuepress/nprogress", //网页加载进度条
-    "@vuepress/plugin-back-to-top" //返回页面顶部按钮
-  ]
+    "@vuepress/plugin-back-to-top", //返回页面顶部按钮
+  ],
 };
 ```
 
@@ -490,13 +490,13 @@ module.exports = {
   head: [
     [
       "link",
-      { rel: "icon", href: "/gamepad_game_128px.ico" } //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
-    ]
+      { rel: "icon", href: "/gamepad_game_128px.ico" }, //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
+    ],
   ],
 
   //markdown扩展
   markdown: {
-    lineNumbers: true //是否在每个代码块的左侧显示行号
+    lineNumbers: true, //是否在每个代码块的左侧显示行号
   },
 
   //默认主题配置
@@ -508,7 +508,7 @@ module.exports = {
       { text: "创建Github仓库", link: "/pages/Github.md" },
       { text: "配置VuePress", link: "/pages/VuePress.md" },
       { text: "TravisCI生成和发布", link: "/pages/TravisCI.md" },
-      { text: "博客", link: "https://tsanfer.xyz" }
+      { text: "博客", link: "https://tsanfer.xyz" },
     ],
     sidebarDepth: 2, //侧边栏深度
     //侧边栏
@@ -516,7 +516,7 @@ module.exports = {
       ["/pages/flow.md", "思路"],
       ["/pages/Github.md", "创建Github仓库"],
       ["/pages/VuePress.md", "配置VuePress"],
-      ["/pages/TravisCI.md", "TravisCI生成和发布"]
+      ["/pages/TravisCI.md", "TravisCI生成和发布"],
     ],
 
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
@@ -535,7 +535,7 @@ module.exports = {
     editLinkText: "在 Github 上编辑此页",
 
     smoothScroll: true, //页面滚动效果
-    lastUpdated: "最后更新" // string | boolean
+    lastUpdated: "最后更新", // string | boolean
   },
 
   //插件
@@ -544,10 +544,9 @@ module.exports = {
     "@vuepress/nprogress", //网页加载进度条
     "@vuepress/back-to-top", //返回页面顶部按钮
     "@vuepress/nprogress", //提示加载进度
-    "reading-progress" //提示阅读进度
-  ]
+    "reading-progress", //提示阅读进度
+  ],
 };
-
 ```
 
 ## TravisCI 生成和发布

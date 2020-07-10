@@ -22,9 +22,9 @@ frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86
 src="https://music.163.com/outchain/player?type=2&id=465675050&auto=0&height=66">
 </iframe>
 
-|                                    [Sphinx](https://www.sphinx-doc.org/)                                     |                                    [Github](https://github.com/)                                     |                                  [Readthedocs](https://readthedocs.org/)                                  |
-| :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-<!-- | [<img src="https://i.loli.net/2020/02/19/JP8td4QvCiY1L3g.png" width="300px" />](https://www.sphinx-doc.org/) | [<img src="https://i.loli.net/2020/02/19/j2Ad8meR5UF3O6P.png" width="300px" />](https://github.com/) | [<img src="https://i.loli.net/2020/02/19/oWvA34qxU9DQyYu.png" width="300px" />](https://readthedocs.org/) | -->
+| [Sphinx](https://www.sphinx-doc.org/) |                                        [Github](https://github.com/)                                         |                               [Readthedocs](https://readthedocs.org/)                                |
+| :-----------------------------------: | :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+|                 <!--                  | [<img src="https://i.loli.net/2020/02/19/JP8td4QvCiY1L3g.png" width="300px" />](https://www.sphinx-doc.org/) | [<img src="https://i.loli.net/2020/02/19/j2Ad8meR5UF3O6P.png" width="300px" />](https://github.com/) | [<img src="https://i.loli.net/2020/02/19/oWvA34qxU9DQyYu.png" width="300px" />](https://readthedocs.org/) | --> |
 
 ## 最终效果
 
@@ -111,11 +111,11 @@ sudo apt install python3-pip
 
 pip 国内的一些镜像
 
-|     名称     |                   域名                    |
-| :----------: | :---------------------------------------: |
-|    阿里云    |  [阿里云](https://mirrors.aliyun.com/pypi/simple/)  |
-| 中国科技大学 | [中国科技大学](https://pypi.mirrors.ustc.edu.cn/simple/)  |
-|   清华大学   | [清华大学](https://pypi.tuna.tsinghua.edu.cn/simple/) |
+|     名称     |                           域名                           |
+| :----------: | :------------------------------------------------------: |
+|    阿里云    |    [阿里云](https://mirrors.aliyun.com/pypi/simple/)     |
+| 中国科技大学 | [中国科技大学](https://pypi.mirrors.ustc.edu.cn/simple/) |
+|   清华大学   |  [清华大学](https://pypi.tuna.tsinghua.edu.cn/simple/)   |
 
 修改 ~/.pip/pip.conf (没有就创建一个)， 内容如下：
 

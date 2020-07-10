@@ -1,4 +1,3 @@
-
 # vuepress-theme-reco + Github Actions 搭建静态博客，自动构建部署到第三方服务器
 
 [![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/CI/CD/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
@@ -8,16 +7,16 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions?logo=Git)
 [![GitHub license](https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
 
-> [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
-> [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
+- > [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
+- > [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
 查看此文档前应先了解，[vuepress 基本操作](https://tsanfer.xyz/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C)
 
 参考官方文档进行配置：
 
-> [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
-> [VuePress](https://vuepress.vuejs.org/zh/)
-> [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
+- > [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
+- > [VuePress](https://vuepress.vuejs.org/zh/)
+- > [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
 
 ## 最终效果
 
@@ -96,7 +95,6 @@ sudo yarn install
     "@vuepress-reco/vuepress-plugin-rss": "^1.0.1"
   }
 }
-
 ```
 
 然后，安装依赖
@@ -135,9 +133,8 @@ sudo yarn
 
 然后根据需要更改一些内容和设置，参考官方的文档，可自行取舍相应内容
 
-> [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
->
-> [VuePress](https://vuepress.vuejs.org/zh/)
+- > [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)
+- > [VuePress](https://vuepress.vuejs.org/zh/)
 
 ```javascript
 // docs/.vuepress/config.js
@@ -347,7 +344,6 @@ module.exports = {
     ["vuepress-plugin-code-copy", true], //一键复制代码插件
   ],
 };
-
 ```
 
 ## Github Actions 配置
@@ -391,7 +387,6 @@ jobs:
           ftp-password: ${{ secrets.FTP_PASSWORD }} # FTP密码
           git-ftp-args: --insecure # （如果是FTP连接的话--insecure不用加）
           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
-
 ```
 
 ```txt
