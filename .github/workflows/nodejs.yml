@@ -41,5 +41,5 @@ jobs:
       - name: upload-artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 网页静态文件
+          name: static_web_file
           path: docs/.vuepress/dist/ # or path/to/artifact
