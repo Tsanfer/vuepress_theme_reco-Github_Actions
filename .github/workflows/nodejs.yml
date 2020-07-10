@@ -32,7 +32,6 @@ jobs:
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
-        with:
 
       - name: Build Project # 此步骤（step）的名字
         run:  yarn docs:build
