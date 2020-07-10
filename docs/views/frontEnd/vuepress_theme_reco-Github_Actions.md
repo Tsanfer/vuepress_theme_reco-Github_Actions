@@ -23,12 +23,11 @@ tags:
 > [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
 [![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/CI/CD/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
-[![GitHub stars](https://img.shields.io/github/stars/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network/members)
-[![GitHub license](https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
-![GitHub repo size](https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions)
 [![Lint Code Style](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Lint%20Code%20Style/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
-[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Tsanfer/vuepress_theme_reco-Github_Actions/master)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/commits/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/221e8d5891cd43d99c90992f7badd72f)](https://app.codacy.com/manual/Tsanfer/vuepress_theme_reco-Github_Actions?utm_source=github.com&utm_medium=referral&utm_content=Tsanfer/vuepress_theme_reco-Github_Actions&utm_campaign=Badge_Grade_Dashboard)
+[![dependabot](https://api.dependabot.com/badges/status?host=github&repo=Tsanfer/vuepress_theme_reco-Github_Actions)](https://api.dependabot.com/badges/status?host=github&repo=Tsanfer/vuepress_theme_reco-Github_Actions)
+![GitHub repo size](https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions?logo=Git)
+[![GitHub license](https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
 
 ::: tip 提示
 
