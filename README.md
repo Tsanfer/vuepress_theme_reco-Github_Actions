@@ -1,6 +1,7 @@
 
 # vuepress-theme-reco + Github Actions 搭建静态博客，自动构建部署到第三方服务器
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/221e8d5891cd43d99c90992f7badd72f)](https://app.codacy.com/manual/Tsanfer/vuepress_theme_reco-Github_Actions?utm_source=github.com&utm_medium=referral&utm_content=Tsanfer/vuepress_theme_reco-Github_Actions&utm_campaign=Badge_Grade_Dashboard)
 [![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/CI/CD/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
 [![GitHub stars](https://img.shields.io/github/stars/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/network/members)
