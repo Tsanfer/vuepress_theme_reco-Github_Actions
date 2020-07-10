@@ -42,4 +42,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: 网页静态文件
-          path: docs/.vuepress/dist # or path/to/artifact
+          path: docs/.vuepress/dist/ # or path/to/artifact
