@@ -36,4 +36,3 @@ jobs:
       ################################
       - name: Lint Code Base step
         uses: github/super-linter@v3.3.0
-        env:
