@@ -1,39 +1,13 @@
----
-###########################
-###########################
-## Linter GitHub Actions ##
-###########################
-###########################
 name: Lint Code Style
-
-#############################
-# Start the job on all push #
-#############################
 on: push
-
-###############
-# Set the Job #
-###############
 jobs:
   Super-Linter:
-    # Name the Job
     name: Lint Code Base job
-    # Set the agent to run on
     runs-on: ubuntu-latest
-
-    ##################
-    # Load all steps #
-    ##################
     steps:
-      ##########################
-      # Checkout the code base #
-      ##########################
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      ################################
-      # Run Linter against code base #
-      ################################
       - name: Lint Code Base step
         uses: github/super-linter@v3.3.0
         env:
