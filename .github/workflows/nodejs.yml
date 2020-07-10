@@ -14,6 +14,15 @@ jobs:
         with:
           node-version: "12.x"
 
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: .
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+
       - name: Build Project # 此步骤（step）的名字
         run: yarn install && yarn docs:build # 下载依赖和构建项目
         env:
@@ -34,12 +43,3 @@ jobs:
         with:
           name: 网页静态文件
           path: docs/.vuepress/dist # or path/to/artifact
-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: .
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
-          restore-keys: |
