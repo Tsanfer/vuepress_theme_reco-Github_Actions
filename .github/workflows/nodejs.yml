@@ -2,7 +2,7 @@ on: push # 触发此文件运行的条件
 name: CI/CD # 此工作流程（workflow）的名字
 jobs:
   FTP-Deploy-Action:
-    name: FTP-Deploy-Action # 此任务（job）的名字
+    name: CI/CD # 此任务（job）的名字
     runs-on: ubuntu-latest # 运行环境
     steps:
       - uses: actions/checkout@master # 切换分支到master
@@ -25,25 +25,17 @@ jobs:
 
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm install &&
+          npm i -D nyc
 
-      # - name: generate coverage report
-      #   run: npm i -D nyc &&
-      #     cd ./docs/.vuepress/ &&
-      #     nyc cover config.js &&
-      #     cd -
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-
-      - name: Build Project # 此步骤（step）的名字
-        run: npm run docs:build
+      - name: Build and generate coverage report
+        run: nyc npm run docs:build
         env:
           LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }} # 评论系统的ID
           LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }} # 评论系统的KEY
 
-      - name: reset git
-        run: git reset --hard
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
 
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1

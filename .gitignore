@@ -5,3 +5,5 @@ yarn.lock
 yarn-error.log
 docs/.vuepress/coverage/
 package-lock.json
+coverage/
+.nyc_output/
