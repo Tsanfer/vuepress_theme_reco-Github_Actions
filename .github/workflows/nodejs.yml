@@ -30,7 +30,7 @@ jobs:
       - name: generate coverage report
         run: npm install -g istanbul &&
           cd ./docs/.vuepress/ &&
-          stanbul cover config.js &&
+          nyc cover config.js &&
           cd -
 
       - name: Upload coverage to Codecov
