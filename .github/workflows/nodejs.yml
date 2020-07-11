@@ -27,14 +27,14 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm install
 
-      - name: generate coverage report
-        run: npm install -g nyc &&
-          cd ./docs/.vuepress/ &&
-          nyc cover config.js &&
-          cd -
+      # - name: generate coverage report
+      #   run: npm i -D nyc &&
+      #     cd ./docs/.vuepress/ &&
+      #     nyc cover config.js &&
+      #     cd -
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+      # - name: Upload coverage to Codecov
+      #   uses: codecov/codecov-action@v1
 
       - name: Build Project # 此步骤（step）的名字
         run: npm run docs:build
