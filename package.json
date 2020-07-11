@@ -1,7 +1,8 @@
 {
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "coverage": "nyc npm run docs:build"
   },
   "dependencies": {
     "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.3",
