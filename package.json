@@ -9,6 +9,7 @@
     "@vuepress/plugin-nprogress": "^1.5.2",
     "copy-webpack-plugin": "^6.0.3",
     "markdown-it": "^11.0.0",
+    "nyc": "^15.1.0",
     "serialize-javascript": "^4.0.0",
     "vue-class-component": "^7.2.3",
     "vuepress": "^1.5.2",
