@@ -4,7 +4,6 @@
 [![Lint Code Style](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Lint%20Code%20Style/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/tsanfer/vuepress_theme_reco-github_actions/badge)](https://www.codefactor.io/repository/github/tsanfer/vuepress_theme_reco-github_actions)
 [![codecov](https://codecov.io/gh/Tsanfer/vuepress_theme_reco-Github_Actions/branch/master/graph/badge.svg)](https://codecov.io/gh/Tsanfer/vuepress_theme_reco-Github_Actions)
-[![dependabot](https://img.shields.io/badge/Dependabot-enable-brightgreen?logo=Dependabot)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/.github/dependabot.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions?logo=Git)
 [![GitHub license](https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
 
