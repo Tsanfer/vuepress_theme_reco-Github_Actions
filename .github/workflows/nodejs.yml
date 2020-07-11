@@ -33,14 +33,17 @@ jobs:
       #     nyc cover config.js &&
       #     cd -
 
-      # - name: Upload coverage to Codecov
-      #   uses: codecov/codecov-action@v1
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
 
       - name: Build Project # 此步骤（step）的名字
         run: npm run docs:build
         env:
           LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }} # 评论系统的ID
           LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }} # 评论系统的KEY
+
+      - name: reset git
+        run: git reset --hard
 
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
