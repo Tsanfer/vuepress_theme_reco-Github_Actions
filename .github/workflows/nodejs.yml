@@ -28,7 +28,7 @@ jobs:
         run: npm install
 
       - name: generate coverage report
-        run: npm install -g istanbul &&
+        run: npm install -g nyc &&
           cd ./docs/.vuepress/ &&
           nyc cover config.js &&
           cd -
