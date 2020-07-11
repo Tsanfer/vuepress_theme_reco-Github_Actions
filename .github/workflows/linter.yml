@@ -2,13 +2,13 @@ name: Lint Code Style
 on: push
 jobs:
   Super-Linter:
-    name: Lint Code Base job
+    name: Lint Code
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Lint Code Base step
+      - name: Lint Code
         uses: github/super-linter@v3.3.1
         env:
           VALIDATE_YAML: true
