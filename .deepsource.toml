@@ -1,5 +1,10 @@
 version = 1
 
+test_patterns = [
+    "docs/.vuepress",
+    "config.js"
+]
+
 [[analyzers]]
 name = "test-coverage"
 enabled = true
