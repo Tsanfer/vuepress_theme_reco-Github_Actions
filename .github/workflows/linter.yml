@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Lint Code
-        uses: github/super-linter@v3.3.2
+        uses: github/super-linter@v3.4.0
         env:
           VALIDATE_YAML: true
           VALIDATE_JSON: true
