@@ -37,8 +37,8 @@ jobs:
         uses: codecov/codecov-action@v1.0.12 # 上传codedev报告
 
       # 如果FTP-Deploy-Action出现，Dirty repository: Having uncommitted changes. 问题时，使用以下注释步骤解决问题
-      - name: reset git
-        run: git reset --hard
+      # - name: reset git
+      #   run: git reset --hard
 
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1

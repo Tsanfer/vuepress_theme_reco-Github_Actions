@@ -10,7 +10,7 @@
     "@vuepress/plugin-nprogress": "^1.5.2",
     "nyc": "^15.1.0",
     "vue-class-component": "^7.2.5",
-    "vuepress": "^1.5.2",
+    "vuepress": "^1.5.3",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-reading-progress": "^1.0.10",
