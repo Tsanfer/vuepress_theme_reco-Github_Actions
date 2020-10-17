@@ -1,6 +1,6 @@
 module.exports = {
   // host: '0.0.0.0',  // 生成网页地址（本地调试使用）
-  // port: '22335',  // 生成网页端口（本地调试使用）
+  port: "22335", // 生成网页端口（本地调试使用）
   title: "Tsanfer's Blog", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
   description: "现居住于猎户臂上的一个碳基生命", // meta 中的描述文字，用于SEO
   head: [
@@ -33,6 +33,16 @@ module.exports = {
       { text: "时间线", link: "/timeline/", icon: "reco-date" },
       { text: "订阅", link: "https://tsanfer.xyz/rss.xml", icon: "reco-rss" },
       {
+        text: "个人网盘",
+        link: "http://clouddisk.tsanfer.xyz:8080",
+        icon: "reco-account",
+      },
+      {
+        text: "第三方网易云播放器",
+        link: "http://clouddisk.tsanfer.xyz:8081",
+        icon: "reco-menu",
+      },
+      {
         text: "联系",
         icon: "reco-message",
         items: [
@@ -53,8 +63,7 @@ module.exports = {
           },
           {
             text: "QQ",
-            link:
-              "tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1124851454",
+            link: "tencent://message/?uin=1124851454",
             icon: "reco-qq",
           },
           {
@@ -66,11 +75,6 @@ module.exports = {
             text: "Gmail",
             link: "mailto:a1124851454@gmail.com",
             icon: "reco-mail",
-          },
-          {
-            text: "个人网盘",
-            link: "http://clouddisk.tsanfer.xyz:8080",
-            icon: "reco-account",
           },
         ],
       },
