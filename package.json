@@ -14,7 +14,7 @@
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-reading-progress": "^1.0.10",
-    "vuepress-plugin-social-share": "^0.3.2",
+    "vuepress-plugin-social-share": "^1.0.0",
     "vuepress-theme-reco": "^1.5.7",
     "vue-router": "3.4.5"
   }
