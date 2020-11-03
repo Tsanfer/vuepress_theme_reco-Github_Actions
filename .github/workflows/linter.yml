@@ -1,4 +1,4 @@
-name: Lint Code Style
+name: Lint Code Base
 on: push
 jobs:
   Super-Linter:
