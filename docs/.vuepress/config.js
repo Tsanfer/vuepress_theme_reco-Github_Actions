@@ -160,19 +160,76 @@ module.exports = {
               "https://p2.music.126.net/4TnTRyHqa3-D2H1UnOa00w==/109951163666994621.jpg",
           },
           {
-            name: "Forever",
-            artist: "PIKASONIC",
-            url: "https://cdn-image.tsanfer.xyz/music/forever%20mst.mp3",
+            name: "Iron Princess",
+            artist: "Xomu,HYP3RLAPS3",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/Xomu%2CHYP3RLAPS3%20-%20Iron%20Princess.flac",
             cover:
-              "https://p1.music.126.net/LjXufn3OaIgf8OwaEP_xcQ==/109951164419438501.jpg",
+              "https://p2.music.126.net/INOnlEePWnMVO3D4U95B9g==/109951165031046695.jpg",
           },
           {
-            name: "Life Of Sin Pt. 4",
-            artist: "MitiS",
+            name: "Rapid as Wildfires 疾如猛火",
+            artist: "陈致逸,HOYO-MiX",
             url:
-              "https://cdn-image.tsanfer.xyz/music/MitiS%20-%20Life%20Of%20Sin%20Pt.%204.mp3",
+              "https://cdn-image.tsanfer.xyz/music/%E9%99%88%E8%87%B4%E9%80%B8%2CHOYO-MiX%20-%20Rapid%20as%20Wildfires%20%E7%96%BE%E5%A6%82%E7%8C%9B%E7%81%AB.flac",
             cover:
-              "https://p2.music.126.net/LmjTrSwvSLSNBsfFsQFO6g==/2533274793491743.jpg",
+              "https://p2.music.126.net/yoRaxBY77koSqhjh52g-DA==/109951165434255510.jpg",
+          },
+          {
+            name: "この世界の頂で",
+            artist: "森下弘生,金﨑猛,近藤嶺",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/%E6%A3%AE%E4%B8%8B%E5%BC%98%E7%94%9F%2C%E9%87%91%EF%A8%91%E7%8C%9B%2C%E8%BF%91%E8%97%A4%E5%B6%BA%20-%20%E3%81%93%E3%81%AE%E4%B8%96%E7%95%8C%E3%81%AE%E9%A0%82%E3%81%A7.mp3",
+            cover:
+              "https://p2.music.126.net/PFojr1j6pdEj3uWrhpdytA==/109951164925376075.jpg",
+          },
+          {
+            name: "終わりの世界から",
+            artist: "やなぎなぎ,麻枝准",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/%E7%B5%82%E3%82%8F%E3%82%8A%E3%81%AE%E4%B8%96%E7%95%8C%E3%81%8B%E3%82%89%20-%20%E3%82%84%E3%81%AA%E3%81%8E%E3%81%AA%E3%81%8E%2C%E9%BA%BB%E6%9E%9D%E5%87%86.mp3",
+            cover:
+              "https://p1.music.126.net/C7ruDdV5NhgfhhJ8_cQSzA==/2426622162519258.jpg",
+          },
+          {
+            name: "寂しい夜",
+            artist: "三輪学",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/%E4%B8%89%E8%BC%AA%E5%AD%A6%20-%20%E5%AF%82%E3%81%97%E3%81%84%E5%A4%9C.flac",
+            cover:
+              "https://p2.music.126.net/RIOvUtQejxeI5S2sP_nmiw==/3434874333355654.jpg",
+          },
+          {
+            name: "「軌跡」",
+            artist: "小野友樹,KENN",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/%E5%B0%8F%E9%87%8E%E5%8F%8B%E6%A8%B9%2CKENN%20-%20%E3%80%8C%E8%BB%8C%E8%B7%A1%E3%80%8D.flac",
+            cover:
+              "https://p2.music.126.net/xY8qFdscge6rmeaw9aCc6A==/109951163168710796.jpg",
+          },
+          {
+            name: "無人区-Vacuum Track#ADD8E6-",
+            artist: "米缐p.",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/%E7%B1%B3%E7%BC%90p.%20-%20%E7%84%A1%E4%BA%BA%E5%8C%BA-Vacuum%C2%A0Track%23ADD8E6-.mp3",
+            cover:
+              "https://p3.music.126.net/WXAAn_D-gfPB9iVcVZQwAw==/109951163037603327.jpg",
+          },
+          {
+            name: "DARK SOULS Ⅲ",
+            artist: "Yuka Kitamura",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/DARK%20SOULS%20%E2%85%A2%20-%20Yuka%20Kitamura.mp3",
+            cover:
+              "https://p1.music.126.net/XS-n1XX9g_OBLFudoQrc5w==/1396379770845098.jpg",
+          },
+          {
+            name: "Ezio's Family",
+            artist: "Jesper Kyd",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/Jesper%20Kyd%20-%20Ezio's%20Family.mp3",
+            cover:
+              "https://p1.music.126.net/BQ0oJHhx3bPdmYbg90WL1g==/2536573326661833.jpg",
           },
           {
             name: "Sea Of Voices (RAC Mix)",
@@ -183,12 +240,12 @@ module.exports = {
               "https://p1.music.126.net/zjQROkEUokU7iS5eUvnVZQ==/3264450027161111.jpg",
           },
           {
-            name: "New Lipstick",
-            artist: "The Kissaway Trail",
+            name: "Superstar (feat. Linn)",
+            artist: "Said The Sky & Dabin",
             url:
-              "https://cdn-image.tsanfer.xyz/music/The%20Kissaway%20Trail%20-%20New%20Lipstick.flac",
+              "https://cdn-image.tsanfer.xyz/music/Said%20The%20Sky%20%26%20Dabin%20-%20Superstar%20(feat.%20Linn)%20-%20Said%20The%20Sky.mp3",
             cover:
-              "https://p2.music.126.net/VjN74c1hoYgPCEZ9DngeQw==/109951163772624643.jpg",
+              "https://p2.music.126.net/G105trvU6R2_vqgZWvncuQ==/109951163506191548.jpg",
           },
         ],
       },
