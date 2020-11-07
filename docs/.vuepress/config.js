@@ -176,6 +176,14 @@ module.exports = {
               "https://p2.music.126.net/yoRaxBY77koSqhjh52g-DA==/109951165434255510.jpg",
           },
           {
+            name: "清平乐",
+            artist: "张紫宁",
+            url:
+              "https://cdn-image.tsanfer.xyz/music/%E7%81%AB%E7%AE%AD%E5%B0%91%E5%A5%B3101%E7%B4%AB%E5%AE%81%20-%20%E6%B8%85%E5%B9%B3%E4%B9%90.flac",
+            cover:
+              "https://p1.music.126.net/145FpHsLi2_RyjqCm9kEUQ==/109951164698991135.jpg",
+          },
+          {
             name: "この世界の頂で",
             artist: "森下弘生,金﨑猛,近藤嶺",
             url:
