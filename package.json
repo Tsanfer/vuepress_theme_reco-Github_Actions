@@ -10,12 +10,12 @@
     "@vuepress/plugin-nprogress": "^1.6.0",
     "nyc": "^15.1.0",
     "vue-class-component": "^7.2.6",
+    "vue-router": "3.4.9",
     "vuepress": "^1.6.0",
     "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-reading-progress": "^1.0.10",
     "vuepress-plugin-social-share": "^1.0.0",
-    "vuepress-theme-reco": "^1.5.7",
-    "vue-router": "3.4.9"
+    "vuepress-theme-reco": "^1.6.1"
   }
 }
