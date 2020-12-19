@@ -48,7 +48,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }} # FTP密码
           protocol: ftps
           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
-          server-dir: home/www/htdocs
+          server-dir: home/www/htdocs/
 
       - name: upload-artifact
         uses: actions/upload-artifact@v2 #共享或保存action过程中产生的文件
