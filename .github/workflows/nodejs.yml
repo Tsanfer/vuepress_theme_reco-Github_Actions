@@ -44,6 +44,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.FTP_IP }} # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
+          port: 22
           username: ${{ secrets.FTP_USERNAME }} # FTP用户名
           password: ${{ secrets.FTP_PASSWORD }} # FTP密码
           protocol: ftps
