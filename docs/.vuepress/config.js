@@ -26,6 +26,13 @@ module.exports = {
         location: 3, // 在导航栏菜单中所占的位置，默认3
         text: "标签", // 默认 “标签”
       },
+      socialLinks: [
+        { icon: "reco-github", link: "https://github.com/Tsanfer" },
+        { icon: "reco-bilibili", link: "https://space.bilibili.com/12167681" },
+        { icon: "reco-qq", link: "tencent://message/?uin=1124851454" },
+        { icon: "reco-twitter", link: "https://twitter.com/a1124851454" },
+        { icon: "reco-mail", link: "mailto:a1124851454@gmail.com" },
+      ],
     },
     nav: [
       //导航栏设置
@@ -39,17 +46,17 @@ module.exports = {
           {
             text: "个人网盘",
             link: "http://clouddisk.tsanfer.xyz:8081",
-            icon: "reco-account",
+            icon: "fa-hdd",
           },
           {
             text: "第三方网易云播放器",
             link: "http://clouddisk.tsanfer.xyz/YesPlayMusic/",
-            icon: "music",
+            icon: "fa-music"
           },
           {
             text: "订阅转换器",
             link: "https://tsanfer.xyz/sub-web/",
-            icon: "exchange-alt",
+            icon: "fa-exchange-alt"
           },
         ],
       },
@@ -108,13 +115,6 @@ module.exports = {
       appId: process.env.LEANCLOUD_APP_ID,
       appKey: process.env.LEANCLOUD_APP_KEY,
     },
-    socialLinks: [
-      { icon: "reco-github", link: "https://github.com/Tsanfer" },
-      { icon: "reco-bilibili", link: "https://space.bilibili.com/12167681" },
-      { icon: "reco-qq", link: "tencent://message/?uin=1124851454" },
-      { icon: "reco-twitter", link: "https://twitter.com/a1124851454" },
-      { icon: "reco-mail", link: "mailto:a1124851454@gmail.com" },
-    ],
   },
   markdown: {
     lineNumbers: true, //代码显示行号
