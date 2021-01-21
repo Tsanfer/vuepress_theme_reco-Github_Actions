@@ -1,7 +1,7 @@
 # vuepress-theme-reco + Github Actions 搭建静态博客，自动构建部署到第三方服务器
 
 [![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/CI/CD/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
-[![Lint Code Base](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Lint%20Code%20Base/badge.svg)](<https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions>)
+[![Lint Code Base](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/tsanfer/vuepress_theme_reco-github_actions/badge)](https://www.codefactor.io/repository/github/tsanfer/vuepress_theme_reco-github_actions)
 [![codecov](https://codecov.io/gh/Tsanfer/vuepress_theme_reco-Github_Actions/branch/master/graph/badge.svg)](https://codecov.io/gh/Tsanfer/vuepress_theme_reco-Github_Actions)
 [![dependabot](https://img.shields.io/badge/Dependabot-enable-brightgreen?logo=Dependabot)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/.github/dependabot.yml)
@@ -22,6 +22,8 @@
 - > [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
 
 ## 最终效果
+
+[最终效果链接](https://tsanfer.xyz/)
 
 ![最终效果](https://cdn-image.tsanfer.xyz/img/20200322150711.png)
 

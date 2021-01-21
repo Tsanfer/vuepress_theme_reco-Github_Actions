@@ -16,6 +16,7 @@
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-reading-progress": "^1.0.10",
     "vuepress-plugin-social-share": "^1.0.0",
-    "vuepress-theme-reco": "^1.6.1"
+    "vuepress-theme-reco": "^1.6.1",
+    "vuepress-plugin-meting": "^0.1.1"
   }
 }

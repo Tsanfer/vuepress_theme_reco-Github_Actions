@@ -1,6 +1,6 @@
 ---
 home: true
-bgImage: "/background.jpg"
+bgImage: "/background.svg"
 bgImageStyle: { height: "350px" }
 ---
 
