@@ -15,7 +15,13 @@ This application provides display and control of Android devices connected on US
 
 ## 工具简介
 
-This application provides display and control of Android devices connected on USB (or [over TCP/IP](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)). It does not require any _root_ access. It works on _GNU/Linux_, _Windows_ and _macOS_.
+> This application provides display and control of Android devices connected on USB (or [over TCP/IP](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)). It does not require any _root_ access. It works on _GNU/Linux_, _Windows_ and _macOS_.
+>
+> [_Github README_](https://github.com/Genymobile/scrcpy#translations)
+
+> 本应用程序可以显示并控制通过 USB (或 [TCP/IP](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)) 连接的安卓设备，且不需要任何 _root_ 权限。本程序支持 _GNU/Linux_, _Windows_ 和 _macOS_。
+>
+> —— [scrcpy 中文说明文档](https://github.com/Genymobile/scrcpy/blob/master/README.zh-Hans.md)
 
 ### 常用命令
 
@@ -61,6 +67,6 @@ E:\Stand_alone\scrcpy\scrcpy.exe --max-fps 60 --window-title 'Pixel XL'  --alway
 _¹Double-click on black borders to remove them._
 _²Right-click turns the screen on if it was off, presses BACK otherwise._
 
-> <https://github.com/Genymobile/scrcpy>
+> [官方教程](https://github.com/Genymobile/scrcpy)
 
 > 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！

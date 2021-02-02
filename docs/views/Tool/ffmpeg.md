@@ -9,29 +9,22 @@ tags:
 ---
 
 ::: tip
-![FFmpeg_Logo_new](http://image-hosting-tsanfer.oss-accelerate.aliyuncs.com/img/FFmpeg_Logo_new.svg)
+![FFmpeg_Logo_new](https://image-hosting-tsanfer.oss-accelerate.aliyuncs.com/img/FFmpeg_Logo_new.svg)
 :::
 
 <!-- more -->
 
 ## 工具简介
 
-FFmpeg is the leading multimedia framework, able to **decode**, **encode**, **transcode**, **mux**, **demux**, **stream**, **filter** and **play** pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure [FATE](http://fate.ffmpeg.org) across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.
+> FFmpeg is the leading multimedia framework, able to **decode**, **encode**, **transcode**, **mux**, **demux**, **stream**, **filter** and **play** pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure [FATE](http://fate.ffmpeg.org) across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.
+>
+> [_About FFmpeg_](https://www.ffmpeg.org/about.html)
+
+> **FFmpeg** 是一个[开放源代码](https://zh.wikipedia.org/wiki/開放原始碼)的[自由软件](https://zh.wikipedia.org/wiki/自由軟體)，可以运行音频和视频多种格式的录影、转换、流功能[[1\]](https://zh.wikipedia.org/wiki/FFmpeg#cite_note-1)，包含了 libavcodec——这是一个用于多个项目中音频和视频的解码器库，以及 libavformat——一个音频与视频格式转换库。
+>
+> —— [维基百科词条：FFmpeg](https://zh.wikipedia.org/wiki/FFmpeg)
 
 ### 常用命令
-
-```powershell
-.\scrcpy.exe -m 600 -b 100M --max-fps 60 --window-title 'Pixel XL'  --always-on-top -Sw -t --push-target /sdcard/Download/From_computer/
-
-E:\Stand_alone\scrcpy\scrcpy.exe --max-fps 60 --window-title 'Pixel XL'  --always-on-top -Sw -t --push-target /sdcard/Download/From_computer/
-
---max-size -m # short version high
---bit-rate -b
---max-fps
---stay-awake -w
---turn-screen-off -S
---show-touches -t
-```
 
 ```powershell
 #命令
