@@ -34,7 +34,7 @@ jobs:
           LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }} # 评论系统的KEY
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1.2.1 # 上传codedev报告
+        uses: codecov/codecov-action@v1.2.2 # 上传codedev报告
 
       # 如果FTP-Deploy-Action出现，Dirty repository: Having uncommitted changes. 问题时，使用以下注释步骤解决问题
       - name: reset git
