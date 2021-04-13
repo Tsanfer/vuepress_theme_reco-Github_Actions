@@ -16,7 +16,7 @@ jobs:
 
       - name: Cache node modules
         id: cache # 缓存id
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.5
         env:
           cache-name: cache-node-modules # 缓存名字
         with:
