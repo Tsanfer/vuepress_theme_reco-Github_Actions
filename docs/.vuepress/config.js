@@ -117,7 +117,7 @@ module.exports = {
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: [
             "Linux_board_NFS",
-            "First Prepare for Lanqiao Cup MCU Competition",
+            "First_Prepare_for_Lanqiao_Cup_MCU_Competition",
           ],
         },
       ],
@@ -126,7 +126,7 @@ module.exports = {
           title: "计算机", // 必要的
           // path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: ["Storage hardware"],
+          children: ["Storage_hardware"],
         },
       ],
       "/views/Tool/": [
