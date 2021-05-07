@@ -1,5 +1,5 @@
 ---
-title: scrcpy使用
+title: 手机控制工具 scrcpy 的使用
 date: 2021-01-21
 categories:
   - 工具

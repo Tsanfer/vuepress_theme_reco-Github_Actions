@@ -98,7 +98,7 @@ module.exports = {
     //   ['/views/FrontEndSphinx_GitHub_ReadtheDocs.md', 'ReadtheDocs'],
     // ],
     sidebar: {
-      "/views/FrontEnd/": [
+      "/views/frontEnd/": [
         {
           title: "前端", // 必要的
           // path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
