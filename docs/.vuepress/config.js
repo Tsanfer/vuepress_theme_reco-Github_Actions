@@ -1,6 +1,6 @@
 module.exports = {
-  host: "0.0.0.0", // 生成网页地址（本地调试使用）
-  port: "22333", // 生成网页端口（本地调试使用）
+//   host: "0.0.0.0", // 生成网页地址（本地调试使用）
+//   port: "22333", // 生成网页端口（本地调试使用）
   title: "Tsanfer's Blog", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
   description: "现居住于猎户臂上的一个碳基生命", // meta 中的描述文字，用于SEO
   head: [
@@ -98,13 +98,13 @@ module.exports = {
     //   ['/views/FrontEndSphinx_GitHub_ReadtheDocs.md', 'ReadtheDocs'],
     // ],
     sidebar: {
-      "/views/frontEnd/": [
+      "/views/FrontEnd/": [
         {
           title: "前端", // 必要的
           // path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: [
-            "vuepress_theme_reco_Github_Actions",
+            "vuepress_theme_reco-Github_Actions",
             "VuePress_GithubPages_TravisCI",
             "Sphinx_GitHub_ReadtheDocs",
           ],
@@ -117,7 +117,7 @@ module.exports = {
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: [
             "Linux_board_NFS",
-            "First_Prepare_for_Lanqiao_Cup_MCU_Competition",
+            "First Prepare for Lanqiao Cup MCU Competition",
           ],
         },
       ],
@@ -126,7 +126,7 @@ module.exports = {
           title: "计算机", // 必要的
           // path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: ["Storage_hardware"],
+          children: ["Storage hardware"],
         },
       ],
       "/views/Tool/": [
