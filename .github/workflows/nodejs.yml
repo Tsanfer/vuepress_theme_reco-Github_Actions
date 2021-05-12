@@ -38,7 +38,7 @@ jobs:
         run: git reset --hard
 
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           ftp-server: sftp://${{ secrets.FTP_IP }}/home/www/htdocs # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
           ftp-username: ${{ secrets.FTP_USERNAME }} # FTP用户名
