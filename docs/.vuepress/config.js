@@ -45,13 +45,18 @@ module.exports = {
         items: [
           {
             text: "个人网盘",
-            link: "http://clouddisk.tsanfer.xyz:8081",
+            link: "http://clouddisk.tsanfer.xyz:8080",
             icon: "fa-hdd",
           },
           {
             text: "订阅转换器",
-            link: "https://tsanfer.xyz/sub-web/",
+            link: "http://clouddisk.tsanfer.xyz:58080",
             icon: "fa-exchange-alt",
+          },
+          {
+            text: "目标检测",
+            link: "http://hpc.tsanfer.xyz:8000",
+            icon: "fa-object-ungroup",
           },
         ],
       },
@@ -92,16 +97,10 @@ module.exports = {
         ],
       },
     ],
-    // sidebar: [
-    //   ['/views/FrontEnd/vuepress_theme_reco-Github_Actions.md','"reco'],
-    //   ['/views/FrontEndVuePress_GithubPages_TravisCI.md', 'TravisCI'],
-    //   ['/views/FrontEndSphinx_GitHub_ReadtheDocs.md', 'ReadtheDocs'],
-    // ],
     sidebar: {
       "/views/frontEnd/": [
         {
           title: "前端", // 必要的
-          // path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: [
             "vuepress_theme_reco-Github_Actions",
@@ -113,7 +112,6 @@ module.exports = {
       "/views/MCU/": [
         {
           title: "MCU", // 必要的
-          // path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: [
             "Linux_board_NFS",
@@ -124,7 +122,6 @@ module.exports = {
       "/views/Computer/": [
         {
           title: "计算机", // 必要的
-          // path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: ["Storage_hardware"],
         },
@@ -132,7 +129,6 @@ module.exports = {
       "/views/Tool/": [
         {
           title: "工具", // 必要的
-          // path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: ["ffmpeg", "scrcpy"],
         },
@@ -180,15 +176,6 @@ module.exports = {
         },
       },
     ],
-    // ],
-    [
-      "social-share", //分享插件
-      {
-        networks: ["qq", "weibo", "twitter", "facebook", "email"], //分享类型
-        email: "a1124851454@gmail.com", //email地址
-        twitterUser: "a1124851454", //Twitter账号
-      },
-    ],
     [
       "@vuepress-reco/vuepress-plugin-rss", //RSS插件
       {
@@ -197,7 +184,6 @@ module.exports = {
       },
     ],
     ["flowchart"], // 支持流程图
-    // ["vuepress-plugin-smooth-scroll"], // 平滑滚动
     ["@vuepress/nprogress"], // 加载进度条
     ["reading-progress"], // 阅读进度条
     ["vuepress-plugin-code-copy", true], //一键复制代码插件
