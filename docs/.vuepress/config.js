@@ -37,8 +37,6 @@ module.exports = {
     nav: [
       //导航栏设置
       { text: "主页", link: "/", icon: "reco-home" },
-      { text: "时间线", link: "/timeline/", icon: "reco-date" },
-      { text: "订阅", link: "https://tsanfer.xyz/rss.xml", icon: "reco-rss" },
       {
         text: "工具",
         icon: "reco-api",
