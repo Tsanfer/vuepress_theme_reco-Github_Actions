@@ -1,15 +1,14 @@
 ---
 title: 胡思乱想
 date: 2022-10-21
+sidebar: "auto"
 categories:
   - 其他
 tags:
   - 其他
 ---
 
-::: tip
 ![](http://assets.processon.com/chart_image/61712b25e401fd76f956ba2f.png)
-:::
 
 ## 一些他人思考
 

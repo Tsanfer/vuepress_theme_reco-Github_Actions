@@ -219,7 +219,7 @@ master_doc = 'index'
 
 添加`./requirements.txt` pip 要求文件（**Readthedocs 配置**时需要用到）
 
-```text
+```
 # markdown suport
 recommonmark
 # markdown table suport
@@ -237,7 +237,7 @@ sphinx-rtd-theme
 
 配置`./source/index.rst`文件：
 
-```rst
+```
 创建Sphinx + GitHub + ReadtheDocs托管文档
 =====================================================
 

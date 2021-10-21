@@ -1,6 +1,7 @@
 ---
 title: 常用存储硬件标准
 date: 2021-01-21
+sidebar: "auto"
 categories:
   - 计算机
 tags:

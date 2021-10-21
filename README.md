@@ -78,26 +78,26 @@ sudo yarn install
 #### 更改最新依赖
 
 ```json
-// package.json
-
 {
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "vuepress": "^1.5.2",
-    "vuepress-theme-reco": "^1.4.6",
-    "vuepress-plugin-flowchart": "^1.4.3",
-    "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.3",
-    "@vuepress/plugin-nprogress": "^1.5.0",
-    "vuepress-plugin-reading-progress": "^1.0.9",
+    "@vuepress-reco/vuepress-plugin-rss": "^1.0.2",
+    "@vuepress/plugin-nprogress": "^1.8.2",
+    "npm-check": "^5.9.2",
+    "vue-class-component": "^7.2.6",
+    "vue-router": "^3.5.2",
+    "vuepress": "^1.8.2",
     "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-plugin-social-share": "^0.3.0",
-    "vue-class-component": "^7.2.3",
-    "@vuepress-reco/vuepress-plugin-rss": "^1.0.1"
+    "vuepress-plugin-flowchart": "^1.4.3",
+    "vuepress-plugin-meting": "^0.3.0",
+    "vuepress-plugin-reading-progress": "^1.0.10",
+    "vuepress-theme-reco": "^1.6.6"
   }
 }
+
 ```
 
 然后，安装依赖
@@ -143,8 +143,8 @@ sudo yarn
 // docs/.vuepress/config.js
 
 module.exports = {
-  // host: '0.0.0.0',  // 生成网页地址（本地调试使用）
-  // port: '22335',  // 生成网页端口（本地调试使用）
+//   host: "0.0.0.0", // 生成网页地址（本地调试使用）
+//   port: "22333", // 生成网页端口（本地调试使用）
   title: "Tsanfer's Blog", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
   description: "现居住于猎户臂上的一个碳基生命", // meta 中的描述文字，用于SEO
   head: [
@@ -157,7 +157,6 @@ module.exports = {
       },
     ], //在移动端，搜索框在获得焦点时会放大
   ],
-
   theme: "reco", //选择主题‘reco’
   themeConfig: {
     type: "blog", //选择类型博客
@@ -171,12 +170,38 @@ module.exports = {
         location: 3, // 在导航栏菜单中所占的位置，默认3
         text: "标签", // 默认 “标签”
       },
+      socialLinks: [
+        { icon: "reco-github", link: "https://github.com/Tsanfer" },
+        { icon: "reco-bilibili", link: "https://space.bilibili.com/12167681" },
+        { icon: "reco-qq", link: "tencent://message/?uin=1124851454" },
+        { icon: "reco-twitter", link: "https://twitter.com/a1124851454" },
+        { icon: "reco-mail", link: "mailto:a1124851454@gmail.com" },
+      ],
     },
     nav: [
       //导航栏设置
       { text: "主页", link: "/", icon: "reco-home" },
-      { text: "时间线", link: "/timeline/", icon: "reco-date" },
-      { text: "订阅", link: "https://tsanfer.xyz/rss.xml", icon: "reco-rss" },
+      {
+        text: "工具",
+        icon: "reco-api",
+        items: [
+          {
+            text: "个人网盘",
+            link: "http://clouddisk.tsanfer.xyz:8080",
+            icon: "fa-hdd",
+          },
+          {
+            text: "订阅转换器",
+            link: "http://clouddisk.tsanfer.xyz:58080",
+            icon: "fa-exchange-alt",
+          },
+          {
+            text: "目标检测",
+            link: "http://hpc.tsanfer.xyz:8000",
+            icon: "fa-object-ungroup",
+          },
+        ],
+      },
       {
         text: "联系",
         icon: "reco-message",
@@ -198,8 +223,7 @@ module.exports = {
           },
           {
             text: "QQ",
-            link:
-              "tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1124851454",
+            link: "tencent://message/?uin=1124851454",
             icon: "reco-qq",
           },
           {
@@ -212,17 +236,51 @@ module.exports = {
             link: "mailto:a1124851454@gmail.com",
             icon: "reco-mail",
           },
-          {
-            text: "个人网盘",
-            link: "http://clouddisk.tsanfer.xyz:8080",
-            icon: "reco-account",
-          },
         ],
       },
     ],
-    sidebar: "auto", //在所有页面中启用自动生成侧栏
+    sidebar: {
+      "/views/frontEnd/": [
+        {
+          title: "前端", // 必要的
+          sidebarDepth: 2, // 可选的, 默认值是 1
+          children: [
+            "vuepress_theme_reco-Github_Actions",
+            "VuePress_GithubPages_TravisCI",
+            "Sphinx_GitHub_ReadtheDocs",
+          ],
+        },
+      ],
+      "/views/MCU/": [
+        {
+          title: "MCU", // 必要的
+          sidebarDepth: 2, // 可选的, 默认值是 1
+          children: [
+            "Linux_board_NFS",
+            "First_Prepare_for_Lanqiao_Cup_MCU_Competition",
+          ],
+        },
+      ],
+      "/views/Computer/": [
+        {
+          title: "计算机", // 必要的
+          sidebarDepth: 2, // 可选的, 默认值是 1
+          children: ["Storage_hardware"],
+        },
+      ],
+      "/views/Tool/": [
+        {
+          title: "工具", // 必要的
+          sidebarDepth: 2, // 可选的, 默认值是 1
+          children: ["ffmpeg", "scrcpy"],
+        },
+      ],
+    },
+    // displayAllHeaders: true, // 默认值：false
+    subSidebar: "auto",
+
     record: "蜀ICP备20005033号-1",
-    recordLink: "https://icp.chinaz.com/tsanfer.xyz",
+    recordLink: "https://icp.chinaz.com/home/info?host=tsanfer.xyz",
     cyberSecurityRecord: "川公网安备 51110202000301号",
     cyberSecurityLink:
       "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51110202000301",
@@ -231,106 +289,33 @@ module.exports = {
     author: "Tsanfer",
     authorAvatar: "/avatar.svg", //作者头像
     mode: "light", //默认显示白天模式
+    codeTheme: "okaidia", // default 'tomorrow'
+    smooth: "true", //平滑滚动
     // 评论设置
     valineConfig: {
       appId: process.env.LEANCLOUD_APP_ID,
       appKey: process.env.LEANCLOUD_APP_KEY,
     },
   },
-
   markdown: {
     lineNumbers: true, //代码显示行号
-  },
-  // 搜索设置
+  }, // 搜索设置
   search: true,
-  searchMaxSuggestions: 10,
-
-  // 插件
+  searchMaxSuggestions: 10, // 插件
   plugins: [
     [
-      "@vuepress-reco/vuepress-plugin-bgm-player", // BGM播放器
+      "meting",
       {
-        audios: [
-          {
-            name: "Faster Than Light",
-            artist: "Andreas Waldetoft / Mia Stegmar",
-            url:
-              "https://cdn-image.tsanfer.xyz/music/Andreas%20Waldetoft%2CMia%20Stegmar%20-%20Faster%20Than%20Light.mp3",
-            cover:
-              "https://p1.music.126.net/Gxv6d9W4Yd9q9WNHPpi8rw==/1379887104073348.jpg",
-          },
-          {
-            name: "Dawn",
-            artist: "DDRKirby(ISQ)",
-            url:
-              "https://cdn-image.tsanfer.xyz/music/Dawn%20-%20DDRKirby%28ISQ%29.mp3",
-            cover:
-              "https://p2.music.126.net/IPnqMCk8YaN9inwYV2bdgQ==/18774161044446693.jpg",
-          },
-          {
-            name: "TRON Legacy (End Titles)",
-            artist: "Daft Punk",
-            url:
-              "https://cdn-image.tsanfer.xyz/music/Daft%20Punk%20-%20TRON%20Legacy%20%28End%20Titles%29.mp3",
-            cover:
-              "https://p2.music.126.net/qOOTIykbSLw9RHB0vI83GA==/737772302281958.jpg",
-          },
-          {
-            name: "Reconfig",
-            artist: "Shortwire",
-            url:
-              "https://cdn-image.tsanfer.xyz/music/Reconfig%20-%20Shortwire.mp3",
-            cover:
-              "https://p2.music.126.net/2oouVh_rHOv1nZXYapF41A==/109951163606358209.jpg",
-          },
-          {
-            name: "Broken Boy",
-            artist: "Tonspender",
-            url:
-              "https://cdn-image.tsanfer.xyz/music/Tonspender%20-%20Broken%20Boy.flac",
-            cover:
-              "https://p2.music.126.net/4TnTRyHqa3-D2H1UnOa00w==/109951163666994621.jpg",
-          },
-          {
-            name: "Forever",
-            artist: "PIKASONIC",
-            url: "https://cdn-image.tsanfer.xyz/music/forever%20mst.mp3",
-            cover:
-              "https://p1.music.126.net/LjXufn3OaIgf8OwaEP_xcQ==/109951164419438501.jpg",
-          },
-          {
-            name: "Life Of Sin Pt. 4",
-            artist: "MitiS",
-            url:
-              "https://cdn-image.tsanfer.xyz/music/MitiS%20-%20Life%20Of%20Sin%20Pt.%204.mp3",
-            cover:
-              "https://p2.music.126.net/LmjTrSwvSLSNBsfFsQFO6g==/2533274793491743.jpg",
-          },
-          {
-            name: "Sea Of Voices (RAC Mix)",
-            artist: "Porter Robinson",
-            url:
-              "https://cdn-image.tsanfer.xyz/music/Porter%20Robinson%20-%20Sea%20Of%20Voices%20%28RAC%20Mix%29.mp3",
-            cover:
-              "https://p1.music.126.net/zjQROkEUokU7iS5eUvnVZQ==/3264450027161111.jpg",
-          },
-          {
-            name: "New Lipstick",
-            artist: "The Kissaway Trail",
-            url:
-              "https://cdn-image.tsanfer.xyz/music/The%20Kissaway%20Trail%20-%20New%20Lipstick.flac",
-            cover:
-              "https://p2.music.126.net/VjN74c1hoYgPCEZ9DngeQw==/109951163772624643.jpg",
-          },
-        ],
-      },
-    ],
-    [
-      "social-share", //分享插件
-      {
-        networks: ["qq", "weibo", "twitter", "facebook", "email"], //分享类型
-        email: "a1124851454@gmail.com", //email地址
-        twitterUser: "a1124851454", //Twitter账号
+        // metingApi: "https://meting.sigure.xyz/api/music",
+        meting: {
+          server: "netease",
+          type: "playlist",
+          mid: "4902520778",
+        },
+        aplayer: {
+          lrcType: 3,
+          theme: "#3489fd",
+        },
       },
     ],
     [
@@ -341,12 +326,12 @@ module.exports = {
       },
     ],
     ["flowchart"], // 支持流程图
-    ["vuepress-plugin-smooth-scroll"], // 平滑滚动
     ["@vuepress/nprogress"], // 加载进度条
     ["reading-progress"], // 阅读进度条
     ["vuepress-plugin-code-copy", true], //一键复制代码插件
   ],
 };
+
 ```
 
 ## Github Actions 配置
@@ -361,35 +346,65 @@ module.exports = {
 # .github/workflows/nodejs.yml
 
 on: push # 触发此文件运行的条件
-name: Github Actions # 此工作流程（workflow）的名字
+name: CI/CD # 此工作流程（workflow）的名字
 jobs:
   FTP-Deploy-Action:
-    name: FTP-Deploy-Action # 此任务（job）的名字
+    name: CI&CD # 此任务（job）的名字
     runs-on: ubuntu-latest # 运行环境
     steps:
       - uses: actions/checkout@master # 切换分支到master
         with:
           fetch-depth: 2
 
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2.4.1 # 使用node环境
         with:
-          node-version: "12.x"
+          node-version: "14.x" # 版本14
 
-      - name: Build Project # 此步骤（step）的名字
-        run: yarn install && yarn docs:build # 下载依赖和构建项目
+      - name: Cache node modules
+        id: cache # 缓存id
+        uses: actions/cache@v2.1.6
         env:
-          LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }} # 评论系统的ID
+          cache-name: cache-node-modules # 缓存名字
+        with:
+          path: node_modules # 缓存路径
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package.json') }} # 缓存标识
+
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true' # 如果没有缓存的话
+        run: npm install # 安装依赖
+
+      - name: Build project
+        run: npm run docs:build # 构建项目和生成代码覆盖率报告
+        env:
+          LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }} # 评 论系统的ID
           LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }} # 评论系统的KEY
 
-      - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      # 如果FTP-Deploy-Action出现，Dirty repository: Having uncommitted changes. 问题时，使用以下注释步骤解决问题
+      - name: reset git
+        run: git reset --hard
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          ftp-server: sftp://${{ secrets.FTP_IP }}/home/www/htdocs # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
-          ftp-username: ${{ secrets.FTP_USERNAME }} # FTP用户名
-          ftp-password: ${{ secrets.FTP_PASSWORD }} # FTP密码
-          git-ftp-args: --insecure # （如果是FTP连接的话--insecure不用加）
+          server: ${{ secrets.FTP_IP }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
+          server-dir: default/
+
+#           ftp-server: sftp://${{ secrets.FTP_IP }}/home/www/htdocs # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
+#           ftp-username: ${{ secrets.FTP_USERNAME }} # FTP用户名
+#           ftp-password: ${{ secrets.FTP_PASSWORD }} # FTP密码
+#           git-ftp-args: --insecure # （如果是FTP连接的话--insecure不用加）
+#           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
+
+      - name: upload-artifact
+        uses: actions/upload-artifact@v2.2.4 #共享或保存action过程中产生的文件
+        with:
+          name: static_web_file
+          path: ./docs/.vuepress/dist/ # or path/to/artifact
+
 ```
 
 ```txt
