@@ -9,7 +9,7 @@ tags:
 ---
 
 ::: tip
-![FFmpeg_Logo_new](https://image-hosting-tsanfer.oss-accelerate.aliyuncs.com/img/FFmpeg_Logo_new.svg)
+![FFmpeg_Logo_new](https://cdn-oss.aliyuncs.com/image/FFmpeg_Logo_new.svg)
 :::
 
 <!-- more -->

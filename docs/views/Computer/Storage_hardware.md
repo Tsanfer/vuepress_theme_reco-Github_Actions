@@ -45,7 +45,7 @@ RPM (Revolutions per minute)
   - M key / Socket3
   - B & M key
 
-![M2_Edge_Connector_Keying](http://image-hosting-tsanfer.oss-accelerate.aliyuncs.com/img/M2_Edge_Connector_Keying.svg)
+![M2_Edge_Connector_Keying](http://cdn-oss.aliyuncs.com/image/M2_Edge_Connector_Keying.svg)
 
 - PCIe
 
@@ -88,10 +88,10 @@ RPM (Revolutions per minute)
 ### 物理接口
 
 <center>
-<img src="http://image-hosting-tsanfer.oss-accelerate.aliyuncs.com/img/USB_Micro-B.svg" width=200>
-<img src="http://image-hosting-tsanfer.oss-accelerate.aliyuncs.com/img/USB_Type-A.svg" width=200>
-<img src="http://image-hosting-tsanfer.oss-accelerate.aliyuncs.com/img/USB_3.0_Type-A_blue.svg" width=200>
-<img src="http://image-hosting-tsanfer.oss-accelerate.aliyuncs.com/img/USB_Type-C_receptacle.svg" width=200>
+<img src="http://cdn-oss.aliyuncs.com/image/USB_Micro-B.svg" width=200>
+<img src="http://cdn-oss.aliyuncs.com/image/USB_Type-A.svg" width=200>
+<img src="http://cdn-oss.aliyuncs.com/image/USB_3.0_Type-A_blue.svg" width=200>
+<img src="http://cdn-oss.aliyuncs.com/image/USB_Type-C_receptacle.svg" width=200>
 </center>
 
 ### 协议
