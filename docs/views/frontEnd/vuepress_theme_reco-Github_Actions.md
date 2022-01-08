@@ -56,7 +56,7 @@ publish: true
 
 [最终效果链接](https://tsanfer.xyz/)
 
-![最终效果链接](https://cdn-image.tsanfer.xyz/img/20200322150711.png)
+![最终效果链接](https://cdn-oss.tsanfer.xyz/image/20200322150711.png)
 
 ## 思路
 
