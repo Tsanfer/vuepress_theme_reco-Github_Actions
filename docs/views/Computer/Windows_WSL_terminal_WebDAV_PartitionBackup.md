@@ -70,7 +70,11 @@ tags:
 
 ## 系统重装
 
+::: tip 提示
+
 [Ventoy 官网](https://www.ventoy.net/)
+
+:::
 
 先做个U盘启动盘出来重装系统，顺便在U盘里放个 PE 系统镜像，方便以后配置电脑。
 
@@ -140,7 +144,11 @@ Windows 和 Linux 的镜像都可以，不过如果要在 Windows 11 上用 QQ �
 
 ### 安装 WSL
 
+::: tip 提示
+
 [旧版 WSL 的手动安装步骤](https://docs.microsoft.com/zh-cn/windows/wsl/install-manual)
+
+:::
 
 这里我是通过安装 docker 来安装 WSL 的， 不过 docker 安装的是 WSL1，在安装时 docker 会提示你需要升级到 WSL2，官方有教程。
 
@@ -159,8 +167,11 @@ Windows 和 Linux 的镜像都可以，不过如果要在 Windows 11 上用 QQ �
 5. 安装所选的 [Linux 分发](https://aka.ms/wslstore)，我这选的是 Ubuntu，安装好后打开，设置一下用户名和密码，就可以正常使用 WSL 了。
 
 ## 配置终端
+::: tip 提示
 
 [Oh My Posh 官网](https://ohmyposh.dev/)
+
+:::
 
 这里我用的终端是系统自带的 Windows Terminal，然后通过 Oh My Posh 来配置终端，主要是因为它同时支持 Windows 和 Linux。
 
@@ -286,7 +297,11 @@ WSL 的配置大体和 PowerShell 一样，不过我是在 oh-my-zsh 的基础�
 
 ### 配置 Cloudreve
 
+::: tip 提示
+
  [Cloudreve Github 地址](https://github.com/cloudreve/Cloudreve)
+
+ :::
 
 在被控制的电脑中打开 `cloudreve.exe` 即可，第一次启动时会提示一次用户名和密码，以后启动时就没有提示了，所以要注意保存。
 
@@ -304,7 +319,11 @@ Cloudreve 默认每个用户的容量为 1G，可以进 cloudreve 的后台更�
 
 ### 配置 aliyundrive-webdav
 
+::: tip 提示
+
 [aliyundrive-webdav Github 地址](https://github.com/messense/aliyundrive-webdav)
+
+:::
 
 我把阿里云盘的 webdav 服务放在了被控制的 windows 上一直开着，比较方便，而且局域网内的其他设备也可以用。下面跟着 Github 上的说明走就行，我是用 docker 部署的服务：
 
@@ -344,7 +363,11 @@ docker run -d --name=aliyundrive-webdav --restart=unless-stopped -p 8080:8080 `
 
 ## 备份分区/磁盘
 
+::: tip 提示
+
 [DiskGenius 官网](https://www.diskgenius.cn/)
+
+:::
 
 这次配置系统，不知道出了多少的问题（主要是因为 Spacedesk 和 WSL2 不兼容的问题），还把机械硬盘弄成了动态卷，然后又一不小心把机械硬盘的分区弄坏了。后来用 DiskGenius 重建分区表都只恢复了部分分区，感觉以后随时都要注意备份分区和硬盘了。我前面弄的那个阿里云盘 webdav 主要也是为了方便保存一些数据和系统备份镜像，以免本地电脑出问题后花时间来重新配置系统。
 

@@ -9,7 +9,6 @@ tags:
   - Github
   - 博客
   - 持续集成
-sticky: 1
 publish: true
 ---
 
