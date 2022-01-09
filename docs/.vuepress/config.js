@@ -136,10 +136,10 @@ module.exports = {
     subSidebar: "auto",
 
     record: "蜀ICP备20005033号-1",
-    recordLink: "https://icp.chinaz.com/home/info?host=tsanfer.xyz",
+    recordLink: "https://beian.miit.gov.cn/",
     cyberSecurityRecord: "川公网安备 51110202000301号",
     cyberSecurityLink:
-      "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51110202000301",
+      "http://www.beian.gov.cn/",
     startYear: "2020", // 项目开始时间，只填写年份
     lastUpdated: "最后更新时间", // string | boolean
     author: "Tsanfer",
