@@ -121,7 +121,10 @@ module.exports = {
         {
           title: "计算机", // 必要的
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: ["Storage_hardware"],
+          children: [
+            "Storage_hardware",
+            "Windows_WSL_terminal_WebDAV_PartitionBackup"
+          ],
         },
       ],
       "/views/Tool/": [
