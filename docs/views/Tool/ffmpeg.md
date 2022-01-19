@@ -9,7 +9,7 @@ tags:
 ---
 
 ::: tip
-![FFmpeg_Logo_new](https://cdn-oss.tsanfer.xyz/image/FFmpeg_Logo_new.svg)
+![FFmpeg_Logo_new](https://oss.tsanfer.com/image/FFmpeg_Logo_new.svg)
 :::
 
 <!-- more -->
@@ -64,4 +64,4 @@ file ./split.mp4
 file ./split1.mp4
 ```
 
-> 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！
+> 本文由[Tsanfer's Blog](https://tsanfer.com) 发布！

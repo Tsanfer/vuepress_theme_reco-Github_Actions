@@ -43,17 +43,17 @@ module.exports = {
         items: [
           {
             text: "个人网盘",
-            link: "http://clouddisk.tsanfer.xyz:8080",
+            link: "http://clouddisk.tsanfer.com:8080",
             icon: "fa-hdd",
           },
           {
             text: "订阅转换器",
-            link: "http://clouddisk.tsanfer.xyz:58080",
+            link: "http://clouddisk.tsanfer.com:58080",
             icon: "fa-exchange-alt",
           },
           {
             text: "目标检测",
-            link: "http://hpc.tsanfer.xyz:8000",
+            link: "http://hpc.tsanfer.com:8000",
             icon: "fa-object-ungroup",
           },
         ],
@@ -131,7 +131,11 @@ module.exports = {
         {
           title: "工具", // 必要的
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: ["ffmpeg", "scrcpy"],
+          children: [
+            "ffmpeg",
+            "scrcpy",
+            "Frp_Docker_SSH_RDP"
+          ],
         },
       ],
     },
@@ -180,7 +184,7 @@ module.exports = {
     [
       "@vuepress-reco/vuepress-plugin-rss", //RSS插件
       {
-        site_url: "https://tsanfer.xyz", //网站地址
+        site_url: "https://tsanfer.com", //网站地址
         copyright: "Tsanfer", //版权署名
       },
     ],

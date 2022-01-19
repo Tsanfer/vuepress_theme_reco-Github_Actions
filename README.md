@@ -10,10 +10,10 @@
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
-- > [最新博客链接](https://tsanfer.xyz/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
+- > [最新博客链接](https://tsanfer.com/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
 - > [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
-查看此文档前应先了解，[vuepress 基本操作](https://tsanfer.xyz/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C)
+查看此文档前应先了解，[vuepress 基本操作](https://tsanfer.com/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C)
 
 参考官方文档进行配置：
 
@@ -23,9 +23,9 @@
 
 ## 最终效果
 
-[最终效果链接](https://tsanfer.xyz/)
+[最终效果链接](https://tsanfer.com/)
 
-![最终效果](https://cdn-oss.tsanfer.xyz/image/20200322150711.png)
+![最终效果](https://oss.tsanfer.com/image/20200322150711.png)
 
 ## 思路
 
@@ -187,17 +187,17 @@ module.exports = {
         items: [
           {
             text: "个人网盘",
-            link: "http://clouddisk.tsanfer.xyz:8080",
+            link: "http://clouddisk.tsanfer.com:8080",
             icon: "fa-hdd",
           },
           {
             text: "订阅转换器",
-            link: "http://clouddisk.tsanfer.xyz:58080",
+            link: "http://clouddisk.tsanfer.com:58080",
             icon: "fa-exchange-alt",
           },
           {
             text: "目标检测",
-            link: "http://hpc.tsanfer.xyz:8000",
+            link: "http://hpc.tsanfer.com:8000",
             icon: "fa-object-ungroup",
           },
         ],
@@ -280,7 +280,7 @@ module.exports = {
     subSidebar: "auto",
 
     record: "蜀ICP备20005033号-1",
-    recordLink: "https://icp.chinaz.com/home/info?host=tsanfer.xyz",
+    recordLink: "https://icp.chinaz.com/home/info?host=tsanfer.com",
     cyberSecurityRecord: "川公网安备 51110202000301号",
     cyberSecurityLink:
       "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51110202000301",
@@ -306,7 +306,7 @@ module.exports = {
     [
       "meting",
       {
-        // metingApi: "https://meting.sigure.xyz/api/music",
+        // metingApi: "https://meting.sigure.com/api/music",
         meting: {
           server: "netease",
           type: "playlist",
@@ -321,7 +321,7 @@ module.exports = {
     [
       "@vuepress-reco/vuepress-plugin-rss", //RSS插件
       {
-        site_url: "https://tsanfer.xyz", //网站地址
+        site_url: "https://tsanfer.com", //网站地址
         copyright: "Tsanfer", //版权署名
       },
     ],
@@ -428,4 +428,4 @@ jobs:
 
 [![WTFPL License](https://upload.wikimedia.org/wikipedia/commons/0/0a/WTFPL_badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
 
-> 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！
+> 本文由[Tsanfer's Blog](https://tsanfer.com) 发布！

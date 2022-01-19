@@ -69,4 +69,4 @@ _²Right-click turns the screen on if it was off, presses BACK otherwise._
 
 > [官方教程](https://github.com/Genymobile/scrcpy)
 
-> 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！
+> 本文由[Tsanfer's Blog](https://tsanfer.com) 发布！

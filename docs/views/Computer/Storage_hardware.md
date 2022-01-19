@@ -45,7 +45,7 @@ RPM (Revolutions per minute)
   - M key / Socket3
   - B & M key
 
-![M2_Edge_Connector_Keying](http://cdn-oss.tsanfer.xyz/image/M2_Edge_Connector_Keying.svg)
+![M2_Edge_Connector_Keying](http://oss.tsanfer.com/image/M2_Edge_Connector_Keying.svg)
 
 - PCIe
 
@@ -88,10 +88,10 @@ RPM (Revolutions per minute)
 ### 物理接口
 
 <center>
-<img src="http://cdn-oss.tsanfer.xyz/image/USB_Micro-B.svg" width=200>
-<img src="http://cdn-oss.tsanfer.xyz/image/USB_Type-A.svg" width=200>
-<img src="http://cdn-oss.tsanfer.xyz/image/USB_3.0_Type-A_blue.svg" width=200>
-<img src="http://cdn-oss.tsanfer.xyz/image/USB_Type-C_receptacle.svg" width=200>
+<img src="http://oss.tsanfer.com/image/USB_Micro-B.svg" width=200>
+<img src="http://oss.tsanfer.com/image/USB_Type-A.svg" width=200>
+<img src="http://oss.tsanfer.com/image/USB_3.0_Type-A_blue.svg" width=200>
+<img src="http://oss.tsanfer.com/image/USB_Type-C_receptacle.svg" width=200>
 </center>
 
 ### 协议
@@ -105,4 +105,4 @@ RPM (Revolutions per minute)
 | USB 3.2  | 2424.24MB/s (20Gbps) | USB 3.2 Gen 2x2 |
 | USB4     | 5GB/s (40Gbps)       |                 |
 
-> 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！
+> 本文由[Tsanfer's Blog](https://tsanfer.com) 发布！

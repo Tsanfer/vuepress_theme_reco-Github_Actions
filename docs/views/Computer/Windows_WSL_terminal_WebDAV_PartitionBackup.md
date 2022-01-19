@@ -15,7 +15,7 @@ tags:
   - Docker
 ---
 
-> [最新博客文章链接](https://tsanfer.xyz/views/Computer/Windows_WSL_terminal_WebDAV_PartitionBackup.html)
+> [最新博客文章链接](https://tsanfer.com/views/Computer/Windows_WSL_terminal_WebDAV_PartitionBackup.html)
 > 
 
 最近发现我 Windows11 上的 WSL 打不开了，一直提示我虚拟化功能没有打开，但我看了下配置，发现虚拟化功能其实是开着的。然后试了各种方法，重装了好几次系统，我一个软件一个软件的试，最后发现是 Spacedesk 与 WSL2 不兼容，只要不装 Spacedesk 就行了。我也正好趁这个机会，配置了一些其他的东西，比如终端的美化，WebDAV 服务器的搭建，硬盘分区的备份等。
@@ -381,5 +381,5 @@ docker run -d --name=aliyundrive-webdav --restart=unless-stopped -p 8080:8080 `
 
 这以后如果在云端能做的事情，我就尽量在线上操作算了，这样就不用注意本地备份的问题了。
 
-> 本文由 [Tsanfer's Blog](https://tsanfer.xyz/) 发布！
+> 本文由 [Tsanfer's Blog](https://tsanfer.com/) 发布！
 >
