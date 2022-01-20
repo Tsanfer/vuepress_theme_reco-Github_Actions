@@ -160,20 +160,23 @@ bind_port = 3390
 
 在配置时可以用 `docker logs frps` 或 `docker logs frpc` 来查看调试信息
 
-![](https://oss.tsanfer.com/image/2022119192840.png)
+![](https://cdn-oss.tsanfer.xyz/image/2022119192840.png)
 
 ### 被控制端本地 SSH 设置
 
-[微软官方 | 通过 SSH 进行 PowerShell 远程处理](https://docs.microsoft.com/zh-cn/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7.2)
+[微软官方 |  通过 SSH 进行 PowerShell 远程处理](https://docs.microsoft.com/zh-cn/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7.2)
 
-1. 先安装 OpenSSH，最新的 [PowerShell](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D) 里就内置了 OpenSSH，可以直接去 Windows 商店里下载
-2. 将 SSH 默认 shell 改为 powershell.exe
+[微软官方 |  安装 OpenSSH](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse)
+
+1. 先安装最新的 [PowerShell](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D) ，可以直接去 Windows 商店里下载
+2. 然后安装 OpenSSH，“设置”->“应用”->“应用和功能”->“可选功能”->“添加功能”，安装“OpenSSH 客户端”和“OpenSSH 服务器”
+3. 将 SSH 默认 shell 改为 powershell.exe
    
    `New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force` 
-3. 我没有给电脑设置登录密码，所以要开启免密登陆
+4. 我没有给电脑设置登录密码，所以要开启免密登陆
    
    把 `C:\ProgramData\ssh\sshd_config` 中的 `PermitEmptyPasswords` 选项，取消注释并设置为 `PermitEmptyPasswords yes` 
-4. 最后再重启 sshd 服务 `Restart-Service sshd`
+5. 最后再重启 sshd 服务 `Restart-Service sshd`
 
 ### 配置 Windows 远程桌面
 
