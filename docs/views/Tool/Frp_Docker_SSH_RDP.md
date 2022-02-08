@@ -12,7 +12,7 @@ tags:
 publish: true
 ---
 
-> [最新博客文章链接](https://tsanfer.com/views/Computer/Frp_Docker_SSH_RDP.html)
+> [最新博客文章链接](https://tsanfer.com/views/Tool/Frp_Docker_SSH_RDP.html)
 
 ***
 
