@@ -1,6 +1,6 @@
 ---
 title: 使用 Frp 和 Docker 通过远程桌面和 SSH 来远程控制 Windows（反向代理）
-date: 2021-01-19
+date: 2022-01-18
 sidebar: "auto"
 categories:
   - 工具
@@ -12,14 +12,16 @@ tags:
 publish: true
 ---
 
-> [最新博客链接](https://tsanfer.com/views/frontEnd/Frp_Docker_SSH_RDP.html)
+> [最新博客文章链接](https://tsanfer.com/views/Computer/Frp_Docker_SSH_RDP.html)
+
+***
 
 ## 大体思路
 
 使用 Docker 容器，在云服务器上部署 Frps 容器来中转流量，在被控制的 Windows 上部署 Frpc 容器来暴露内网的服务，在主控制端的 Windows 上直接运行 Frpc，来连接要访问的服务到本地。
 
 ||主控制端|中转服务器|被控制端|
-|:--:|:--:|:--:|:--:|
+|--|--|--|--|
 |Frp 类型|Frpc|Frps|Frpc|
 |SSH 端口|6000||22|
 |远程桌面端口|3390||3389|
@@ -32,9 +34,7 @@ publish: true
 - [Frp](https://gofrp.org/)：
   > frp 采用 C/S 模式，将服务端部署在具有公网 IP 的机器上，客户端部署在内网或防火墙内的机器上，通过访问暴露在服务器上的端口，反向代理到处于内网的服务。 在此基础上，frp 支持 TCP, UDP, HTTP, HTTPS 等多种协议，提供了加密、压缩，身份认证，代理限速，负载均衡等众多能力。
   > 
-  > ![](https://oss.tsanfer.com/image/2022119165912.png)
-
-<br/>
+  > ![https://cdn.tsanfer.com/image/2022119165912.png](https://cdn.tsanfer.com/image/2022119165912.png)
 
 ## Frp 配置文件
 
@@ -154,33 +154,28 @@ bind_port = 3390
 # bind_port = 3390
 ```
 
-<br/>
-
 ## 其他配置和部署连接
 
 在配置时可以用 `docker logs frps` 或 `docker logs frpc` 来查看调试信息
 
-![](https://cdn-oss.tsanfer.xyz/image/2022119192840.png)
+![https://cdn.tsanfer.com/image/2022119192840.png](https://cdn.tsanfer.com/image/2022119192840.png)
 
 ### 被控制端本地 SSH 设置
 
-[微软官方 |  通过 SSH 进行 PowerShell 远程处理](https://docs.microsoft.com/zh-cn/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7.2)
+> [微软官方 | 通过 SSH 进行 PowerShell 远程处理](https://docs.microsoft.com/zh-cn/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7.2)
 
-[微软官方 |  安装 OpenSSH](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse)
-
-1. 先安装最新的 [PowerShell](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D) ，可以直接去 Windows 商店里下载
-2. 然后安装 OpenSSH，“设置”->“应用”->“应用和功能”->“可选功能”->“添加功能”，安装“OpenSSH 客户端”和“OpenSSH 服务器”
-3. 将 SSH 默认 shell 改为 powershell.exe
+1. 先安装 OpenSSH，最新的 [PowerShell](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D) 里就内置了 OpenSSH，可以直接去 Windows 商店里下载
+2. 将 SSH 默认 shell 改为 powershell.exe
    
-   `New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force` 
-4. 我没有给电脑设置登录密码，所以要开启免密登陆
+    `New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force`
+3. 我没有给电脑设置登录密码，所以要开启免密登陆
    
-   把 `C:\ProgramData\ssh\sshd_config` 中的 `PermitEmptyPasswords` 选项，取消注释并设置为 `PermitEmptyPasswords yes` 
-5. 最后再重启 sshd 服务 `Restart-Service sshd`
+    把 `C:\ProgramData\ssh\sshd_config` 中的 `PermitEmptyPasswords` 选项，取消注释并设置为 `PermitEmptyPasswords yes`
+4. 最后再重启 sshd 服务 `Restart-Service sshd`
 
 ### 配置 Windows 远程桌面
 
-[微软官方 | 如何使用远程桌面](https://support.microsoft.com/zh-cn/windows/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-5fe128d5-8fb1-7a23-3b8a-41e636865e8c)
+> [微软官方 | 如何使用远程桌面](https://support.microsoft.com/zh-cn/windows/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-5fe128d5-8fb1-7a23-3b8a-41e636865e8c)
 
 在被控制的电脑上开启远程桌面，然后在主控制端连接
 
@@ -188,22 +183,59 @@ bind_port = 3390
 
 在服务器端部署 frps 容器，服务器的配置文件我放在了 `~/frp/frps.ini` 。
 
-`docker run --network host --restart=always -d -v ~/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps` 
+`docker run --network host --restart=always -d -v ~/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps`
 
 在客户端（被控制端）部署 frpc 容器，被控制端的配置文件我放在了 `C:\Stand_alone\frp\frpc.ini` 。
 
-`docker run --network host --restart=always -d -v C:\Stand_alone\frp\frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc` 
+`docker run --network host --restart=always -d -v C:\Stand_alone\frp\frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc`
 
 ### 连接 Frp
 
 在客户端（主控制端）运行 frpc，主控制端的配置文件我放在了 `C:\Stand_alone\frp\frpc.ini` 。
 
-`C:\Stand_alone\frp\frpc.exe -c C:\Stand_alone\frp\frpc.ini` 
+`C:\Stand_alone\frp\frpc.exe -c C:\Stand_alone\frp\frpc.ini`
 
 最后就可以直接访问 SSH（`localhost:6000`） 和远程桌面（`localhost:3389`）了
 
-![](https://oss.tsanfer.com/image/2022119192306.png)
+![https://cdn.tsanfer.com/image/2022119192306.png](https://cdn.tsanfer.com/image/2022119192306.png)
 
-![](https://oss.tsanfer.com/image/2022119192519.png)
+![https://cdn.tsanfer.com/image/2022119192519.png](https://cdn.tsanfer.com/image/2022119192519.png)
 
-> 本文由[Tsanfer's Blog](https://tsanfer.com) 发布！
+## 可替代方案：Sakura Frp
+
+如果嫌麻烦，以及不太强调安全的话，可以使用 [Sakura Frp](https://www.natfrp.com/tunnel/)
+
+原理和普通的 Frp 一样，不过配置起来更方便。你可以在被控制端直接下载一个 Sakura Frp 官方的启动器，或者用 Frpc 或 Docker 来连接到 Sakura Frp 的服务器。
+
+配置的步骤比较简单，直接看官方的教程就行了。
+
+我是用的 Docker 方式部署，这里我列一下我自己的配置：
+
+|节点|成都电信|
+|--|--|
+|隧道类型|TCP|
+|端口|自动生成|
+|本地 IP|192.168.1.7|
+|访问密码|xxxxxx|
+|加密传输|禁用|
+|压缩数据|启用|
+
+![](https://cdn.tsanfer.com/image/202228192056.png)
+
+被控制端 Docker 的配置
+
+`docker run -d --restart=always --name=frpc_sakura natfrp/frpc -f abcdefghijklmnop:2680675,2804403 --remote_control yyyyyy`
+
+- `abcdefghijklmnop` ：Sakura Frp 账号的总访问密钥
+
+- `2680675` ：远程桌面的隧道 ID
+
+- `2804403` ：SSH 的隧道 ID
+
+- `yyyyyy` ：设置在 Sakura Frp 官网网页上远程管理隧道的密码（不是访问密码）
+
+如果被控制端的 Docker 运行正常的话，官网上的隧道颜色，会由灰色变成绿色。之后就可以在官网上对相应的隧道进行授权，一般就授权本地的 IP 地址。完成过后就可以连接 Sakura Frp 官网的代理服务器的域名和相应端口，来进行远程控制了。如果自己有已备案的域名的话，可以用 DNS 的 CNAME 解析，把自己的域名映射到 Sakura Frp 的代理服务器，方便隧道节点的更换。
+
+***
+
+> 本文由 [Tsanfer's Blog](https://tsanfer.com/) 发布！

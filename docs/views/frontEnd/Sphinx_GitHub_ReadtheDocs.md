@@ -54,7 +54,7 @@ Ubuntu 18.04.1，查出来的代号就是 bionic.
 
 #### step 3: 编辑源
 
-![编辑源](https://oss.tsanfer.com/image/20190121012630368.png)
+![编辑源](https://cdn.tsanfer.com/image/20190121012630368.png)
 
 红色边框：服务器地址
 

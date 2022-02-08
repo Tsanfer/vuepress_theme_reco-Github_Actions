@@ -55,7 +55,7 @@ publish: true
 
 [最终效果链接](https://tsanfer.com/)
 
-![最终效果链接](https://oss.tsanfer.com/image/20200322150711.png)
+![最终效果链接](https://cdn.tsanfer.com/image/20200322150711.png)
 
 ## 思路
 
@@ -302,14 +302,21 @@ module.exports = {
         {
           title: "计算机", // 必要的
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: ["Storage_hardware"],
+          children: [
+            "Storage_hardware",
+            "Windows_WSL_terminal_WebDAV_PartitionBackup"
+          ],
         },
       ],
       "/views/Tool/": [
         {
           title: "工具", // 必要的
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: ["ffmpeg", "scrcpy"],
+          children: [
+            "ffmpeg",
+            "scrcpy",
+            "Frp_Docker_SSH_RDP"
+          ],
         },
       ],
     },
@@ -317,10 +324,10 @@ module.exports = {
     subSidebar: "auto",
 
     record: "蜀ICP备20005033号-1",
-    recordLink: "https://icp.chinaz.com/home/info?host=tsanfer.com",
+    recordLink: "https://beian.miit.gov.cn/",
     cyberSecurityRecord: "川公网安备 51110202000301号",
     cyberSecurityLink:
-      "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51110202000301",
+      "http://www.beian.gov.cn/",
     startYear: "2020", // 项目开始时间，只填写年份
     lastUpdated: "最后更新时间", // string | boolean
     author: "Tsanfer",
@@ -343,7 +350,7 @@ module.exports = {
     [
       "meting",
       {
-        // metingApi: "https://meting.sigure.com/api/music",
+        // metingApi: "https://meting.sigure.xyz/api/music",
         meting: {
           server: "netease",
           type: "playlist",
@@ -398,13 +405,13 @@ jobs:
           fetch-depth: 2
 
       - name: Use Node.js 14.x
-        uses: actions/setup-node@v2.4.1 # 使用node环境
+        uses: actions/setup-node@v2.5.1 # 使用node环境
         with:
           node-version: "14.x" # 版本14
 
       - name: Cache node modules
         id: cache # 缓存id
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         env:
           cache-name: cache-node-modules # 缓存名字
         with:
@@ -426,13 +433,13 @@ jobs:
         run: git reset --hard
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.FTP_IP }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
-          server-dir: default/
+          server-dir: /
 
 #           ftp-server: sftp://${{ secrets.FTP_IP }}/home/www/htdocs # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
 #           ftp-username: ${{ secrets.FTP_USERNAME }} # FTP用户名
@@ -441,11 +448,10 @@ jobs:
 #           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
 
       - name: upload-artifact
-        uses: actions/upload-artifact@v2.2.4 #共享或保存action过程中产生的文件
+        uses: actions/upload-artifact@v2.3.1 #共享或保存action过程中产生的文件
         with:
           name: static_web_file
           path: ./docs/.vuepress/dist/ # or path/to/artifact
-
 ```
 
 ```txt

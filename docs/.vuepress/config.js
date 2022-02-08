@@ -1,3 +1,5 @@
+// docs/.vuepress/config.js
+
 module.exports = {
 //   host: "0.0.0.0", // 生成网页地址（本地调试使用）
 //   port: "22333", // 生成网页端口（本地调试使用）
