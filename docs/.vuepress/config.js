@@ -144,7 +144,7 @@ module.exports = {
     // displayAllHeaders: true, // 默认值：false
     subSidebar: "auto",
 
-    record: "蜀ICP备20005033号-1",
+    record: "蜀ICP备20005033号-2",
     recordLink: "https://beian.miit.gov.cn/",
     cyberSecurityRecord: "川公网安备 51110202000301号",
     cyberSecurityLink:
