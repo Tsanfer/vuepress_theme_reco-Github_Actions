@@ -40,7 +40,7 @@ jobs:
         run: git reset --hard
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_IP }}
           username: ${{ secrets.FTP_USERNAME }}
