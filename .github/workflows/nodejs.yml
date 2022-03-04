@@ -55,7 +55,7 @@ jobs:
 #           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
 
       - name: upload-artifact
-        uses: actions/upload-artifact@v2.3.1 #共享或保存action过程中产生的文件
+        uses: actions/upload-artifact@v3 #共享或保存action过程中产生的文件
         with:
           name: static_web_file
           path: ./docs/.vuepress/dist/ # or path/to/artifact
