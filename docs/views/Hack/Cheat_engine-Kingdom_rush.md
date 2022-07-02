@@ -102,7 +102,7 @@ General-Purpose Registers：EAX, EBX, ECX, EDX, ESP, EBP, ESI, EDI
 
 学过 CE 的，通过注释，应该能看懂
 
-```c_cpp
+```c
 { Game   : Kingdom Rush.exe
   Version:
   Date   : 2022-06-19
