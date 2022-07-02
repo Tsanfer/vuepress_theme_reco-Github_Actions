@@ -87,12 +87,10 @@ RPM (Revolutions per minute)
 
 ### 物理接口
 
-<center>
 <img src="http://cdn.tsanfer.com/image/USB_Micro-B.svg" width=200>
 <img src="http://cdn.tsanfer.com/image/USB_Type-A.svg" width=200>
 <img src="http://cdn.tsanfer.com/image/USB_3.0_Type-A_blue.svg" width=200>
 <img src="http://cdn.tsanfer.com/image/USB_Type-C_receptacle.svg" width=200>
-</center>
 
 ### 协议
 
