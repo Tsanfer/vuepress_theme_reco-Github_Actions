@@ -1,13 +1,13 @@
 ---
 title: 常用存储硬件标准
 date: 2021-01-21
-sidebar: "auto"
 categories:
   - 计算机
 tags:
   - 硬件
   - 存储设备
 ---
+<!-- 文件位置：docs/views/Computer/Storage_hardware.md -->
 
 ::: tip
 SSD? HDD? SATA? M.2? PCIe? AHCI? NVME? USB?

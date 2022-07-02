@@ -1,7 +1,6 @@
 ---
 title: 使用 Frp 和 Docker 通过远程桌面和 SSH 来远程控制 Windows（反向代理）
 date: 2022-01-18
-sidebar: "auto"
 categories:
   - 工具
 tags:
@@ -11,6 +10,7 @@ tags:
   - Docker
 publish: true
 ---
+<!-- 文件位置：docs/views/Tool/Frp_Docker_SSH_RDP.md -->
 
 > [最新博客文章链接](https://tsanfer.com/views/Tool/Frp_Docker_SSH_RDP.html)
 

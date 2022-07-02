@@ -1,7 +1,6 @@
 ---
 title: Windows 重装系统，配置 WSL，美化终端，部署 WebDAV 服务器，并备份系统分区
 date: 2022-01-09
-sidebar: "auto"
 categories:
   - 计算机
 tags:
@@ -14,6 +13,7 @@ tags:
   - 系统备份
   - Docker
 ---
+<!-- 文件位置：docs/views/Computer/Windows_WSL_terminal_WebDAV_PartitionBackup.md -->
 
 > [最新博客文章链接](https://tsanfer.com/views/Computer/Windows_WSL_terminal_WebDAV_PartitionBackup.html)
 

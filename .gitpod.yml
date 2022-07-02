@@ -1,4 +1,7 @@
+# gitpo 初始化
+# 文件位置 .gitpod.yml
+
 tasks:
   - name: Dev Server
-    init: npm install
-    command: npm run docs:dev
+    init: cd docs
+    command: npm install && npm run dev

@@ -7,6 +7,7 @@ tags:
   - 多媒体
   - 转码
 ---
+<!-- 文件位置：docs/views/Tool/ffmpeg.md -->
 
 ::: tip
 ![FFmpeg_Logo_new](https://cdn.tsanfer.com/image/FFmpeg_Logo_new.svg)
@@ -27,41 +28,46 @@ tags:
 ### 常用命令
 
 ```powershell
-#命令
+# 命令
 
-#合并
-FFmpeg -f concat -i list.txt -c copy concat.mp4
+# 合并
+FFmpeg -f concat -safe 0 -i list.txt -c copy concat.mp4
+-f fmt # force
+-i url # input
+-c # codec (copy (output only) to indicate that the stream is not to be re-encoded.)
 
--f fmt #force
--i url #input
--c #codec (copy (output only) to indicate that the stream is not to be re-encoded.)
-
-#剪切
+# 剪切
 ffmpeg -ss 00:01:30 -t 00:00:20 -i input.mp4 -c copy output.mp4
+# 等价于
+# ffmpeg -ss 00:01:30 -t 00:01:50 -i input.mp4 -c copy output.mp4
+-ss position # seeks
+-t duration # time
+-to position # to
 
--ss position #seeks
--t duration #time
 
-#压缩
-ffmpeg -i input.mp4 -vf scale=-1:1080 -b:v 500k -bufsize 500k -c:v hevc_nvenc -c:a copy output_1080.mp4
+# 压缩
+ffmpeg -i input.mp4 -vf scale=-1:1080 -b:v 6000k -c:v libx265 -c:a copy output_1080.mp4
+-vf # -filter:v
+-b # bitrate
+-c:v # -codec:v
+-c:a # -codec:a
 
--vf #-filter:v
--b #bitrate
--bufsize #buffer size
--c:v #-codec:v
--c:a #-codec:a
+# 提取音频
+ffmpeg -i input.mp4 -vn -c:a copy output.m4a
+# 合并音视频，并替换原视频的音频
+ffmpeg -i video.mp4 -i audio.m4a -c copy -strict experimental -map 0:v:0 -map 1:a:0 output.mp4
 
-#提取音频
-ffmpeg -i input.mp4 -vn -y -acodec copy output.m4a
-#合并音视频，并替换原视频的音频
-ffmpeg -i video.mp4 -i audio.m4a -c:v copy -c:a copy -strict experimental -map 0:v:0 -map 1:a:0 output.mp4
-```
+# 转换格式
+ffmpeg -i input.avi -c copy output_1080.mp4
+# 转换格式（兼容）
+ffmpeg -i input.avi -c:v h264 -c:a aac output_1080.mp4
 
-### list.txt（批处理）
+# 外挂字幕转内嵌
+# （字幕文件需为 UTF-8 格式）
+ffmpeg -i input.mp4 -vf "subtitles=subtitle.srt" output.mp4 # srt格式字幕
+ffmpeg -i input.mp4 -vf "ass=subtitle.ass" output.mp4 # ass格式字幕
 
-```powershell
-file ./split.mp4
-file ./split1.mp4
+ffmpeg -i subtitle.srt subtitle.ass # srt字幕转ass字幕
 ```
 
 > 本文由[Tsanfer's Blog](https://tsanfer.com) 发布！

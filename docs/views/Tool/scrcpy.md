@@ -6,6 +6,7 @@ categories:
 tags:
   - 设备控制
 ---
+<!-- 文件位置：docs/views/Tool/scrcpy.md -->
 
 ::: tip
 This application provides display and control of Android devices connected on USB (or over TCP/IP). It does not require any root access. It works on GNU/Linux, Windows and macOS.
@@ -13,60 +14,98 @@ This application provides display and control of Android devices connected on US
 
 <!-- more -->
 
-## 工具简介
+[Scrcpy 官方使用说明（最新）](https://github.com/Genymobile/scrcpy)
 
-> This application provides display and control of Android devices connected on USB (or [over TCP/IP](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)). It does not require any _root_ access. It works on _GNU/Linux_, _Windows_ and _macOS_.
->
-> [_Github README_](https://github.com/Genymobile/scrcpy#translations)
+[Scrcpy 官方使用说明（简体中文）](https://github.com/Genymobile/scrcpy/blob/master/README.zh-Hans.md)
 
-> 本应用程序可以显示并控制通过 USB (或 [TCP/IP](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)) 连接的安卓设备，且不需要任何 _root_ 权限。本程序支持 _GNU/Linux_, _Windows_ 和 _macOS_。
->
-> —— [scrcpy 中文说明文档](https://github.com/Genymobile/scrcpy/blob/master/README.zh-Hans.md)
+### 安装 scrcpy 和 adb
 
-### 常用命令
+我是通过 Chocolatey 安装的，所以要先安装 Chocolatey
+
+通过 Windows 自带的 PowerShell 安装 Chocolatey:
 
 ```powershell
-.\scrcpy.exe -m 600 -b 100M --max-fps 60 --window-title 'Pixel XL'  --always-on-top -Sw -t --push-target /sdcard/Download/From_computer/
-
-E:\Stand_alone\scrcpy\scrcpy.exe --max-fps 60 --window-title 'Pixel XL'  --always-on-top -Sw -t --push-target /sdcard/Download/From_computer/
-
---max-size -m # short version high
---bit-rate -b
---max-fps
---stay-awake -w
---turn-screen-off -S
---show-touches -t
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-### Shortcuts
+安装 scrcpy 和 adb
 
-| Action                                      | Shortcut                      | Shortcut (macOS)             |
-| ------------------------------------------- | ----------------------------- | ---------------------------- |
-| Switch fullscreen mode                      | `Ctrl`+`f`                    | `Cmd`+`f`                    |
-| Rotate display left                         | `Ctrl`+`←` _(left)_           | `Cmd`+`←` _(left)_           |
-| Rotate display right                        | `Ctrl`+`→` _(right)_          | `Cmd`+`→` _(right)_          |
-| Resize window to 1:1 (pixel-perfect)        | `Ctrl`+`g`                    | `Cmd`+`g`                    |
-| Resize window to remove black borders       | `Ctrl`+`x` \| _Double-click¹_ | `Cmd`+`x` \| _Double-click¹_ |
-| Click on `HOME`                             | `Ctrl`+`h` \| _Middle-click_  | `Ctrl`+`h` \| _Middle-click_ |
-| Click on `BACK`                             | `Ctrl`+`b` \| _Right-click²_  | `Cmd`+`b` \| _Right-click²_  |
-| Click on `APP_SWITCH`                       | `Ctrl`+`s`                    | `Cmd`+`s`                    |
-| Click on `MENU`                             | `Ctrl`+`m`                    | `Ctrl`+`m`                   |
-| Click on `VOLUME_UP`                        | `Ctrl`+`↑` _(up)_             | `Cmd`+`↑` _(up)_             |
-| Click on `VOLUME_DOWN`                      | `Ctrl`+`↓` _(down)_           | `Cmd`+`↓` _(down)_           |
-| Click on `POWER`                            | `Ctrl`+`p`                    | `Cmd`+`p`                    |
-| Power on                                    | _Right-click²_                | _Right-click²_               |
-| Turn device screen off (keep mirroring)     | `Ctrl`+`o`                    | `Cmd`+`o`                    |
-| Turn device screen on                       | `Ctrl`+`Shift`+`o`            | `Cmd`+`Shift`+`o`            |
-| Rotate device screen                        | `Ctrl`+`r`                    | `Cmd`+`r`                    |
-| Expand notification panel                   | `Ctrl`+`n`                    | `Cmd`+`n`                    |
-| Collapse notification panel                 | `Ctrl`+`Shift`+`n`            | `Cmd`+`Shift`+`n`            |
-| Copy device clipboard to computer           | `Ctrl`+`c`                    | `Cmd`+`c`                    |
-| Copy computer clipboard to device and paste | `Ctrl`+`Shift`+`v`            | `Cmd`+`Shift`+`v`            |
-| Enable/disable FPS counter (on stdout)      | `Ctrl`+`i`                    | `Cmd`+`i`                    |
+```powershell
+choco install scrcpy
+choco install adb
+```
 
-_¹Double-click on black borders to remove them._
-_²Right-click turns the screen on if it was off, presses BACK otherwise._
+### **本地调试** scrcpy
 
-> [官方教程](https://github.com/Genymobile/scrcpy)
+> [Scrcpy 官方使用说明（简体中文）](https://github.com/Genymobile/scrcpy/blob/master/README.zh-Hans.md)
+
+配置其实官方写得很详细了，可以进行参考。
+
+- **连接手机**
+
+我一般用 Wifi 无线连手机，所以第一步是配置 scrcpy 的远程控制。
+
+先把手机插在电脑上，然后查看一下，电脑连接的安卓设备
+
+```powershell
+adb devices
+```
+
+因为我电脑连了两个安卓设备，所以 adb 命令的结果是
+
+```powershell
+➜ adb devices
+List of devices attached
+33007175cd0362d9        device
+39685b53        device # 要连接的手机
+```
+
+然后使用 scrcpy 自动配置手机的远程连接
+
+```powershell
+scrcpy --tcpip -s 39685b53
+```
+
+运行上面这条命令，电脑会自动完成相关远程连接的配置，并自动连接上手机，然后就可以把线拔了。只要电脑和手机不关机，之后就能随时远程连接手机。不过有时手机锁屏久了，会连不上，需要重新打开。还有就是解锁屏幕的时候也会断开，不过只要重新连接一下就好了。
+
+- **连接选项**
+
+> [Scrcpy 官方使用说明（简体中文）](https://github.com/Genymobile/scrcpy/blob/master/README.zh-Hans.md)
+
+在运行 scrcpy 进行连接时，可以配置一些参数，来适应需求，这里是我常用的配置
+
+`scrcpy --max-size=1080 --bit-rate=100M --max-fps 60 --turn-screen-off --stay-awake --show-touches --power-off-on-close --window-title="Android" --select-tcpip --push-target /sdcard/Download/From_computer/`
+
+- `--max-size` : 屏幕最大的长或宽（保持显示比例）
+- `--bit-rate` : 比特率
+- `--max-fps` : 最大 FPS
+- `--turn-screen-off` : 连接后关闭手机屏幕显示（不会关闭电脑中的手机屏幕）
+- `--stay-awake` : 防止手机休眠
+- `--show-touches` : 显示触摸
+- `--power-off-on-close` : 退出 scrcpy 时关闭设备屏幕
+- `--select-tcpip` : 选择连接远程设备
+- `--window-title` : 电脑上的窗口标题
+- `--push-target /sdcard/Download/From_computer/` : 手机接收电脑文件位置
+- **scrcpy 操作快捷键**
+
+> [官方快捷键说明](http://github.com/Genymobile/scrcpy/blob/master/README.zh-Hans.md#快捷键)
+
+这里是我常用的快捷键
+
+| 操作                                  | 快捷键          |
+| ------------------------------------- | --------------- |
+| 点击                                  | 鼠标左键        |
+| 返回                                  | 鼠标右键        |
+| HOME 键                               | 鼠标中键        |
+| 左/右旋转屏幕                         | Alt+←/→         |
+| 消除屏幕黑边                          | 双击黑边        |
+| 音量加                                | Alt+↑           |
+| 音量减                                | Alt+↓           |
+| 打开屏幕                              | 鼠标右键        |
+| 关闭设备物理屏幕 (但继续在电脑上显示) | Alt+o           |
+| 打开设备物理屏幕                      | Alt+Shift+o     |
+| 缩放内容                              | Ctrl+左键拖动   |
+| 从电脑安装 APK 文件                   | 拖放 APK 文件   |
+| 将文件推送至设备                      | 拖放非 APK 文件 |
 
 > 本文由[Tsanfer's Blog](https://tsanfer.com) 发布！

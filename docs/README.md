@@ -1,11 +1,25 @@
 ---
 home: true
-bgImage: "/background.svg"
-bgImageStyle: { height: "350px" }
+modules:
+  - Banner
+  - Blog
+  - Footer
+banner:
+  heroText: "Tsanfer's Blog"
+  heroImage: "./avatar.svg"
+  tagline: "网络空间无限宽广"
+  bgImage: "./background.svg"
+blog:
+  socialLinks:
+    - { icon: "BrandGithub", link: "https://github.com/Tsanfer" }
+    - { icon: "DeviceTv", link: "https://space.bilibili.com/12167681" }
+    - { icon: "BrandTwitter", link: "https://twitter.com/a1124851454" }
+    - { icon: "Mail", link: "mailto:a1124851454@gmail.com" }
+footer:
+  record: "蜀ICP备20005033号-2"
+  recordLink: "https://beian.miit.gov.cn/"
+  cyberSecurityRecord: "川公网安备 51110202000301号"
+  cyberSecurityLink: "http://www.beian.gov.cn/"
+  startYear: "2020"
 ---
-
-<!--
-<div style="width:300px;margin:0 auto; padding:20px 0;">
-<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51110202000301" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51110202000301号</p></a>
-</div>
--->
+<!-- 文件位置：docs/README.md -->

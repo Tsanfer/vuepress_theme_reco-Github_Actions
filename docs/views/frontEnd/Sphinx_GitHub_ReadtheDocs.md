@@ -1,13 +1,14 @@
 ---
 title: 创建Sphinx + GitHub + ReadtheDocs托管文档
 date: 2020-03-07
-sidebar: "auto"
 categories:
   - 前端
 tags:
   - Github
   - 在线文档
 ---
+
+<!-- 文件位置：docs/views/frontEnd/Sphinx_GitHub_ReadtheDocs.md -->
 
 ::: tip
 在本地配置好 Linux 环境（我用的 WSL），然后配置好 Sphinx 生成文档的样式，最后推送到 Github，并触发 Readthedocs 自动构建、生成在线文档
@@ -23,7 +24,7 @@ src="https://music.163.com/outchain/player?type=2&id=465675050&auto=0&height=66"
 </iframe>
 
 | [Sphinx](https://www.sphinx-doc.org/) |                                        [Github](https://github.com/)                                         |                               [Readthedocs](https://readthedocs.org/)                                |
-| :-----------------------------------: | :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+| :-----------------------------------: | :----------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------------------- | --- |
 |                 <!--                  | [<img src="https://i.loli.net/2020/02/19/JP8td4QvCiY1L3g.png" width="300px" />](https://www.sphinx-doc.org/) | [<img src="https://i.loli.net/2020/02/19/j2Ad8meR5UF3O6P.png" width="300px" />](https://github.com/) | [<img src="https://i.loli.net/2020/02/19/oWvA34qxU9DQyYu.png" width="300px" />](https://readthedocs.org/) | --> |
 
 ## 最终效果

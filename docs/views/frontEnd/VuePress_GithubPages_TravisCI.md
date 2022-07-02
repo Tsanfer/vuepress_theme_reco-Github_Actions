@@ -1,7 +1,6 @@
 ---
 title: 创建 VuePress + GithubPages + TravisCI 在线文档
 date: 2020-03-16
-sidebar: "auto"
 categories:
   - 前端
 tags:
@@ -10,6 +9,7 @@ tags:
   - 在线文档
   - 持续集成
 ---
+<!-- 文件位置：docs/views/frontEnd/VuePress_GithubPages_TravisCI.md -->
 
 ::: tip
 在本地配置好 VuePress 环境和 TravisCI 配置文件，推送到 Github，触发 TravisCI 自动构建、生成在另一个分支的在线文档

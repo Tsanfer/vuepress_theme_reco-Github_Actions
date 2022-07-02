@@ -1,7 +1,6 @@
 ---
-title: vuepress-theme-reco + Github Actions 搭建静态博客，自动构建部署到第三方服务器
+title: vuepress-theme-reco v2 + Github Actions 搭建静态博客，自动构建部署到第三方服务器
 date: 2020-03-21
-sidebar: "auto"
 categories:
   - 前端
 tags:
@@ -11,6 +10,7 @@ tags:
   - 持续集成
 publish: true
 ---
+<!-- 文件位置：docs/views/frontEnd/vuepress_theme_reco-Github_Actions.md -->
 
 ::: tip
 
@@ -97,12 +97,10 @@ publish: true
 
 ```bash
 # 初始化
-sudo yarn global add @vuepress-reco/theme-cli
-theme-cli init my-blog
-
-# 安装
-cd my-blog
-sudo yarn install
+npm install @vuepress-reco/theme-cli@1.0.7 -g
+theme-cli init
+cd init
+npm run dev
 ```
 
 #### 更改最新依赖
@@ -110,21 +108,13 @@ sudo yarn install
 ```json
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev .",
+    "start": "vuepress dev .",
+    "build": "vuepress build ."
   },
   "dependencies": {
-    "@vuepress-reco/vuepress-plugin-rss": "^1.0.2",
-    "@vuepress/plugin-nprogress": "^1.8.2",
-    "npm-check": "^5.9.2",
-    "vue-class-component": "^7.2.6",
-    "vue-router": "^3.5.2",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-plugin-flowchart": "^1.4.3",
-    "vuepress-plugin-meting": "^0.3.0",
-    "vuepress-plugin-reading-progress": "^1.0.10",
-    "vuepress-theme-reco": "^1.6.6"
+    "vuepress": "2.0.0-beta.48",
+    "vuepress-theme-reco": "2.0.0-beta.19"
   }
 }
 
@@ -133,35 +123,36 @@ sudo yarn install
 然后，安装依赖
 
 ```bash
-sudo yarn
+npm run dev
 ```
 
 ### 目录结构
 
 ```bash
-
 .
-├── .git-ftp-include  // 用于最后指定需要部署的文件或文件夹
-├── .gitattributes  // 用于统一文件内编码的换行符
+├── .git-ftp-include // 用于最后指定需要部署的文件或文件夹
+├── .gitattributes // 用于统一文件内编码的换行符
 ├── .github
 │   └── workflows
-│       └── nodejs.yml  // Github Actions的配置文件
-├── .gitignore  // 忽略上传到Github的文件或目录
+│       └── nodejs.yml // Github Actions的配置文件
+├── .gitignore // 忽略上传到Github的文件或目录
+├── .gitpod.yml // gitpod 初始化文件
 ├── LICENSE // 许可证文件
 ├── README.md // Github项目展示文件
-├── docs  // VuePress项目根目录
-│   ├── .vuepress // 存放配置文件的文件夹
-│   │   ├── config.js // 整个工程的配置文件
-│   │   ├── dist  // 最后生成的文件目录
-│   │   ├── public  // 媒体文件夹（主要是图片）
-│   │   └── styles  // 网页样式文件夹（里面空的，没有用）
-│   ├── README.md // 网页首页文件
-│   └── views // 存放markdown文件的文件夹（可以不要直接把markdown文件放在docs里面）
-│       └── frontEnd  // 分类目录（也可以不要分类目录直接放在views里面）
-├── package.json  // 指定依赖，项目脚本，Node.js项目描述文件
-├── yarn-error.log  // 记录构建失败的日志文件
-└── yarn.lock // 变更依赖时自动生成和更新
-
+└── docs // VuePress项目根目录
+    ├── .vuepress  // 存放配置文件的文件夹
+    │   ├── config.ts // 整个工程的配置文件
+    │   ├── dist // 最后生成的文件目录
+    │   └── public // 媒体文件夹（主要是图片）
+    ├── README.md // 网页首页文件
+    ├── package.json  // 指定依赖，项目脚本，Node.js项目描述文件
+    └── views // 存放markdown文件的文件夹（可以不要直接把markdown文件放在docs里面）
+        ├── Computer // 分类目录（也可以不要分类目录直接放在views里面）
+        ├── Hack
+        ├── MCU
+        ├── Tool
+        ├── frontEnd
+        └── others
 ```
 
 ### 添加博客配置
@@ -177,13 +168,17 @@ sudo yarn
 :::
 
 ```javascript
-// docs/.vuepress/config.js
+// 文件位置 docs/.vuepress/config.ts
 
-module.exports = {
-//   host: "0.0.0.0", // 生成网页地址（本地调试使用）
-//   port: "22333", // 生成网页端口（本地调试使用）
-  title: "Tsanfer's Blog", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
-  description: "现居住于猎户臂上的一个碳基生命", // meta 中的描述文字，用于SEO
+import { defineUserConfig } from "vuepress"; // 导入 vuepress 用户自定义
+import recoTheme from "vuepress-theme-reco"; // 导入 reco 主题
+
+export default defineUserConfig({
+  // host: "0.0.0.0", // 生成网页地址（本地调试使用）
+  // port: "22333", // 生成网页端口（本地调试使用）
+  // 用户自定义设置
+  title: "Tsanfer's Blog",
+  description: "网络空间无限宽广",
   head: [
     ["link", { rel: "icon", href: "/favicon.svg" }], //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
     [
@@ -194,94 +189,21 @@ module.exports = {
       },
     ], //在移动端，搜索框在获得焦点时会放大
   ],
-  theme: "reco", //选择主题‘reco’
-  themeConfig: {
-    type: "blog", //选择类型博客
-    fullscreen: true,
-    blogConfig: {
-      category: {
-        location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: "分类", // 默认 “分类”
-      },
-      tag: {
-        location: 3, // 在导航栏菜单中所占的位置，默认3
-        text: "标签", // 默认 “标签”
-      },
-      socialLinks: [
-        { icon: "reco-github", link: "https://github.com/Tsanfer" },
-        { icon: "reco-bilibili", link: "https://space.bilibili.com/12167681" },
-        { icon: "reco-qq", link: "tencent://message/?uin=1124851454" },
-        { icon: "reco-twitter", link: "https://twitter.com/a1124851454" },
-        { icon: "reco-mail", link: "mailto:a1124851454@gmail.com" },
-      ],
-    },
-    nav: [
-      //导航栏设置
-      { text: "主页", link: "/", icon: "reco-home" },
-      {
-        text: "工具",
-        icon: "reco-api",
-        items: [
-          {
-            text: "个人网盘",
-            link: "http://clouddisk.tsanfer.com:8080",
-            icon: "fa-hdd",
-          },
-          {
-            text: "订阅转换器",
-            link: "http://clouddisk.tsanfer.com:58080",
-            icon: "fa-exchange-alt",
-          },
-          {
-            text: "目标检测",
-            link: "http://hpc.tsanfer.com:8000",
-            icon: "fa-object-ungroup",
-          },
-        ],
-      },
-      {
-        text: "联系",
-        icon: "reco-message",
-        items: [
-          {
-            text: "GitHub",
-            link: "https://github.com/Tsanfer",
-            icon: "reco-github",
-          },
-          {
-            text: "CSDN",
-            link: "https://blog.csdn.net/qq_27961843/",
-            icon: "reco-csdn",
-          },
-          {
-            text: "BiliBili",
-            link: "https://space.bilibili.com/12167681",
-            icon: "reco-bilibili",
-          },
-          {
-            text: "QQ",
-            link: "tencent://message/?uin=1124851454",
-            icon: "reco-qq",
-          },
-          {
-            text: "Twitter",
-            link: "https://twitter.com/a1124851454",
-            icon: "reco-twitter",
-          },
-          {
-            text: "Gmail",
-            link: "mailto:a1124851454@gmail.com",
-            icon: "reco-mail",
-          },
-        ],
-      },
-    ],
-    sidebar: {
+  theme: recoTheme({
+    // 主题设置
+    style: "@vuepress-reco/style-default", // 风格设置
+    logo: "./favicon.svg",
+    // author: "Tsanfer",
+    // authorAvatar: "./avatar.svg",
+    // lastUpdatedText: "lastUpdatedText",
+    series: {
+      // 文章系列分组
       "/views/frontEnd/": [
         {
-          title: "前端", // 必要的
-          sidebarDepth: 2, // 可选的, 默认值是 1
+          text: "前端",
+          sidebarDepth: 2, // 侧边栏深度
           children: [
+            // 系列具体内容
             "vuepress_theme_reco-Github_Actions",
             "VuePress_GithubPages_TravisCI",
             "Sphinx_GitHub_ReadtheDocs",
@@ -290,8 +212,8 @@ module.exports = {
       ],
       "/views/MCU/": [
         {
-          title: "MCU", // 必要的
-          sidebarDepth: 2, // 可选的, 默认值是 1
+          text: "MCU",
+          sidebarDepth: 2,
           children: [
             "Linux_board_NFS",
             "First_Prepare_for_Lanqiao_Cup_MCU_Competition",
@@ -300,81 +222,120 @@ module.exports = {
       ],
       "/views/Computer/": [
         {
-          title: "计算机", // 必要的
-          sidebarDepth: 2, // 可选的, 默认值是 1
+          text: "计算机",
+          sidebarDepth: 2,
           children: [
             "Storage_hardware",
-            "Windows_WSL_terminal_WebDAV_PartitionBackup"
+            "Windows_WSL_terminal_WebDAV_PartitionBackup",
           ],
         },
       ],
       "/views/Tool/": [
         {
-          title: "工具", // 必要的
-          sidebarDepth: 2, // 可选的, 默认值是 1
-          children: [
-            "ffmpeg",
-            "scrcpy",
-            "Frp_Docker_SSH_RDP"
-          ],
+          text: "工具",
+          sidebarDepth: 2,
+          children: ["ffmpeg", "scrcpy", "Frp_Docker_SSH_RDP"],
         },
       ],
     },
-    // displayAllHeaders: true, // 默认值：false
-    subSidebar: "auto",
-
-    record: "蜀ICP备20005033号-1",
-    recordLink: "https://beian.miit.gov.cn/",
-    cyberSecurityRecord: "川公网安备 51110202000301号",
-    cyberSecurityLink:
-      "http://www.beian.gov.cn/",
-    startYear: "2020", // 项目开始时间，只填写年份
-    lastUpdated: "最后更新时间", // string | boolean
-    author: "Tsanfer",
-    authorAvatar: "/avatar.svg", //作者头像
-    mode: "light", //默认显示白天模式
-    codeTheme: "okaidia", // default 'tomorrow'
-    smooth: "true", //平滑滚动
-    // 评论设置
+    navbar: [
+      // 最上面导航栏
+      { text: "主页", icon: "Home", link: "/" },
+      {
+        text: "分类",
+        icon: "BrandWindows",
+        children: [
+          {
+            text: "工具",
+            icon: "Tool",
+            link: "/categories/gongju/1/",
+          },
+          {
+            text: "计算机",
+            icon: "DeviceLaptop",
+            link: "/categories/jisuanji/1/",
+          },
+          {
+            text: "前端",
+            icon: "AppWindow",
+            link: "/categories/qianduan/1/",
+          },
+          {
+            text: "MCU",
+            icon: "Cpu",
+            link: "/categories/MCU/1/",
+          },
+        ],
+      },
+      {
+        text: "在线应用",
+        icon: "Box",
+        children: [
+          {
+            text: "个人网盘",
+            icon: "Database",
+            link: "http://clouddisk.tsanfer.com:8080",
+          },
+          {
+            text: "订阅转换器",
+            icon: "Exchange",
+            link: "http://clouddisk.tsanfer.com:58080",
+          },
+          {
+            text: "目标检测",
+            icon: "AspectRatio",
+            link: "http://hpc.tsanfer.com:8000",
+          },
+        ],
+      },
+      {
+        text: "联系",
+        icon: "Message",
+        children: [
+          {
+            text: "GitHub",
+            icon: "BrandGithub",
+            link: "https://github.com/Tsanfer",
+          },
+          {
+            text: "CSDN",
+            icon: "Code",
+            link: "https://blog.csdn.net/qq_27961843/",
+          },
+          {
+            text: "BiliBili",
+            icon: "DeviceTv",
+            link: "https://space.bilibili.com/12167681",
+          },
+          {
+            text: "QQ",
+            icon: "Message",
+            link: "tencent://message/?uin=1124851454",
+          },
+          {
+            text: "Twitter",
+            icon: "BrandTwitter",
+            link: "https://twitter.com/a1124851454",
+          },
+          {
+            text: "Gmail",
+            icon: "Mail",
+            link: "mailto:a1124851454@gmail.com",
+          },
+        ],
+      },
+    ],
     valineConfig: {
+      // 评论设置
       appId: process.env.LEANCLOUD_APP_ID,
       appKey: process.env.LEANCLOUD_APP_KEY,
+      placeholder: "a1124851454@gmail.com", // 评论邮件提醒
+      verify: true, // 验证码
+      recordIP: true, // 记录 IP
     },
-  },
-  markdown: {
-    lineNumbers: true, //代码显示行号
-  }, // 搜索设置
-  search: true,
-  searchMaxSuggestions: 10, // 插件
-  plugins: [
-    [
-      "meting",
-      {
-        // metingApi: "https://meting.sigure.xyz/api/music",
-        meting: {
-          server: "netease",
-          type: "playlist",
-          mid: "4902520778",
-        },
-        aplayer: {
-          lrcType: 3,
-          theme: "#3489fd",
-        },
-      },
-    ],
-    [
-      "@vuepress-reco/vuepress-plugin-rss", //RSS插件
-      {
-        site_url: "https://tsanfer.com", //网站地址
-        copyright: "Tsanfer", //版权署名
-      },
-    ],
-    ["flowchart"], // 支持流程图
-    ["@vuepress/nprogress"], // 加载进度条
-    ["reading-progress"], // 阅读进度条
-    ["vuepress-plugin-code-copy", true], //一键复制代码插件
-  ],
-};
+  }),
+  // debug: true,
+});
 
 ```
 
@@ -391,7 +352,7 @@ module.exports = {
 :::
 
 ```yml
-# .github/workflows/nodejs.yml
+# 文件位置：.github/workflows/nodejs.yml
 
 on: push # 触发此文件运行的条件
 name: CI/CD # 此工作流程（workflow）的名字
@@ -404,14 +365,17 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v2.5.1 # 使用node环境
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3 # 使用node环境
         with:
-          node-version: "14.x" # 版本14
+          node-version: "16.x" # 版本14
+
+      - name: Change work directory  
+        run: cd docs
 
       - name: Cache node modules
         id: cache # 缓存id
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         env:
           cache-name: cache-node-modules # 缓存名字
         with:
@@ -423,7 +387,7 @@ jobs:
         run: npm install # 安装依赖
 
       - name: Build project
-        run: npm run docs:build # 构建项目和生成代码覆盖率报告
+        run: npm run build # 构建项目和生成代码覆盖率报告
         env:
           LEANCLOUD_APP_ID: ${{ secrets.LEANCLOUD_APP_ID }} # 评 论系统的ID
           LEANCLOUD_APP_KEY: ${{ secrets.LEANCLOUD_APP_KEY }} # 评论系统的KEY
@@ -433,12 +397,13 @@ jobs:
         run: git reset --hard
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_IP }}
+          port: 21
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
+          local-dir: .vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
           server-dir: /
 
 #           ftp-server: sftp://${{ secrets.FTP_IP }}/home/www/htdocs # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
@@ -448,11 +413,10 @@ jobs:
 #           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
 
       - name: upload-artifact
-        uses: actions/upload-artifact@v2.3.1 #共享或保存action过程中产生的文件
+        uses: actions/upload-artifact@v3 #共享或保存action过程中产生的文件
         with:
           name: static_web_file
-          path: ./docs/.vuepress/dist/ # or path/to/artifact
-```
+          path: .vuepress/dist/ # or path/to/artifact
 
 ```txt
 // .git-ftp-include
