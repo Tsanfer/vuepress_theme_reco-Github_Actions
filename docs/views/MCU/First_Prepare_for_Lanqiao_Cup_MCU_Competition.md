@@ -1284,8 +1284,6 @@ uint sonic_get(void)
 }
 ```
 
-</br>
-
 - [x] common.h
 - [x] main.c
 - [x] timer.c
