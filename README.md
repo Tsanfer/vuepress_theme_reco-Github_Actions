@@ -316,7 +316,7 @@ export default defineUserConfig({
 
 [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
 
-````yml
+```yml
 # 文件位置：.github/workflows/nodejs.yml
 
 on: push # 触发此文件运行的条件
@@ -379,12 +379,13 @@ jobs:
         with:
           name: static_web_file
           path: ./docs/.vuepress/dist/ # or path/to/artifact
+```
 
 ```txt
 // .git-ftp-include
 
 !docs/.vuepress/dist/
-````
+```
 
 ### 添加 Github Token
 
