@@ -6,6 +6,7 @@ categories:
 tags:
   - 单片机
 ---
+
 <!-- 文件位置：docs/views/MCU/First_Prepare_for_Lanqiao_Cup_MCU_Competition.md -->
 
 ## 实物图

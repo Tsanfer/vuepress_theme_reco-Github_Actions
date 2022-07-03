@@ -166,7 +166,6 @@ export default defineUserConfig({
       // 评论设置
       appId: process.env.LEANCLOUD_APP_ID,
       appKey: process.env.LEANCLOUD_APP_KEY,
-      placeholder: "a1124851454@gmail.com", // 评论邮件提醒
       verify: true, // 验证码
       recordIP: true, // 记录 IP
     },

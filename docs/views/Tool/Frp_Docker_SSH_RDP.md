@@ -10,30 +10,31 @@ tags:
   - Docker
 publish: true
 ---
+
 <!-- 文件位置：docs/views/Tool/Frp_Docker_SSH_RDP.md -->
 
 > [最新博客文章链接](https://tsanfer.com/views/Tool/Frp_Docker_SSH_RDP.html)
 
-***
+---
 
 ## 大体思路
 
 使用 Docker 容器，在云服务器上部署 Frps 容器来中转流量，在被控制的 Windows 上部署 Frpc 容器来暴露内网的服务，在主控制端的 Windows 上直接运行 Frpc，来连接要访问的服务到本地。
 
-||主控制端|中转服务器|被控制端|
-|--|--|--|--|
-|Frp 类型|Frpc|Frps|Frpc|
-|SSH 端口|6000||22|
-|远程桌面端口|3390||3389|
-|转发 IP|127.0.0.1（本地 IP）||192.168.1.7（容器外部宿主，局域网 IP）|
+|              | 主控制端             | 中转服务器 | 被控制端                               |
+| ------------ | -------------------- | ---------- | -------------------------------------- |
+| Frp 类型     | Frpc                 | Frps       | Frpc                                   |
+| SSH 端口     | 6000                 |            | 22                                     |
+| 远程桌面端口 | 3390                 |            | 3389                                   |
+| 转发 IP      | 127.0.0.1（本地 IP） |            | 192.168.1.7（容器外部宿主，局域网 IP） |
 
 ### 用到的东西
 
 - 反向代理
-  > 反向代理在电脑网络中是代理服务器的一种。服务器根据客户端的请求，从其关系的一组或多组后端服务器（如Web服务器）上获取资源，然后再将这些资源返回给客户端，客户端只会得知反向代理的IP地址，而不知道在代理服务器后面的服务器集群的存在。
+  > 反向代理在电脑网络中是代理服务器的一种。服务器根据客户端的请求，从其关系的一组或多组后端服务器（如 Web 服务器）上获取资源，然后再将这些资源返回给客户端，客户端只会得知反向代理的 IP 地址，而不知道在代理服务器后面的服务器集群的存在。
 - [Frp](https://gofrp.org/)：
   > frp 采用 C/S 模式，将服务端部署在具有公网 IP 的机器上，客户端部署在内网或防火墙内的机器上，通过访问暴露在服务器上的端口，反向代理到处于内网的服务。 在此基础上，frp 支持 TCP, UDP, HTTP, HTTPS 等多种协议，提供了加密、压缩，身份认证，代理限速，负载均衡等众多能力。
-  > 
+  >
   > ![https://cdn.tsanfer.com/image/2022119165912.png](https://cdn.tsanfer.com/image/2022119165912.png)
 
 ## Frp 配置文件
@@ -166,11 +167,13 @@ bind_port = 3390
 
 1. 先安装 OpenSSH，最新的 [PowerShell](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D) 里就内置了 OpenSSH，可以直接去 Windows 商店里下载
 2. 将 SSH 默认 shell 改为 powershell.exe
-   
-    `New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force`
+
+   `New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force`
+
 3. 我没有给电脑设置登录密码，所以要开启免密登陆
-   
-    把 `C:\ProgramData\ssh\sshd_config` 中的 `PermitEmptyPasswords` 选项，取消注释并设置为 `PermitEmptyPasswords yes`
+
+   把 `C:\ProgramData\ssh\sshd_config` 中的 `PermitEmptyPasswords` 选项，取消注释并设置为 `PermitEmptyPasswords yes`
+
 4. 最后再重启 sshd 服务 `Restart-Service sshd`
 
 ### 配置 Windows 远程桌面
@@ -211,14 +214,14 @@ bind_port = 3390
 
 我是用的 Docker 方式部署，这里我列一下我自己的配置：
 
-|节点|成都电信|
-|--|--|
-|隧道类型|TCP|
-|端口|自动生成|
-|本地 IP|192.168.1.7|
-|访问密码|xxxxxx|
-|加密传输|禁用|
-|压缩数据|启用|
+| 节点     | 成都电信    |
+| -------- | ----------- |
+| 隧道类型 | TCP         |
+| 端口     | 自动生成    |
+| 本地 IP  | 192.168.1.7 |
+| 访问密码 | xxxxxx      |
+| 加密传输 | 禁用        |
+| 压缩数据 | 启用        |
 
 ![](https://cdn.tsanfer.com/image/202228192056.png)
 
@@ -236,6 +239,6 @@ bind_port = 3390
 
 如果被控制端的 Docker 运行正常的话，官网上的隧道颜色，会由灰色变成绿色。之后就可以在官网上对相应的隧道进行授权，一般就授权本地的 IP 地址。完成过后就可以连接 Sakura Frp 官网的代理服务器的域名和相应端口，来进行远程控制了。如果自己有已备案的域名的话，可以用 DNS 的 CNAME 解析，把自己的域名映射到 Sakura Frp 的代理服务器，方便隧道节点的更换。
 
-***
+---
 
 > 本文由 [Tsanfer's Blog](https://tsanfer.com/) 发布！

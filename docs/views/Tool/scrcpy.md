@@ -6,6 +6,7 @@ categories:
 tags:
   - 设备控制
 ---
+
 <!-- 文件位置：docs/views/Tool/scrcpy.md -->
 
 ::: tip

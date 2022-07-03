@@ -10,6 +10,7 @@ tags:
   - 持续集成
 publish: true
 ---
+
 <!-- 文件位置：docs/views/frontEnd/vuepress_theme_reco-Github_Actions.md -->
 
 ::: tip
@@ -20,12 +21,12 @@ publish: true
 
 <!-- more -->
 
-- > [最新博客链接](https://tsanfer.com/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
-- > [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
+> [最新博客链接](https://tsanfer.com/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
+
+> [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
 [![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/CI/CD/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions?logo=Git)
-[![GitHub license](https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWw6bGFuZz0ienh4IiB2ZXJzaW9uPSIxLjEiCiAgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjU4MHB4IiB2aWV3Qm94PSIwIDAgMjk3IDIxNSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCj4KPHRpdGxlPkxvZ28gb2YgV1RGUEw8L3RpdGxlPgoKPGRlc2M+QW4gb2ZmaWNpYWwgbG9nbyBmb3IgdGhlIFdURlBMIChEbyB3aGF0IHRoZSBmdWNrIHlvdSB3YW50IHRvIFB1YmxpYyBMaWNlbnNlKS48L2Rlc2M+Cgo8bWV0YWRhdGE+CjcomGY6UkRGCiAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKPgoJPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiI+CgkJPGRjOnRpdGxlIHhtbDpsYW5nPSJqYSI+V1RGUEzjga7jg63jgrQ8L2RjOnRpdGxlPgoJCTxkYzp0aXRsZSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5Mb2dvIG9mIFdURlBMPC9kYzp0aXRsZT4KCQk8ZGM6Y3JlYXRvciByZGY6cmVzb3VyY2U9Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnLz9jdXJpZD0xMDQ4NDQ3MCIvPgoJCTxkYzpzdWJqZWN0IHJkZjpyZXNvdXJjZT0iaHR0cHM6Ly93d3cud2lraWRhdGEub3JnL3dpa2kvUTc5NzE5Ii8+CgkJPGRjOmRlc2NyaXB0aW9uIHhtbDpsYW5nPSJqYSIgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgoJCQk8ZGM6Zm9ybWF0IHJkZjpkYXRhdHlwZT0iaHR0cDovL3B1cmwub3JnL2RjL3Rlcm1zL0lNVCI+dGV4dC94LXdpa2k8L2RjOmZvcm1hdD4KCQkJPHJkZjp2YWx1ZT48IVtDREFUQVsKW1t3OmphOldURlBMfFdURlBMXV3vvIjjganjgYbjgajjgafjgoLli53miYvjgavjgZfjgoTjgYzjgozjgq/jgr3jg4Pjgr/jg6zjg7vlhazooYbliKnnlKjoqLHoq77mm7jvvInjga7lhazlvI/jg63jgrTjgIIKXV0+PCEtLSAgLS0+PC9yZGY6dmFsdWU+CgkJPC9kYzpkZXNjcmlwdGlvbj4KCQk8ZGM6ZGVzY3JpcHRpb24geG1sOmxhbmc9IngtZGVmYXVsdCIgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgoJCQk8ZGM6Zm9ybWF0IHJkZjpkYXRhdHlwZT0iaHR0cDovL3B1cmwub3JnL2RjL3Rlcm1zL0lNVCI+dGV4dC94LXdpa2k8L2RjOmZvcm1hdD4KCQkJPHJkZjp2YWx1ZT48IVtDREFUQVsKQW4gb2ZmaWNpYWwgbG9nbyBmb3IgdGhlIFtbdzpXVEZQTHxdXSAoRG8gd2hhdCB0aGUgZnVjayB5b3Ugd2FudCB0byBQdWJsaWMgTGljZW5zZSkuCl1dPjwhLS0gIC0tPjwvcmRmOnZhbHVlPgoJCTwvZGM6ZGVzY3JpcHRpb24+CgkJPGRjOmNvbnRyaWJ1dG9yIHJkZjpyZXNvdXJjZT0iaHR0cDovL3d3dy53dGZwbC5uZXQvIi8+CgkJPGRjOmRhdGUgcmRmOmRhdGF0eXBlPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYWRhdGUiPjIwMTItMTItMjg8L2RjOmRhdGU+CgkJPGRjOnR5cGUgcmRmOmRhdGF0eXBlPSJodHRwOi8vcHVybC5vcmcvZGMvdGVybXMvRENNSVR5cGUiPlN0aWxsSW1hZ2U8L2RjOnR5cGU+CgkJPGRjOmZvcm1hdCByZGY6ZGF0YXR5cGU9Imh0dHA6Ly9wdXJsLm9yZy9kYy90ZXJtcy9JTVQiPmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KCQk8ZGM6c291cmNlIHJkZjpyZXNvdXJjZT0iaHR0cDovL3d3dy53dGZwbC5uZXQvd3AtY29udGVudC91cGxvYWRzLzIwMTIvMTIvd3RmcGwuc3ZnIi8+CgkJPGRjOmxhbmd1YWdlIHJkZjpkYXRhdHlwZT0iaHR0cDovL3B1cmwub3JnL2RjL3Rlcm1zL0lTTzYzOS0yIj56eHg8L2RjOmxhbmd1YWdlPgoJCTxkYzpyaWdodHM+wqkgMjAxMiBXVEZQTCDigJMgRG8gV2hhdCB0aGUgRnVjayBZb3UgV2FudCB0byBQdWJsaWMgTGljZW5zZS48L2RjOnJpZ2h0cz4KCQk8ZGM6cmlnaHRzIHJkZjpyZXNvdXJjZT0iaHR0cDovL3d3dy53dGZwbC5uZXQvYWJvdXQvIi8+Cgk8L3JkZjpEZXNjcmlwdGlvbj4KPC9yZGY6UkRGPgo8L21ldGFkYXRhPgoKPHBhdGgKICBkPSJNIDEwOC40MDYyNSw1LjkwNjI1CiAgICAgQyAgNTIuMzA2MDU1LDUuOTA2MjUgICAgNi44NDM3NSw1MS4zOTk4MDUgICAgNi44NDM3NSwxMDcuNQogICAgICAgICA2Ljg0Mzc1LDE2My42MDAxOSAgNTIuMzA2MDU1LDIwOS4wOTM3NSAxMDguNDA2MjUsMjA5LjA5Mzc1CiAgICAgICAxMjIuNjEzMjksMjA5LjA5Mzc1IDEzNi4xMjc3NSwyMDYuMTQyMTYgIDE0OC40MDYyNSwyMDAuODc1CiAgICAgICAxNjAuNjg0NzUsMjA2LjE0MjE2IDE3NC4xOTkyMSwyMDkuMDkzNzUgIDE4OC40MDYyNSwyMDkuMDkzNzUKICAgICAgIDI0NC41MDY0NCwyMDkuMDkzNzUgMjkwLDE2My42MDAxOSAgICAgICAgMjkwLDEwNy41CiAgICAgICAyOTAsNTEuMzk5ODA1ICAgICAgIDI0NC41MDY0NCw1LjkwNjI1ICAgIDE4OC40MDYyNSw1LjkwNjI1CiAgICAgICAxNzQuMTk5MjEsNS45MDYyNSAgIDE2MC42ODQ3NSw4Ljg1Nzg0MTQgIDE0OC40MDYyNSwxNC4xMjUKICAgICAgIDEzNi4xMjc3NSw4Ljg1Nzg0MTQgMTIyLjYxMzI5LDUuOTA2MjUgICAgMTA4LjQwNjI1LDUuOTA2MjUgICAgegogICAgIE0gMTA2LjQwNjI1LDM3LjgxMjUKICAgICBDIDEyMS43MzU4NywzNy44MTI1ICAgMTM1LjkxNjQ3LDQyLjczMzM5NCAgMTQ3LjQ2ODc1LDUxLjA2MjUKICAgICAgIDE1OS4wMjEwMyw0Mi43MzMzOTQgMTczLjE3MDM4LDM3LjgxMjUgICAgMTg4LjUsMzcuODEyNQogICAgICAgMjI3LjMyMTgzLDM3LjgxMjUgICAyNTguODEyNSw2OS4yNzE5MjMgICAyNTguODEyNSwxMDguMDkzNzUKICAgICAgIDI1OC44MTI1LDE0Ni45MTU1OCAgMjI3LjMyMTgzLDE3OC40MDYyNSAgMTg4LjUsMTc4LjQwNjI1CiAgICAgICAxNzMuMTcyNzQsMTc4LjQwNjI1IDE1OS4wMjAwNiwxNzMuNDgzMDIgIDE0Ny40Njg3NSwxNjUuMTU2MjUKICAgICAgIDEzNS45MTc0NCwxNzMuNDgzMDIgMTIxLjczMzUxLDE3OC40MDYyNSAgMTA2LjQwNjI1LDE3OC40MDYyNQogICAgICAgIDY3LjU4NDQyMywxNzguNDA2MjUgMzYuMTI1LDE0Ni45MTU1OCAgICAgMzYuMTI1LDEwOC4wOTM3NQogICAgICAgIDM2LjEyNSw2OS4yNzE5MjMgICAgNjcuNTg0NDIzLDM3LjgxMjUgICAxMDYuNDA2MjUsMzcuODEyNSAgICB6IgovPgo8cGF0aAogIHN0cm9rZS13aWR0aD0iMC4yIgogIGQ9Im0gMTE2LjgyNTQ2LDY2LjE5Mjk3MyAtMzMuNDE5NTI1LDAKICAgICBjIC0yMi41NDc2Nyw0Ni42ODk2MTcgIC0zLjY3OTUwNSw3OC40NjkzNzcgIDExLjIzMDAxOCw4NS4wNjcyMjcKICAgICAgICAxNC45MDk1MjcsNi41OTc4NiAgIDM5LjI5Nzg5NywxMC43ODkyMyAgIDUyLjg0MzYyNywtMTMuNjQwNzEKICAgICAgICAxMS4xMjcsMjAuOTEwMzkgICAgIDM2LjQxMDE4LDIyLjEyMDIyICAgIDUzLjIyMTgxLDE0LjM3Njk2CiAgICAgICAgMTYuODExNjMsLTcuNzQzMjcgICAzMy4xMjMxMSwtNDMuMTE1NDcgICAxMS43MzA0NywtODUuODAzNDc3CiAgICAgbCAtMzMuOTkyMjcsMi43ZS01CiAgICAgYyAgMTEuNTAxNTksMjYuNDE5NDkyICAxMS43MzI1Nyw2Mi40NjIgICAgICAgMC4wMDksNjMuNTMyNjQKICAgICAgIC0xMS43MjM3OCwxLjA3MDYzICAgLTE1LjA5Njk0LC0yLjg0OTgxICAgLTEzLjc2NDQ2LC00NC4yODUyMzEKICAgICBsIC0zMy4zMDksLTAuMTQ5NjAyCiAgICAgYyAgIDIuNDg5MTEsNDAuOTAwMjczICAtNS4wODg4Myw0OC4wMDIwMDMgIC0xNS4zMzg2NSw0My41MTQzNjMKICAgICAgIC0xMC4yNDk4MiwtNC40ODc2MyAgIC05Ljc5NDY4LC0yOC4xMzA0MiAgICAwLjc4OTE4LC02Mi42MTIxOTcgeiIKLz4KPC9zdmc+Cg==)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
@@ -96,7 +97,6 @@ publish: true
 npm install @vuepress-reco/theme-cli@1.0.7 -g
 theme-cli init
 cd init
-npm run dev
 ```
 
 #### 更改最新依赖
@@ -104,21 +104,21 @@ npm run dev
 ```json
 {
   "scripts": {
-    "dev": "vuepress dev .",
-    "start": "vuepress dev .",
-    "build": "vuepress build ."
+    "dev": "vuepress dev ./docs",
+    "start": "vuepress dev ./docs",
+    "build": "vuepress build ./docs"
   },
   "dependencies": {
     "vuepress": "2.0.0-beta.48",
     "vuepress-theme-reco": "2.0.0-beta.19"
   }
 }
-
 ```
 
-然后，安装依赖
+安装运行
 
 ```bash
+npm install
 npm run dev
 ```
 
@@ -135,13 +135,13 @@ npm run dev
 ├── .gitpod.yml // gitpod 初始化文件
 ├── LICENSE // 许可证文件
 ├── README.md // Github项目展示文件
+├── package.json  // 指定依赖，项目脚本，Node.js项目描述文件
 └── docs // VuePress项目根目录
     ├── .vuepress  // 存放配置文件的文件夹
     │   ├── config.ts // 整个工程的配置文件
     │   ├── dist // 最后生成的文件目录
     │   └── public // 媒体文件夹（主要是图片）
     ├── README.md // 网页首页文件
-    ├── package.json  // 指定依赖，项目脚本，Node.js项目描述文件
     └── views // 存放markdown文件的文件夹（可以不要直接把markdown文件放在docs里面）
         ├── Computer // 分类目录（也可以不要分类目录直接放在views里面）
         ├── Hack
@@ -231,6 +231,13 @@ export default defineUserConfig({
           text: "工具",
           sidebarDepth: 2,
           children: ["ffmpeg", "scrcpy", "Frp_Docker_SSH_RDP"],
+        },
+      ],
+      "/views/Hack/": [
+        {
+          text: "Hack",
+          sidebarDepth: 2,
+          children: ["Cheat_engine-Kingdom_rush"],
         },
       ],
     },
@@ -325,14 +332,12 @@ export default defineUserConfig({
       // 评论设置
       appId: process.env.LEANCLOUD_APP_ID,
       appKey: process.env.LEANCLOUD_APP_KEY,
-      placeholder: "a1124851454@gmail.com", // 评论邮件提醒
       verify: true, // 验证码
       recordIP: true, // 记录 IP
     },
   }),
   // debug: true,
 });
-
 ```
 
 ## Github Actions 配置
@@ -347,7 +352,7 @@ export default defineUserConfig({
 
 :::
 
-```yml
+````yml
 # 文件位置：.github/workflows/nodejs.yml
 
 on: push # 触发此文件运行的条件
@@ -366,16 +371,13 @@ jobs:
         with:
           node-version: "16.x" # 版本14
 
-      - name: Change work directory  
-        run: cd docs
-
       - name: Cache node modules
         id: cache # 缓存id
         uses: actions/cache@v3
         env:
           cache-name: cache-node-modules # 缓存名字
         with:
-          path: node_modules # 缓存路径
+          path: ./node_modules/ # 缓存路径
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package.json') }} # 缓存标识
 
       - name: Install Dependencies
@@ -399,26 +401,26 @@ jobs:
           port: 21
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: .vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
+          local-dir: ./docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
           server-dir: /
 
-#           ftp-server: sftp://${{ secrets.FTP_IP }}/home/www/htdocs # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
-#           ftp-username: ${{ secrets.FTP_USERNAME }} # FTP用户名
-#           ftp-password: ${{ secrets.FTP_PASSWORD }} # FTP密码
-#           git-ftp-args: --insecure # （如果是FTP连接的话--insecure不用加）
-#           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
+      #           ftp-server: sftp://${{ secrets.FTP_IP }}/home/www/htdocs # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
+      #           ftp-username: ${{ secrets.FTP_USERNAME }} # FTP用户名
+      #           ftp-password: ${{ secrets.FTP_PASSWORD }} # FTP密码
+      #           git-ftp-args: --insecure # （如果是FTP连接的话--insecure不用加）
+      #           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
 
       - name: upload-artifact
         uses: actions/upload-artifact@v3 #共享或保存action过程中产生的文件
         with:
           name: static_web_file
-          path: .vuepress/dist/ # or path/to/artifact
+          path: ./docs/.vuepress/dist/ # or path/to/artifact
 
 ```txt
 // .git-ftp-include
 
 !docs/.vuepress/dist/
-```
+````
 
 ### 添加 Github Token
 

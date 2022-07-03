@@ -9,6 +9,7 @@ tags:
   - 在线文档
   - 持续集成
 ---
+
 <!-- 文件位置：docs/views/frontEnd/VuePress_GithubPages_TravisCI.md -->
 
 ::: tip
@@ -349,7 +350,6 @@ features:
     details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 footer: MIT Licensed | Copyright © 2020 Tsanfer
 ---
-
 ```
 
 #### 文档属性

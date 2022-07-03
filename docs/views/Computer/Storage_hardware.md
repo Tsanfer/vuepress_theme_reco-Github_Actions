@@ -7,6 +7,7 @@ tags:
   - 硬件
   - 存储设备
 ---
+
 <!-- 文件位置：docs/views/Computer/Storage_hardware.md -->
 
 ::: tip
