@@ -102,6 +102,11 @@ export default defineUserConfig({
             icon: "Cpu",
             link: "/categories/MCU/1/",
           },
+          {
+            text: "Hack",
+            icon: "bug",
+            link: "/categories/Hack/1/",
+          },
         ],
       },
       {
