@@ -27,7 +27,6 @@ publish: true
 
 [![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/CI/CD/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions?logo=Git)
-
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 [![Cloud Studio Template](https://cs-res.codehub.cn/common/assets/icon-badge.svg)](https://cloudstudio.net/templates/hhU6TQfvlFW)
 
@@ -353,7 +352,7 @@ export default defineUserConfig({
 
 :::
 
-````yml
+```yml
 # 文件位置：.github/workflows/nodejs.yml
 
 on: push # 触发此文件运行的条件
@@ -416,12 +415,13 @@ jobs:
         with:
           name: static_web_file
           path: ./docs/.vuepress/dist/ # or path/to/artifact
+```
 
 ```txt
 // .git-ftp-include
 
 !docs/.vuepress/dist/
-````
+```
 
 ### 添加 Github Token
 
