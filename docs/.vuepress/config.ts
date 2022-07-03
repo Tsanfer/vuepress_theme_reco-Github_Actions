@@ -104,7 +104,7 @@ export default defineUserConfig({
           },
           {
             text: "Hack",
-            icon: "bug",
+            icon: "Bug",
             link: "/categories/Hack/1/",
           },
         ],
