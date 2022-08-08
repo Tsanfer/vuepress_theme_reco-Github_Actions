@@ -20,11 +20,12 @@ export default defineUserConfig({
     ], //在移动端，搜索框在获得焦点时会放大
   ],
   theme: recoTheme({
+    // catalogTitle: '自定义目录标题',
     // 主题设置
-    style: "@vuepress-reco/style-default", // 风格设置
+    // style: "@vuepress-reco/style-default", // 风格设置
     logo: "./favicon.svg",
-    // author: "Tsanfer",
-    // authorAvatar: "./avatar.svg",
+    author: "Tsanfer",
+    authorAvatar: "./avatar.svg",
     // lastUpdatedText: "lastUpdatedText",
     series: {
       // 文章系列分组
