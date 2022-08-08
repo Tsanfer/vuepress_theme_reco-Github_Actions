@@ -168,12 +168,14 @@ export default defineUserConfig({
         ],
       },
     ],
-    valineConfig: {
-      // 评论设置
-      appId: process.env.LEANCLOUD_APP_ID,
-      appKey: process.env.LEANCLOUD_APP_KEY,
-      verify: true, // 验证码
-      recordIP: true, // 记录 IP
+    commentConfig: {
+      type: 'valine',
+      options: {
+        appId: process.env.LEANCLOUD_APP_ID, // your appId
+        appKey: process.env.LEANCLOUD_APP_KEY, // your appKey
+        verify: true, // 验证码
+        recordIP: true, // 记录 IP
+      },
     },
   }),
   // debug: true,
