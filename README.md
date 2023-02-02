@@ -1,21 +1,17 @@
 # vuepress-theme-reco + Github Actions 搭建静态博客，自动构建部署到第三方服务器
 
-先下载主题模板，再根据自己的需要进行相应的修改，再根据自己的服务器配置 Github Actions 文件，最后上传到 Github，触发 Github Actions 自动构建部署到服务器
-
 - > [最新博客链接](https://tsanfer.com/views/frontEnd/vuepress_theme_reco-Github_Actions.html)
 - > [Github 链接](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
 [![CI/CD](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/CI/CD/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
-[![Lint Code Base](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/actions)
-[![CodeFactor](https://www.codefactor.io/repository/github/tsanfer/vuepress_theme_reco-github_actions/badge)](https://www.codefactor.io/repository/github/tsanfer/vuepress_theme_reco-github_actions)
-[![codecov](https://codecov.io/gh/Tsanfer/vuepress_theme_reco-Github_Actions/branch/master/graph/badge.svg)](https://codecov.io/gh/Tsanfer/vuepress_theme_reco-Github_Actions)
-[![dependabot](https://img.shields.io/badge/Dependabot-enable-brightgreen?logo=Dependabot)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/.github/dependabot.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tsanfer/vuepress_theme_reco-Github_Actions?logo=Git)
 [![GitHub license](https://img.shields.io/github/license/Tsanfer/vuepress_theme_reco-Github_Actions?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWw6bGFuZz0ienh4IiB2ZXJzaW9uPSIxLjEiCiAgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjU4MHB4IiB2aWV3Qm94PSIwIDAgMjk3IDIxNSIKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCj4KPHRpdGxlPkxvZ28gb2YgV1RGUEw8L3RpdGxlPgoKPGRlc2M+QW4gb2ZmaWNpYWwgbG9nbyBmb3IgdGhlIFdURlBMIChEbyB3aGF0IHRoZSBmdWNrIHlvdSB3YW50IHRvIFB1YmxpYyBMaWNlbnNlKS48L2Rlc2M+Cgo8bWV0YWRhdGE+CjcomGY6UkRGCiAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKPgoJPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiI+CgkJPGRjOnRpdGxlIHhtbDpsYW5nPSJqYSI+V1RGUEzjga7jg63jgrQ8L2RjOnRpdGxlPgoJCTxkYzp0aXRsZSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5Mb2dvIG9mIFdURlBMPC9kYzp0aXRsZT4KCQk8ZGM6Y3JlYXRvciByZGY6cmVzb3VyY2U9Imh0dHBzOi8vbWV0YS53aWtpbWVkaWEub3JnLz9jdXJpZD0xMDQ4NDQ3MCIvPgoJCTxkYzpzdWJqZWN0IHJkZjpyZXNvdXJjZT0iaHR0cHM6Ly93d3cud2lraWRhdGEub3JnL3dpa2kvUTc5NzE5Ii8+CgkJPGRjOmRlc2NyaXB0aW9uIHhtbDpsYW5nPSJqYSIgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgoJCQk8ZGM6Zm9ybWF0IHJkZjpkYXRhdHlwZT0iaHR0cDovL3B1cmwub3JnL2RjL3Rlcm1zL0lNVCI+dGV4dC94LXdpa2k8L2RjOmZvcm1hdD4KCQkJPHJkZjp2YWx1ZT48IVtDREFUQVsKW1t3OmphOldURlBMfFdURlBMXV3vvIjjganjgYbjgajjgafjgoLli53miYvjgavjgZfjgoTjgYzjgozjgq/jgr3jg4Pjgr/jg6zjg7vlhazooYbliKnnlKjoqLHoq77mm7jvvInjga7lhazlvI/jg63jgrTjgIIKXV0+PCEtLSAgLS0+PC9yZGY6dmFsdWU+CgkJPC9kYzpkZXNjcmlwdGlvbj4KCQk8ZGM6ZGVzY3JpcHRpb24geG1sOmxhbmc9IngtZGVmYXVsdCIgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgoJCQk8ZGM6Zm9ybWF0IHJkZjpkYXRhdHlwZT0iaHR0cDovL3B1cmwub3JnL2RjL3Rlcm1zL0lNVCI+dGV4dC94LXdpa2k8L2RjOmZvcm1hdD4KCQkJPHJkZjp2YWx1ZT48IVtDREFUQVsKQW4gb2ZmaWNpYWwgbG9nbyBmb3IgdGhlIFtbdzpXVEZQTHxdXSAoRG8gd2hhdCB0aGUgZnVjayB5b3Ugd2FudCB0byBQdWJsaWMgTGljZW5zZSkuCl1dPjwhLS0gIC0tPjwvcmRmOnZhbHVlPgoJCTwvZGM6ZGVzY3JpcHRpb24+CgkJPGRjOmNvbnRyaWJ1dG9yIHJkZjpyZXNvdXJjZT0iaHR0cDovL3d3dy53dGZwbC5uZXQvIi8+CgkJPGRjOmRhdGUgcmRmOmRhdGF0eXBlPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYWRhdGUiPjIwMTItMTItMjg8L2RjOmRhdGU+CgkJPGRjOnR5cGUgcmRmOmRhdGF0eXBlPSJodHRwOi8vcHVybC5vcmcvZGMvdGVybXMvRENNSVR5cGUiPlN0aWxsSW1hZ2U8L2RjOnR5cGU+CgkJPGRjOmZvcm1hdCByZGY6ZGF0YXR5cGU9Imh0dHA6Ly9wdXJsLm9yZy9kYy90ZXJtcy9JTVQiPmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KCQk8ZGM6c291cmNlIHJkZjpyZXNvdXJjZT0iaHR0cDovL3d3dy53dGZwbC5uZXQvd3AtY29udGVudC91cGxvYWRzLzIwMTIvMTIvd3RmcGwuc3ZnIi8+CgkJPGRjOmxhbmd1YWdlIHJkZjpkYXRhdHlwZT0iaHR0cDovL3B1cmwub3JnL2RjL3Rlcm1zL0lTTzYzOS0yIj56eHg8L2RjOmxhbmd1YWdlPgoJCTxkYzpyaWdodHM+wqkgMjAxMiBXVEZQTCDigJMgRG8gV2hhdCB0aGUgRnVjayBZb3UgV2FudCB0byBQdWJsaWMgTGljZW5zZS48L2RjOnJpZ2h0cz4KCQk8ZGM6cmlnaHRzIHJkZjpyZXNvdXJjZT0iaHR0cDovL3d3dy53dGZwbC5uZXQvYWJvdXQvIi8+Cgk8L3JkZjpEZXNjcmlwdGlvbj4KPC9yZGY6UkRGPgo8L21ldGFkYXRhPgoKPHBhdGgKICBkPSJNIDEwOC40MDYyNSw1LjkwNjI1CiAgICAgQyAgNTIuMzA2MDU1LDUuOTA2MjUgICAgNi44NDM3NSw1MS4zOTk4MDUgICAgNi44NDM3NSwxMDcuNQogICAgICAgICA2Ljg0Mzc1LDE2My42MDAxOSAgNTIuMzA2MDU1LDIwOS4wOTM3NSAxMDguNDA2MjUsMjA5LjA5Mzc1CiAgICAgICAxMjIuNjEzMjksMjA5LjA5Mzc1IDEzNi4xMjc3NSwyMDYuMTQyMTYgIDE0OC40MDYyNSwyMDAuODc1CiAgICAgICAxNjAuNjg0NzUsMjA2LjE0MjE2IDE3NC4xOTkyMSwyMDkuMDkzNzUgIDE4OC40MDYyNSwyMDkuMDkzNzUKICAgICAgIDI0NC41MDY0NCwyMDkuMDkzNzUgMjkwLDE2My42MDAxOSAgICAgICAgMjkwLDEwNy41CiAgICAgICAyOTAsNTEuMzk5ODA1ICAgICAgIDI0NC41MDY0NCw1LjkwNjI1ICAgIDE4OC40MDYyNSw1LjkwNjI1CiAgICAgICAxNzQuMTk5MjEsNS45MDYyNSAgIDE2MC42ODQ3NSw4Ljg1Nzg0MTQgIDE0OC40MDYyNSwxNC4xMjUKICAgICAgIDEzNi4xMjc3NSw4Ljg1Nzg0MTQgMTIyLjYxMzI5LDUuOTA2MjUgICAgMTA4LjQwNjI1LDUuOTA2MjUgICAgegogICAgIE0gMTA2LjQwNjI1LDM3LjgxMjUKICAgICBDIDEyMS43MzU4NywzNy44MTI1ICAgMTM1LjkxNjQ3LDQyLjczMzM5NCAgMTQ3LjQ2ODc1LDUxLjA2MjUKICAgICAgIDE1OS4wMjEwMyw0Mi43MzMzOTQgMTczLjE3MDM4LDM3LjgxMjUgICAgMTg4LjUsMzcuODEyNQogICAgICAgMjI3LjMyMTgzLDM3LjgxMjUgICAyNTguODEyNSw2OS4yNzE5MjMgICAyNTguODEyNSwxMDguMDkzNzUKICAgICAgIDI1OC44MTI1LDE0Ni45MTU1OCAgMjI3LjMyMTgzLDE3OC40MDYyNSAgMTg4LjUsMTc4LjQwNjI1CiAgICAgICAxNzMuMTcyNzQsMTc4LjQwNjI1IDE1OS4wMjAwNiwxNzMuNDgzMDIgIDE0Ny40Njg3NSwxNjUuMTU2MjUKICAgICAgIDEzNS45MTc0NCwxNzMuNDgzMDIgMTIxLjczMzUxLDE3OC40MDYyNSAgMTA2LjQwNjI1LDE3OC40MDYyNQogICAgICAgIDY3LjU4NDQyMywxNzguNDA2MjUgMzYuMTI1LDE0Ni45MTU1OCAgICAgMzYuMTI1LDEwOC4wOTM3NQogICAgICAgIDM2LjEyNSw2OS4yNzE5MjMgICAgNjcuNTg0NDIzLDM3LjgxMjUgICAxMDYuNDA2MjUsMzcuODEyNSAgICB6IgovPgo8cGF0aAogIHN0cm9rZS13aWR0aD0iMC4yIgogIGQ9Im0gMTE2LjgyNTQ2LDY2LjE5Mjk3MyAtMzMuNDE5NTI1LDAKICAgICBjIC0yMi41NDc2Nyw0Ni42ODk2MTcgIC0zLjY3OTUwNSw3OC40NjkzNzcgIDExLjIzMDAxOCw4NS4wNjcyMjcKICAgICAgICAxNC45MDk1MjcsNi41OTc4NiAgIDM5LjI5Nzg5NywxMC43ODkyMyAgIDUyLjg0MzYyNywtMTMuNjQwNzEKICAgICAgICAxMS4xMjcsMjAuOTEwMzkgICAgIDM2LjQxMDE4LDIyLjEyMDIyICAgIDUzLjIyMTgxLDE0LjM3Njk2CiAgICAgICAgMTYuODExNjMsLTcuNzQzMjcgICAzMy4xMjMxMSwtNDMuMTE1NDcgICAxMS43MzA0NywtODUuODAzNDc3CiAgICAgbCAtMzMuOTkyMjcsMi43ZS01CiAgICAgYyAgMTEuNTAxNTksMjYuNDE5NDkyICAxMS43MzI1Nyw2Mi40NjIgICAgICAgMC4wMDksNjMuNTMyNjQKICAgICAgIC0xMS43MjM3OCwxLjA3MDYzICAgLTE1LjA5Njk0LC0yLjg0OTgxICAgLTEzLjc2NDQ2LC00NC4yODUyMzEKICAgICBsIC0zMy4zMDksLTAuMTQ5NjAyCiAgICAgYyAgIDIuNDg5MTEsNDAuOTAwMjczICAtNS4wODg4Myw0OC4wMDIwMDMgIC0xNS4zMzg2NSw0My41MTQzNjMKICAgICAgIC0xMC4yNDk4MiwtNC40ODc2MyAgIC05Ljc5NDY4LC0yOC4xMzA0MiAgICAwLjc4OTE4LC02Mi42MTIxOTcgeiIKLz4KPC9zdmc+Cg==)](https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions/blob/master/LICENSE)
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Tsanfer/vuepress_theme_reco-Github_Actions)
 
+
 查看此文档前应先了解，[vuepress 基本操作](https://tsanfer.com/views/frontEnd/VuePress%20+%20GithubPages%20+%20TravisCI%20.html#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C)
+
 
 参考官方文档进行配置：
 
@@ -88,17 +84,12 @@ sudo yarn install
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "@vuepress-reco/vuepress-plugin-rss": "^1.0.2",
-    "@vuepress/plugin-nprogress": "^1.8.2",
-    "npm-check": "^5.9.2",
-    "vue-class-component": "^7.2.6",
-    "vue-router": "^3.5.2",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-plugin-flowchart": "^1.4.3",
-    "vuepress-plugin-meting": "^0.3.0",
-    "vuepress-plugin-reading-progress": "^1.0.10",
-    "vuepress-theme-reco": "^1.6.6"
+    "@vuepress/plugin-nprogress": "1.9.8",
+    "vuepress": "1.9.8",
+    "vuepress-plugin-code-copy": "1.0.6",
+    "vuepress-plugin-flowchart": "1.5.0",
+    "vuepress-plugin-reading-progress": "1.0.10",
+    "vuepress-theme-reco": "1.6.16"
   }
 }
 
@@ -107,7 +98,7 @@ sudo yarn install
 然后，安装依赖
 
 ```bash
-sudo yarn
+sudo npm install
 ```
 
 ### 目录结构
@@ -150,8 +141,8 @@ sudo yarn
 // docs/.vuepress/config.js
 
 module.exports = {
-//   host: "0.0.0.0", // 生成网页地址（本地调试使用）
-//   port: "22333", // 生成网页端口（本地调试使用）
+  //   host: "0.0.0.0", // 生成网页地址（本地调试使用）
+  //   port: "22333", // 生成网页端口（本地调试使用）
   title: "Tsanfer's Blog", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
   description: "现居住于猎户臂上的一个碳基生命", // meta 中的描述文字，用于SEO
   head: [
@@ -274,7 +265,7 @@ module.exports = {
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: [
             "Storage_hardware",
-            "Windows_WSL_terminal_WebDAV_PartitionBackup"
+            "Windows_WSL_terminal_WebDAV_PartitionBackup",
           ],
         },
       ],
@@ -282,22 +273,24 @@ module.exports = {
         {
           title: "工具", // 必要的
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: [
-            "ffmpeg",
-            "scrcpy",
-            "Frp_Docker_SSH_RDP"
-          ],
+          children: ["Frp_Docker_SSH_RDP"],
+        },
+      ],
+      "/views/Hack/": [
+        {
+          text: "Hack",
+          sidebarDepth: 2,
+          children: ["Cheat_engine-Kingdom_rush"],
         },
       ],
     },
     // displayAllHeaders: true, // 默认值：false
     subSidebar: "auto",
 
-    record: "蜀ICP备20005033号-1",
+    record: "蜀ICP备20005033号-2",
     recordLink: "https://beian.miit.gov.cn/",
     cyberSecurityRecord: "川公网安备 51110202000301号",
-    cyberSecurityLink:
-      "http://www.beian.gov.cn/",
+    cyberSecurityLink: "http://www.beian.gov.cn/",
     startYear: "2020", // 项目开始时间，只填写年份
     lastUpdated: "最后更新时间", // string | boolean
     author: "Tsanfer",
@@ -317,28 +310,6 @@ module.exports = {
   search: true,
   searchMaxSuggestions: 10, // 插件
   plugins: [
-    [
-      "meting",
-      {
-        // metingApi: "https://meting.sigure.xyz/api/music",
-        meting: {
-          server: "netease",
-          type: "playlist",
-          mid: "4902520778",
-        },
-        aplayer: {
-          lrcType: 3,
-          theme: "#3489fd",
-        },
-      },
-    ],
-    [
-      "@vuepress-reco/vuepress-plugin-rss", //RSS插件
-      {
-        site_url: "https://tsanfer.com", //网站地址
-        copyright: "Tsanfer", //版权署名
-      },
-    ],
     ["flowchart"], // 支持流程图
     ["@vuepress/nprogress"], // 加载进度条
     ["reading-progress"], // 阅读进度条
@@ -364,20 +335,20 @@ name: CI/CD # 此工作流程（workflow）的名字
 jobs:
   FTP-Deploy-Action:
     name: CI&CD # 此任务（job）的名字
-    runs-on: ubuntu-latest # 运行环境
+    runs-on: ubuntu-22.04 # 运行环境
     steps:
-      - uses: actions/checkout@master # 切换分支到master
+      - uses: actions/checkout@v3 # 切换分支
         with:
           fetch-depth: 2
 
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v2.5.1 # 使用node环境
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3 # 使用node环境
         with:
-          node-version: "14.x" # 版本14
+          node-version: 16 # 版本16
 
       - name: Cache node modules
         id: cache # 缓存id
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         env:
           cache-name: cache-node-modules # 缓存名字
         with:
@@ -399,7 +370,7 @@ jobs:
         run: git reset --hard
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.FTP_IP }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -414,10 +385,11 @@ jobs:
 #           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
 
       - name: upload-artifact
-        uses: actions/upload-artifact@v2.3.1 #共享或保存action过程中产生的文件
+        uses: actions/upload-artifact@v3 #共享或保存action过程中产生的文件
         with:
           name: static_web_file
           path: ./docs/.vuepress/dist/ # or path/to/artifact
+
 ```
 
 ```txt

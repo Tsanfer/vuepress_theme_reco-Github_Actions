@@ -5,16 +5,16 @@ name: CI/CD # 此工作流程（workflow）的名字
 jobs:
   FTP-Deploy-Action:
     name: CI&CD # 此任务（job）的名字
-    runs-on: ubuntu-latest # 运行环境
+    runs-on: ubuntu-22.04 # 运行环境
     steps:
-      - uses: actions/checkout@master # 切换分支到master
+      - uses: actions/checkout@v3 # 切换分支
         with:
           fetch-depth: 2
 
-      - name: Use Node.js 14.x
+      - name: Use Node.js 16
         uses: actions/setup-node@v3 # 使用node环境
         with:
-          node-version: "14.x" # 版本14
+          node-version: 16 # 版本16
 
       - name: Cache node modules
         id: cache # 缓存id
@@ -40,7 +40,7 @@ jobs:
         run: git reset --hard
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.FTP_IP }}
           username: ${{ secrets.FTP_USERNAME }}

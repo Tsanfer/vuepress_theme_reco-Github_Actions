@@ -1,8 +1,8 @@
 // docs/.vuepress/config.js
 
 module.exports = {
-//   host: "0.0.0.0", // 生成网页地址（本地调试使用）
-//   port: "22333", // 生成网页端口（本地调试使用）
+  //   host: "0.0.0.0", // 生成网页地址（本地调试使用）
+  //   port: "22333", // 生成网页端口（本地调试使用）
   title: "Tsanfer's Blog", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
   description: "现居住于猎户臂上的一个碳基生命", // meta 中的描述文字，用于SEO
   head: [
@@ -125,7 +125,7 @@ module.exports = {
           sidebarDepth: 2, // 可选的, 默认值是 1
           children: [
             "Storage_hardware",
-            "Windows_WSL_terminal_WebDAV_PartitionBackup"
+            "Windows_WSL_terminal_WebDAV_PartitionBackup",
           ],
         },
       ],
@@ -133,11 +133,14 @@ module.exports = {
         {
           title: "工具", // 必要的
           sidebarDepth: 2, // 可选的, 默认值是 1
-          children: [
-            "ffmpeg",
-            "scrcpy",
-            "Frp_Docker_SSH_RDP"
-          ],
+          children: ["Frp_Docker_SSH_RDP"],
+        },
+      ],
+      "/views/Hack/": [
+        {
+          text: "Hack",
+          sidebarDepth: 2,
+          children: ["Cheat_engine-Kingdom_rush"],
         },
       ],
     },
@@ -147,8 +150,7 @@ module.exports = {
     record: "蜀ICP备20005033号-2",
     recordLink: "https://beian.miit.gov.cn/",
     cyberSecurityRecord: "川公网安备 51110202000301号",
-    cyberSecurityLink:
-      "http://www.beian.gov.cn/",
+    cyberSecurityLink: "http://www.beian.gov.cn/",
     startYear: "2020", // 项目开始时间，只填写年份
     lastUpdated: "最后更新时间", // string | boolean
     author: "Tsanfer",
@@ -168,28 +170,6 @@ module.exports = {
   search: true,
   searchMaxSuggestions: 10, // 插件
   plugins: [
-    [
-      "meting",
-      {
-        // metingApi: "https://meting.sigure.xyz/api/music",
-        meting: {
-          server: "netease",
-          type: "playlist",
-          mid: "4902520778",
-        },
-        aplayer: {
-          lrcType: 3,
-          theme: "#3489fd",
-        },
-      },
-    ],
-    [
-      "@vuepress-reco/vuepress-plugin-rss", //RSS插件
-      {
-        site_url: "https://tsanfer.com", //网站地址
-        copyright: "Tsanfer", //版权署名
-      },
-    ],
     ["flowchart"], // 支持流程图
     ["@vuepress/nprogress"], // 加载进度条
     ["reading-progress"], // 阅读进度条
