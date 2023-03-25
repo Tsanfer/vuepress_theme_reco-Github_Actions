@@ -121,10 +121,11 @@ sudo yarn install
 
 ```
 
-然后，安装依赖
+然后，安装依赖运行
 
 ```bash
 sudo npm install
+npm run docs:build 
 ```
 
 ### 目录结构
