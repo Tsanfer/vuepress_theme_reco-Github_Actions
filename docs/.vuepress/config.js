@@ -58,6 +58,11 @@ module.exports = {
             link: "http://hpc.tsanfer.com:8000",
             icon: "fa-object-ungroup",
           },
+          {
+            text: "在线 XM 音乐播放器",
+            link: "http://clouddisk.tsanfer.com:8081",
+            icon: "fa-alien-8bit",
+          },
         ],
       },
       {
