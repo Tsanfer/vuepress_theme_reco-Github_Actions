@@ -46,22 +46,22 @@ module.exports = {
           {
             text: "个人网盘",
             link: "http://clouddisk.tsanfer.com:8080",
-            icon: "fa-hdd",
+            icon: "fa-hard-drive",
           },
           {
             text: "订阅转换器",
             link: "http://clouddisk.tsanfer.com:58080",
-            icon: "fa-exchange-alt",
+            icon: "fa-right-left",
           },
           {
             text: "目标检测",
             link: "http://hpc.tsanfer.com:8000",
-            icon: "fa-object-ungroup",
+            icon: "fa-solid fa-object-ungroup",
           },
           {
             text: "在线 XM 音乐播放器",
             link: "http://clouddisk.tsanfer.com:8081",
-            icon: "fa-alien-8bit",
+            icon: "fa-robot",
           },
         ],
       },
