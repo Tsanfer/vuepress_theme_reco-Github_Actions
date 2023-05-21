@@ -31,7 +31,7 @@ module.exports = {
       socialLinks: [
         { icon: "reco-github", link: "https://github.com/Tsanfer" },
         { icon: "reco-bilibili", link: "https://space.bilibili.com/12167681" },
-        { icon: "reco-qq", link: "tencent://message/?uin=1124851454" },
+        { icon: "reco-douban", link: "https://www.douban.com/people/219819109" },
         { icon: "reco-twitter", link: "https://twitter.com/a1124851454" },
         { icon: "reco-mail", link: "mailto:a1124851454@gmail.com" },
       ],
@@ -83,6 +83,15 @@ module.exports = {
             text: "BiliBili",
             link: "https://space.bilibili.com/12167681",
             icon: "reco-bilibili",
+          },
+          {
+            text: "豆瓣",
+            link: "https://www.douban.com/people/219819109",
+            icon: "reco-douban",
+          },
+          {
+            text: "网易云音乐",
+            link: "https://music.163.com/#/user/home?id=69696518",
           },
           {
             text: "QQ",
