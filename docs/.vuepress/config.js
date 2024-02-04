@@ -169,7 +169,8 @@ module.exports = {
     lastUpdated: "最后更新时间", // string | boolean
     author: "Tsanfer",
     authorAvatar: "/avatar.svg", //作者头像
-    mode: "light", //默认显示白天模式
+    // mode: "light", //默认显示白天模式
+    mode: "auto", //默认显示白天模式
     smooth: "true", //平滑滚动
     // 评论设置
     valineConfig: {
