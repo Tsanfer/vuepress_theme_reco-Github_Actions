@@ -140,6 +140,7 @@ module.exports = {
           children: [
             "Storage_hardware",
             "Windows_WSL_terminal_WebDAV_PartitionBackup",
+            "C92_Openwrt_DNS_Swap"
           ],
         },
       ],
