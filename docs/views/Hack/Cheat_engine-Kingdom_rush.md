@@ -18,6 +18,8 @@ tags:
 
 这里主要是看写的注释，来理解脚本。（如果什么都不想看，可以直接复制粘贴 CE 自动汇编(AA)脚本）
 
+> [参考 CE 脚本](https://fearlessrevolution.com/viewtopic.php?t=8107)
+
 我学习的链接：
 
 > [你能学会的 Cheat Engine 零基础入门教程](https://www.bilibili.com/video/BV1nR4y1u7PZ)
