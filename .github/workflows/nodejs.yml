@@ -14,10 +14,10 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Use Node.js 20
+      - name: Use Node.js 16
         uses: actions/setup-node@v4 # 使用node环境
         with:
-          node-version: 20 # 版本16
+          node-version: 16 # 版本16
 
       - name: Cache node modules
         id: cache # 缓存id
