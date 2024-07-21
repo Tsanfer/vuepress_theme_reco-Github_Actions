@@ -8,20 +8,20 @@ name: CI/CD # 此工作流程（workflow）的名字
 jobs:
   FTP-Deploy-Action:
     name: CI&CD # 此任务（job）的名字
-    runs-on: ubuntu-22.04 # 运行环境
+    runs-on: ubuntu-24.04 # 运行环境
     steps:
-      - uses: actions/checkout@v3 # 切换分支
+      - uses: actions/checkout@v4 # 切换分支
         with:
           fetch-depth: 2
 
-      - name: Use Node.js 16
-        uses: actions/setup-node@v3 # 使用node环境
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4 # 使用node环境
         with:
-          node-version: 16 # 版本16
+          node-version: 20 # 版本16
 
       - name: Cache node modules
         id: cache # 缓存id
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-node-modules # 缓存名字
         with:
@@ -43,7 +43,7 @@ jobs:
         run: git reset --hard
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with:
           server: ${{ secrets.FTP_IP }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -58,7 +58,7 @@ jobs:
 #           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
 
       - name: upload-artifact
-        uses: actions/upload-artifact@v3 #共享或保存action过程中产生的文件
+        uses: actions/upload-artifact@v4 #共享或保存action过程中产生的文件
         with:
           name: static_web_file
           path: ./docs/.vuepress/dist/ # or path/to/artifact
