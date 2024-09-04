@@ -14,6 +14,9 @@ module.exports = {
         content: "width=device-width,initial-scale=1,user-scalable=no",
       },
     ], //在移动端，搜索框在获得焦点时会放大
+    [
+      'script async defer', {src: 'http://learn.tsanfer.com:8080/api/application/embed?protocol=http&host=learn.tsanfer.com:8080&token=f077a5ae0d9136e0'}
+    ]
   ],
   theme: "reco", //选择主题‘reco’
   themeConfig: {
