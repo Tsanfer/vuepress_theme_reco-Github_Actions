@@ -281,9 +281,7 @@ static void obtain_time(void)
 */
 ```
 
----
-
-## HTTP 请求
+### HTTP 请求
 
 HTTP 请求官方也有 [http_request](https://github.com/espressif/esp-idf/tree/v5.2.3/examples/protocols/http_request) 的例子工程，剪切其中的 http 请求代码到入口文件 `./main/https_request_example_main.c` 中，并添加相应宏定义。然后在入口函数 `app_main()` 末尾处，添加 HTTP 任务即可
 
