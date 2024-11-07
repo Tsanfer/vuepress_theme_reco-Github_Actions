@@ -11,7 +11,7 @@ tags:
   - 单片机
 ---
 
-> [最新博客文章链接](https://tsanfer.com/views/Computer/ESP32_Wi-Fi_schedule_HTTP(S).html)
+> [最新博客文章链接](https://tsanfer.com/views/MCU/ESP32_Wi-Fi_schedule_HTTP(S).html)
 > 
 
 ---
