@@ -133,6 +133,7 @@ module.exports = {
           children: [
             "Linux_board_NFS",
             "First_Prepare_for_Lanqiao_Cup_MCU_Competition",
+            "ESP32_Wi-Fi_schedule_HTTP(S)"
           ],
         },
       ],
