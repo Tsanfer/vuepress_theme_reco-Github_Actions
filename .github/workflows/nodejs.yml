@@ -49,7 +49,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           port: ${{ secrets.FTP_PORT }}
           local_path: './docs/.vuepress/dist'
-          remote_path: './'
+          remote_path: '/'
           sftp_only: true
           password: ${{ secrets.FTP_PASSWORD }}
           # rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log'
