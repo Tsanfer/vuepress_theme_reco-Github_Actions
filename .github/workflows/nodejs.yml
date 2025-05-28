@@ -48,11 +48,11 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           server: ${{ secrets.FTP_SERVER }}
           port: ${{ secrets.FTP_PORT }}
-          local_path: './docs/.vuepress/dist'
+          local_path: './docs/.vuepress/dist/'
           remote_path: '/upload'
           sftp_only: true
           password: ${{ secrets.FTP_PASSWORD }}
-          # rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log'
+          rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log'
           sftpArgs: '-o ConnectTimeout=5'
 
       # - name: 📂 Sync files
