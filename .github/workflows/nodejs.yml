@@ -52,7 +52,7 @@ jobs:
           remote_path: './'
           sftp_only: true
           password: ${{ secrets.FTP_PASSWORD }}
-          rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log'
+          # rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log'
           sftpArgs: '-o ConnectTimeout=5'
 
       # - name: 📂 Sync files
