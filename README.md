@@ -19,7 +19,7 @@
 
 [VuePress](https://vuepress.vuejs.org/zh/)
 
-[SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
+[wlixcc/SFTP-Deploy-Action](https://github.com/wlixcc/SFTP-Deploy-Action)
 
 ## 最终效果
 
@@ -39,7 +39,7 @@
 
 - Github Actions
 
-- SamKirkland / FTP-Deploy-Action
+- wlixcc/SFTP-Deploy-Action
 
 ### 相关
 
@@ -53,11 +53,9 @@
 
   通过 GitHub 操作 可直接在仓库中构建端到端持续集成 (CI) 和持续部署 (CD) 功能。
 
-- SamKirkland / FTP-Deploy-Action:
+- wlixcc/SFTP-Deploy-Action:
 
-  Automate deploying websites and more with this GitHub action
-
-  通过 GitHub action 自动部署网页等操作
+  Deploy files to server use GitHub actions & SFTP
 
 ## 博客主题配置
 
@@ -145,7 +143,7 @@ module.exports = {
   //   host: "0.0.0.0", // 生成网页地址（本地调试使用）
   //   port: "22333", // 生成网页端口（本地调试使用）
   title: "Tsanfer's Blog", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
-  description: "现居住于猎户臂上的一个碳基生命", // meta 中的描述文字，用于SEO
+  description: "网络空间无限宽广", // meta 中的描述文字，用于SEO
   head: [
     ["link", { rel: "icon", href: "/favicon.svg" }], //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
     [
@@ -155,6 +153,9 @@ module.exports = {
         content: "width=device-width,initial-scale=1,user-scalable=no",
       },
     ], //在移动端，搜索框在获得焦点时会放大
+    [
+      'script async defer', {src: 'http://learn.tsanfer.com:8080/api/application/embed?protocol=http&host=learn.tsanfer.com:8080&token=f077a5ae0d9136e0'}
+    ]
   ],
   theme: "reco", //选择主题‘reco’
   themeConfig: {
@@ -172,7 +173,7 @@ module.exports = {
       socialLinks: [
         { icon: "reco-github", link: "https://github.com/Tsanfer" },
         { icon: "reco-bilibili", link: "https://space.bilibili.com/12167681" },
-        { icon: "reco-qq", link: "tencent://message/?uin=1124851454" },
+        { icon: "reco-douban", link: "https://www.douban.com/people/219819109" },
         { icon: "reco-twitter", link: "https://twitter.com/a1124851454" },
         { icon: "reco-mail", link: "mailto:a1124851454@gmail.com" },
       ],
@@ -187,17 +188,22 @@ module.exports = {
           {
             text: "个人网盘",
             link: "http://clouddisk.tsanfer.com:8080",
-            icon: "fa-hdd",
+            icon: "fa-hard-drive",
           },
           {
             text: "订阅转换器",
             link: "http://clouddisk.tsanfer.com:58080",
-            icon: "fa-exchange-alt",
+            icon: "fa-right-left",
           },
           {
             text: "目标检测",
             link: "http://hpc.tsanfer.com:8000",
-            icon: "fa-object-ungroup",
+            icon: "fa-solid fa-object-ungroup",
+          },
+          {
+            text: "在线 XM 音乐播放器",
+            link: "http://clouddisk.tsanfer.com:8081",
+            icon: "fa-robot",
           },
         ],
       },
@@ -219,6 +225,15 @@ module.exports = {
             text: "BiliBili",
             link: "https://space.bilibili.com/12167681",
             icon: "reco-bilibili",
+          },
+          {
+            text: "豆瓣",
+            link: "https://www.douban.com/people/219819109",
+            icon: "reco-douban",
+          },
+          {
+            text: "网易云音乐",
+            link: "https://music.163.com/#/user/home?id=69696518",
           },
           {
             text: "QQ",
@@ -257,6 +272,7 @@ module.exports = {
           children: [
             "Linux_board_NFS",
             "First_Prepare_for_Lanqiao_Cup_MCU_Competition",
+            "ESP32_Wi-Fi_schedule_HTTP(S)"
           ],
         },
       ],
@@ -267,6 +283,7 @@ module.exports = {
           children: [
             "Storage_hardware",
             "Windows_WSL_terminal_WebDAV_PartitionBackup",
+            "C92_Openwrt_DNS_Swap"
           ],
         },
       ],
@@ -296,8 +313,8 @@ module.exports = {
     lastUpdated: "最后更新时间", // string | boolean
     author: "Tsanfer",
     authorAvatar: "/avatar.svg", //作者头像
-    mode: "light", //默认显示白天模式
-    codeTheme: "okaidia", // default 'tomorrow'
+    // mode: "light", //默认显示白天模式
+    mode: "auto", //默认显示白天模式
     smooth: "true", //平滑滚动
     // 评论设置
     valineConfig: {
@@ -328,28 +345,31 @@ module.exports = {
 
 [SamKirkland / FTP-Deploy-Action](https://github.com/marketplace/actions/ftp-deploy)
 
-```yml
+```yaml
 # .github/workflows/nodejs.yml
 
-on: push # 触发此文件运行的条件
+on: # 触发此文件运行的条件
+  workflow_dispatch: # 手动
+  push: # push 时
+
 name: CI/CD # 此工作流程（workflow）的名字
 jobs:
   FTP-Deploy-Action:
     name: CI&CD # 此任务（job）的名字
-    runs-on: ubuntu-22.04 # 运行环境
+    runs-on: ubuntu-24.04 # 运行环境
     steps:
-      - uses: actions/checkout@v3 # 切换分支
+      - uses: actions/checkout@v4 # 切换分支
         with:
           fetch-depth: 2
 
       - name: Use Node.js 16
-        uses: actions/setup-node@v3 # 使用node环境
+        uses: actions/setup-node@v4 # 使用node环境
         with:
           node-version: 16 # 版本16
 
       - name: Cache node modules
         id: cache # 缓存id
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-node-modules # 缓存名字
         with:
@@ -370,14 +390,27 @@ jobs:
       - name: reset git
         run: git reset --hard
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      - name: Deploy with Password
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          server: ${{ secrets.FTP_IP }}
           username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          port: ${{ secrets.FTP_PORT }}
+          local_path: './docs/.vuepress/dist/*'
+          remote_path: '/upload'
+          sftp_only: true
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
-          server-dir: /
+          rsyncArgs: '--exclude=node_modules --exclude=.git --exclude=*.log'
+          sftpArgs: '-o ConnectTimeout=5'
+
+      # - name: 📂 Sync files
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      #   with:
+      #     server: ${{ secrets.FTP_IP }}
+      #     username: ${{ secrets.FTP_USERNAME }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
+      #     server-dir: /
 
 #           ftp-server: sftp://${{ secrets.FTP_IP }}/home/www/htdocs # 服务器地址和端口（可以填域名，不过我服务器做了全站加速会导向加速结点的IP，所以只能用服务器的IP）
 #           ftp-username: ${{ secrets.FTP_USERNAME }} # FTP用户名
@@ -386,7 +419,7 @@ jobs:
 #           local-dir: docs/.vuepress/dist/ # 选择哪些文件要部署到服务器，这个选项在这里选了之后，要在.git-ftp-include中添加相应的路径
 
       - name: upload-artifact
-        uses: actions/upload-artifact@v3 #共享或保存action过程中产生的文件
+        uses: actions/upload-artifact@v4 #共享或保存action过程中产生的文件
         with:
           name: static_web_file
           path: ./docs/.vuepress/dist/ # or path/to/artifact
