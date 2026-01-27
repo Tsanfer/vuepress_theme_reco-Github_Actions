@@ -15,8 +15,21 @@ module.exports = {
       },
     ], //在移动端，搜索框在获得焦点时会放大
     [
-      'script async defer', {src: 'http://learn.tsanfer.com:8080/api/application/embed?protocol=http&host=learn.tsanfer.com:8080&token=f077a5ae0d9136e0'}
-    ]
+      "script async defer",
+      {
+        src: "http://learn.tsanfer.com:8080/api/application/embed?protocol=http&host=learn.tsanfer.com:8080&token=f077a5ae0d9136e0",
+      },
+    ],
+    // Microsoft Clarity (paste this inline script to load Clarity)
+    [
+      "script",
+      {},
+      "(function(c,l,a,r,i,t,y){\n" +
+        "    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};\n" +
+        '    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;\n' +
+        "    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\n" +
+        '})(window, document, "clarity", "script", "v882qv7wii");',
+    ],
   ],
   theme: "reco", //选择主题‘reco’
   themeConfig: {
@@ -34,7 +47,10 @@ module.exports = {
       socialLinks: [
         { icon: "reco-github", link: "https://github.com/Tsanfer" },
         { icon: "reco-bilibili", link: "https://space.bilibili.com/12167681" },
-        { icon: "reco-douban", link: "https://www.douban.com/people/219819109" },
+        {
+          icon: "reco-douban",
+          link: "https://www.douban.com/people/219819109",
+        },
         { icon: "reco-twitter", link: "https://twitter.com/a1124851454" },
         { icon: "reco-mail", link: "mailto:a1124851454@gmail.com" },
       ],
@@ -133,7 +149,7 @@ module.exports = {
           children: [
             "Linux_board_NFS",
             "First_Prepare_for_Lanqiao_Cup_MCU_Competition",
-            "ESP32_Wi-Fi_schedule_HTTP(S)"
+            "ESP32_Wi-Fi_schedule_HTTP(S)",
           ],
         },
       ],
@@ -144,7 +160,7 @@ module.exports = {
           children: [
             "Storage_hardware",
             "Windows_WSL_terminal_WebDAV_PartitionBackup",
-            "C92_Openwrt_DNS_Swap"
+            "C92_Openwrt_DNS_Swap",
           ],
         },
       ],
