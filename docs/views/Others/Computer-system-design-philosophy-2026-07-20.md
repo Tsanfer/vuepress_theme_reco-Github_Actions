@@ -11,7 +11,7 @@ tags:
   - 计算机系统
 ---
 
-> [最新博客文章链接](https://tsanfer.com/views/MCU/Computer-system-design-philosophy-2026-07-20.html)
+> [最新博客文章链接](https://tsanfer.com/views/Others/Computer-system-design-philosophy-2026-07-20.html)
 
 *文字更新时间：2026/07/20*
 
