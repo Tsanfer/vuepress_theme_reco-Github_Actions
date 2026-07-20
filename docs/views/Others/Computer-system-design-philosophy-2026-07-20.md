@@ -1,5 +1,5 @@
 ---
-title: 计算机系统设计思想
+title: 没有完美的系统：辩证法视角下的架构演进与实践论
 date: 2026-07-20
 sidebar: "auto"
 categories:
