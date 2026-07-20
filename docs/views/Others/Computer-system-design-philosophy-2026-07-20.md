@@ -12,13 +12,14 @@ tags:
 ---
 
 > [最新博客文章链接](https://tsanfer.com/views/MCU/Computer-system-design-philosophy-2026-07-20.html)
-> 
-
----
 
 *文字更新时间：2026/07/20*
 
 > 九年垃圾佬，手搓服务器，常年混迹于某海鲜市场；八年MJJ，折腾各种超兽oneman跑路云
+
+---
+
+![Gemini_Generated_计算机系统设计思想_2026-07-20.png](https://cdn.tsanfer.com/image/2026-07-20_15-54-35_185.png)
 
 ## 计算机系统设计思想
 
